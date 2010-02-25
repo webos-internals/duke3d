@@ -1,0 +1,2073 @@
+Archive member included because of file (symbol)
+
+eobj/libbuild.a(build.o)      obj/astub.o (buildkeys)
+eobj/libbuild.a(config.o)     obj/astub.o (loadsetup)
+eobj/libengine.a(cache1d.o)   obj/astub.o (allocache)
+eobj/libengine.a(compat.o)    obj/astub.o (Bgethomedir)
+eobj/libengine.a(defs.o)      eobj/libbuild.a(build.o) (loaddefinitionsfile)
+eobj/libengine.a(engine.o)    eobj/libengine.a(cache1d.o) (kmalloc)
+eobj/libengine.a(kplib.o)     eobj/libengine.a(cache1d.o) (kzaddstack)
+eobj/libengine.a(osd.o)       eobj/libbuild.a(build.o) (OSD_Printf)
+eobj/libengine.a(pragmas.o)   eobj/libengine.a(engine.o) (qinterpolatedown16)
+eobj/libengine.a(scriptfile.o)
+                              eobj/libengine.a(defs.o) (scriptfile_gettoken)
+eobj/libengine.a(sdlayer.o)   eobj/libbuild.a(build.o) (quitevent)
+eobj/libengine.a(a-c.o)       eobj/libengine.a(engine.o) (setvlinebpl)
+eobj/libengine.a(baselayer.o)
+                              eobj/libengine.a(sdlayer.o) (baselayer_init)
+eobj/libengine.a(engineinfo.o)
+                              eobj/libengine.a(baselayer.o) (_engine_cflags)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+                              eobj/libengine.a(sdlayer.o) (__aeabi_uidiv)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+                              obj/astub.o (__aeabi_idiv)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+                              eobj/libengine.a(engine.o) (__aeabi_dadd)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+                              eobj/libbuild.a(build.o) (__aeabi_dmul)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+                              eobj/libbuild.a(build.o) (__aeabi_d2iz)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+                              eobj/libengine.a(engine.o) (__aeabi_d2uiz)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+                              eobj/libengine.a(defs.o) (__aeabi_d2f)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+                              eobj/libengine.a(engine.o) (__aeabi_i2f)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+                              eobj/libbuild.a(build.o) (__aeabi_ldivmod)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o) (__div0)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o) (__gnu_ldivmod_helper)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o) (__divdi3)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o) (__udivdi3)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o) (__clz_tab)
+/usr/lib/libc_nonshared.a(elf-init.oS)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o (__libc_csu_fini)
+/usr/lib/libc_nonshared.a(atexit.oS)
+                              eobj/libengine.a(osd.o) (atexit)
+/usr/lib/libc_nonshared.a(stat.oS)
+                              eobj/libengine.a(cache1d.o) (stat)
+/usr/lib/libc_nonshared.a(fstat.oS)
+                              eobj/libengine.a(compat.o) (fstat)
+
+Allocating common symbols
+Common symbol       size              file
+
+globalbufplc        0x4               eobj/libengine.a(engine.o)
+waloff              0x9000            eobj/libengine.a(engine.o)
+xdimenscale         0x4               eobj/libengine.a(engine.o)
+singlobalang        0x4               eobj/libengine.a(engine.o)
+searchsector        0x2               eobj/libengine.a(engine.o)
+xoldtimerhandler    0x4               obj/astub.o
+tempbuf             0x1000            eobj/libbuild.a(build.o)
+validmode           0x1000            eobj/libengine.a(engine.o)
+names               0x38400           eobj/libbuild.a(build.o)
+dplc                0xc80             eobj/libengine.a(engine.o)
+prevspritestat      0x8000            eobj/libengine.a(engine.o)
+numsectors          0x2               eobj/libengine.a(engine.o)
+globalpicnum        0x2               eobj/libengine.a(engine.o)
+dmval               0x4               eobj/libengine.a(pragmas.o)
+asm4                0x4               eobj/libengine.a(engine.o)
+palookupoffse       0x10              eobj/libengine.a(engine.o)
+globalyscale        0x4               eobj/libengine.a(engine.o)
+fpuasm              0x4               eobj/libengine.a(engine.o)
+halfxdimen          0x4               eobj/libengine.a(engine.o)
+ydim                0x4               eobj/libengine.a(engine.o)
+vplce               0x10              eobj/libengine.a(engine.o)
+globaldclip         0x4               eobj/libengine.a(engine.o)
+globalx1            0x4               eobj/libengine.a(engine.o)
+parallaxyoffs       0x4               eobj/libengine.a(engine.o)
+ydimen              0x4               eobj/libengine.a(engine.o)
+wy2                 0x4               eobj/libengine.a(engine.o)
+curpalettefaded     0x400             eobj/libengine.a(engine.o)
+paleng              0x4               eobj/libengine.a(kplib.o)
+sector              0x28000           eobj/libengine.a(engine.o)
+searchit            0x2               eobj/libengine.a(engine.o)
+tilefilenum         0x2400            eobj/libengine.a(engine.o)
+tempextra           0x2               eobj/libbuild.a(build.o)
+globaly2            0x4               eobj/libengine.a(engine.o)
+globalpalwritten    0x4               eobj/libengine.a(engine.o)
+globalx             0x4               eobj/libengine.a(engine.o)
+parallaxyscale      0x4               eobj/libengine.a(engine.o)
+mousxplc            0x4               obj/astub.o
+tempcstat           0x2               eobj/libbuild.a(build.o)
+xdim                0x4               eobj/libengine.a(engine.o)
+picanm              0x9000            eobj/libengine.a(engine.o)
+globalshade         0x4               eobj/libengine.a(engine.o)
+picsiz              0x2400            eobj/libengine.a(engine.o)
+highlight           0x8000            eobj/libbuild.a(build.o)
+tilesizx            0x4800            eobj/libengine.a(engine.o)
+captureformat       0x1               eobj/libengine.a(engine.o)
+globalz             0x4               eobj/libengine.a(engine.o)
+startposx           0x4               eobj/libengine.a(engine.o)
+keyasciififoplc     0x1               eobj/libengine.a(sdlayer.o)
+slopalookup         0x10000           eobj/libengine.a(engine.o)
+globalposy          0x4               eobj/libengine.a(engine.o)
+totalclock          0x4               eobj/libengine.a(engine.o)
+midydim16           0x4               eobj/libengine.a(engine.o)
+xdimscale           0x4               eobj/libengine.a(engine.o)
+globalorientation   0x4               eobj/libengine.a(engine.o)
+keyasciififo        0x40              eobj/libengine.a(sdlayer.o)
+ebpbak              0x4               eobj/libengine.a(engine.o)
+asm1                0x4               eobj/libengine.a(engine.o)
+cac                 0x1b000           eobj/libengine.a(cache1d.o)
+yvel                0x4               obj/astub.o
+startumost          0xc80             eobj/libengine.a(engine.o)
+palcol              0x400             eobj/libengine.a(kplib.o)
+temphitag           0x2               eobj/libbuild.a(build.o)
+dmost               0xc80             eobj/libengine.a(engine.o)
+templotag           0x2               eobj/libbuild.a(build.o)
+globalvisibility    0x4               eobj/libengine.a(engine.o)
+automapping         0x1               eobj/libengine.a(engine.o)
+globalxpanning      0x4               eobj/libengine.a(engine.o)
+globalx2            0x4               eobj/libengine.a(engine.o)
+lastageclock        0x4               eobj/libengine.a(engine.o)
+pointhighlight      0x2               eobj/libengine.a(engine.o)
+wy1                 0x4               eobj/libengine.a(engine.o)
+timoff              0x4               obj/astub.o
+vel                 0x4               eobj/libbuild.a(build.o)
+nextspritestat      0x8000            eobj/libengine.a(engine.o)
+pskyoff             0x200             eobj/libengine.a(engine.o)
+tempvis             0x1               eobj/libbuild.a(build.o)
+randomseed          0x4               eobj/libengine.a(engine.o)
+BOSS1palette        0x300             obj/astub.o
+posz                0x4               eobj/libbuild.a(build.o)
+globaly3            0x4               eobj/libengine.a(engine.o)
+cursectnum          0x2               eobj/libbuild.a(build.o)
+numsprites          0x4               eobj/libbuild.a(build.o)
+globaluclip         0x4               eobj/libengine.a(engine.o)
+bufplce             0x10              eobj/libengine.a(engine.o)
+temppicnum          0x2               eobj/libbuild.a(build.o)
+REALMSpalette       0x300             obj/astub.o
+wx2                 0x4               eobj/libengine.a(engine.o)
+startdmost          0xc80             eobj/libengine.a(engine.o)
+globalyshift        0x1               eobj/libengine.a(engine.o)
+tilefileoffs        0x9000            eobj/libengine.a(engine.o)
+showinvisibility    0x1               eobj/libengine.a(engine.o)
+globalypanning      0x4               eobj/libengine.a(engine.o)
+visibility          0x4               eobj/libengine.a(engine.o)
+SLIMEpalette        0x300             obj/astub.o
+WATERpalette        0x300             obj/astub.o
+viewingrange        0x4               eobj/libengine.a(engine.o)
+globalposz          0x4               eobj/libengine.a(engine.o)
+numscans            0x2               eobj/libengine.a(engine.o)
+keyfifoend          0x1               eobj/libengine.a(sdlayer.o)
+globalang           0x2               eobj/libengine.a(engine.o)
+xdimenrecip         0x4               eobj/libengine.a(engine.o)
+coltype             0x1               eobj/libengine.a(kplib.o)
+show2dsector        0x200             eobj/libengine.a(engine.o)
+searchstat          0x2               eobj/libengine.a(engine.o)
+globalhisibility    0x4               eobj/libengine.a(engine.o)
+globalcursectnum    0x2               eobj/libengine.a(engine.o)
+ydim16              0x4               eobj/libengine.a(engine.o)
+windowy2            0x4               eobj/libengine.a(engine.o)
+asm2                0x4               eobj/libengine.a(engine.o)
+espbak              0x4               eobj/libengine.a(engine.o)
+parallaxtype        0x1               eobj/libengine.a(engine.o)
+GAMEpalette         0x300             obj/astub.o
+bitdepth            0x1               eobj/libengine.a(kplib.o)
+guniqhudid          0x4               eobj/libengine.a(engine.o)
+startposz           0x4               eobj/libengine.a(engine.o)
+numframes           0x4               eobj/libengine.a(engine.o)
+frameoffset         0x4               eobj/libengine.a(engine.o)
+palette             0x300             eobj/libengine.a(engine.o)
+validmodecnt        0x4               eobj/libengine.a(engine.o)
+numpalookups        0x2               eobj/libengine.a(engine.o)
+numhits             0x2               eobj/libengine.a(engine.o)
+halfxdim16          0x4               eobj/libengine.a(engine.o)
+sinviewingrangeglobalang
+                    0x4               eobj/libengine.a(engine.o)
+tempyrepeat         0x1               eobj/libbuild.a(build.o)
+globalx3            0x4               eobj/libengine.a(engine.o)
+windowx2            0x4               eobj/libengine.a(engine.o)
+reciptable          0x2000            eobj/libengine.a(engine.o)
+keyasciififoend     0x1               eobj/libengine.a(sdlayer.o)
+globalcisibility    0x4               eobj/libengine.a(engine.o)
+globalzx            0x4               eobj/libengine.a(engine.o)
+mousyplc            0x4               obj/astub.o
+spriteext           0x30c00           eobj/libengine.a(engine.o)
+xyaspect            0x4               eobj/libengine.a(engine.o)
+numbunches          0x2               eobj/libengine.a(engine.o)
+keyfifo             0x40              eobj/libengine.a(sdlayer.o)
+tempshade           0x1               eobj/libbuild.a(build.o)
+headspritestat      0x802             eobj/libengine.a(engine.o)
+posy                0x4               eobj/libbuild.a(build.o)
+yxaspect            0x4               eobj/libengine.a(engine.o)
+show2dsprite        0x800             eobj/libengine.a(engine.o)
+gotpic              0x480             eobj/libengine.a(engine.o)
+tsprite             0xb000            eobj/libengine.a(engine.o)
+britable            0x1000            eobj/libengine.a(engine.o)
+nextspritesect      0x8000            eobj/libengine.a(engine.o)
+show2dwall          0x800             eobj/libengine.a(engine.o)
+temppal             0x1               eobj/libbuild.a(build.o)
+globparaceilclip    0x1               eobj/libengine.a(engine.o)
+globparaflorclip    0x1               eobj/libengine.a(engine.o)
+sintable            0x1000            eobj/libengine.a(engine.o)
+tempxrepeat         0x1               eobj/libbuild.a(build.o)
+ppointhighlight     0x4               obj/astub.o
+globalzd            0x4               eobj/libengine.a(engine.o)
+headspritesect      0x2002            eobj/libengine.a(engine.o)
+uplc                0xc80             eobj/libengine.a(engine.o)
+numwalls            0x2               eobj/libengine.a(engine.o)
+viewingrangerecip   0x4               eobj/libengine.a(engine.o)
+hvel                0x4               eobj/libbuild.a(build.o)
+cosglobalang        0x4               eobj/libengine.a(engine.o)
+globalxshift        0x1               eobj/libengine.a(engine.o)
+wx1                 0x4               eobj/libengine.a(engine.o)
+globvis             0x4               eobj/libengine.a(engine.o)
+parallaxvisibility  0x4               eobj/libengine.a(engine.o)
+highlightsector     0x2000            eobj/libbuild.a(build.o)
+palookup            0x400             eobj/libengine.a(engine.o)
+asm3                0x4               eobj/libengine.a(engine.o)
+windowy1            0x4               eobj/libengine.a(engine.o)
+gotsector           0x200             eobj/libengine.a(engine.o)
+TITLEpalette        0x300             obj/astub.o
+prevspritesect      0x8000            eobj/libengine.a(engine.o)
+keyfifoplc          0x1               eobj/libengine.a(sdlayer.o)
+curpalette          0x400             eobj/libengine.a(engine.o)
+umost               0xc80             eobj/libengine.a(engine.o)
+bytesperline        0x4               eobj/libengine.a(sdlayer.o)
+startposy           0x4               eobj/libengine.a(engine.o)
+keystatus           0x100             eobj/libengine.a(sdlayer.o)
+numpages            0x4               eobj/libengine.a(engine.o)
+whitecol            0x4               eobj/libbuild.a(build.o)
+highlightcnt        0x2               eobj/libengine.a(engine.o)
+linehighlight       0x2               eobj/libengine.a(engine.o)
+svel                0x4               eobj/libbuild.a(build.o)
+startang            0x2               eobj/libengine.a(engine.o)
+globalhoriz         0x4               eobj/libengine.a(engine.o)
+cosviewingrangeglobalang
+                    0x4               eobj/libengine.a(engine.o)
+xvel                0x4               obj/astub.o
+windowx1            0x4               eobj/libengine.a(engine.o)
+globalshiftval      0x2               eobj/libengine.a(engine.o)
+spritesortcnt       0x4               eobj/libengine.a(engine.o)
+artversion          0x4               eobj/libengine.a(engine.o)
+pageoffset          0x4               eobj/libengine.a(engine.o)
+ang                 0x2               eobj/libbuild.a(build.o)
+walock              0x2400            eobj/libengine.a(engine.o)
+searchwall          0x2               eobj/libengine.a(engine.o)
+globalpisibility    0x4               eobj/libengine.a(engine.o)
+wall                0x80000           eobj/libengine.a(engine.o)
+posx                0x4               eobj/libbuild.a(build.o)
+globalposx          0x4               eobj/libengine.a(engine.o)
+startsectnum        0x2               eobj/libengine.a(engine.o)
+numtiles            0x4               eobj/libengine.a(engine.o)
+globaly             0x4               eobj/libengine.a(engine.o)
+imageSize           0x4               eobj/libengine.a(sdlayer.o)
+searchy             0x4               eobj/libengine.a(engine.o)
+angvel              0x4               eobj/libbuild.a(build.o)
+pskybits            0x2               eobj/libengine.a(engine.o)
+globalpal           0x4               eobj/libengine.a(engine.o)
+totalclocklock      0x4               eobj/libengine.a(engine.o)
+globaly1            0x4               eobj/libengine.a(engine.o)
+sprite              0xb0000           eobj/libengine.a(engine.o)
+ylookup             0x12c4            eobj/libengine.a(engine.o)
+vince               0x10              eobj/libengine.a(engine.o)
+tilesizy            0x4800            eobj/libengine.a(engine.o)
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/astub.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/build_icon.o
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libbuild.a(build.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libbuild.a(config.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(cache1d.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(compat.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(defs.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(engine.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(kplib.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(osd.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(pragmas.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(scriptfile.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(sdlayer.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(a-c.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(baselayer.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(engineinfo.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+LOAD obj/astub.o
+LOAD obj/build_icon.o
+LOAD eobj/libbuild.a
+LOAD eobj/libengine.a
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libm.so
+LOAD /usr/local/lib/libSDL.so
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libpthread.so
+START GROUP
+LOAD /lib/libpthread.so.0
+LOAD /usr/lib/libpthread_nonshared.a
+END GROUP
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libc.so
+START GROUP
+LOAD /lib/libc.so.6
+LOAD /usr/lib/libc_nonshared.a
+LOAD /lib/ld-linux.so.3
+END GROUP
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+                0x00008000                PROVIDE (__executable_start, 0x8000)
+                0x00008134                . = (0x8000 + SIZEOF_HEADERS)
+
+.interp         0x00008134       0x13
+ *(.interp)
+ .interp        0x00008134       0x13 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.note.ABI-tag   0x00008148       0x20
+ .note.ABI-tag  0x00008148       0x20 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x00008168      0x370
+ *(.hash)
+ .hash          0x00008168      0x370 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x000084d8      0x790
+ *(.dynsym)
+ .dynsym        0x000084d8      0x790 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.dynstr         0x00008c68      0x503
+ *(.dynstr)
+ .dynstr        0x00008c68      0x503 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.gnu.version    0x0000916c       0xf2
+ *(.gnu.version)
+ .gnu.version   0x0000916c       0xf2 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.gnu.version_d  0x00009260        0x0 load address 0x0000925e
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.gnu.version_r  0x00009260       0x80
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00009260       0x80 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.rel.dyn        0x000092e0       0x10
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x000092e0        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x000092e8        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt        0x000092f0      0x348
+ *(.rel.plt)
+ .rel.plt       0x000092f0      0x348 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x00009638        0xc
+ *(.init)
+ .init          0x00009638        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x00009638                _init
+ .init          0x00009640        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+
+.plt            0x00009644      0x500
+ *(.plt)
+ .plt           0x00009644      0x500 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x00009658                SDL_FreeSurface
+                0x00009664                open@@GLIBC_2.4
+                0x00009670                SDL_JoystickOpen
+                0x0000967c                qsort@@GLIBC_2.4
+                0x00009688                fileno@@GLIBC_2.4
+                0x00009694                mkdir@@GLIBC_2.4
+                0x000096a0                abort@@GLIBC_2.4
+                0x000096ac                vprintf@@GLIBC_2.4
+                0x000096b8                opendir@@GLIBC_2.4
+                0x000096c4                sysconf@@GLIBC_2.4
+                0x000096d0                getchar@@GLIBC_2.4
+                0x000096dc                __xstat@@GLIBC_2.4
+                0x000096e8                __libc_start_main@@GLIBC_2.4
+                0x000096f4                SDL_JoystickName
+                0x00009700                SDL_WM_SetCaption
+                0x00009718                rewind@@GLIBC_2.4
+                0x00009724                vsnprintf@@GLIBC_2.4
+                0x00009730                vsprintf@@GLIBC_2.4
+                0x0000973c                pow@@GLIBC_2.4
+                0x00009748                SDL_ShowCursor
+                0x00009754                strncpy@@GLIBC_2.4
+                0x00009760                fclose@@GLIBC_2.4
+                0x0000976c                fgets@@GLIBC_2.4
+                0x00009778                getenv@@GLIBC_2.4
+                0x00009784                strtod@@GLIBC_2.4
+                0x00009790                strchr@@GLIBC_2.4
+                0x0000979c                strcasecmp@@GLIBC_2.4
+                0x000097a8                __cxa_atexit@@GLIBC_2.4
+                0x000097b4                toupper@@GLIBC_2.4
+                0x000097c0                calloc@@GLIBC_2.4
+                0x000097cc                SDL_GetTicks
+                0x000097d8                fopen@@GLIBC_2.4
+                0x000097e4                SDL_UnlockSurface
+                0x000097f0                SDL_SetColors
+                0x000097fc                memset@@GLIBC_2.4
+                0x00009808                SDL_PollEvent
+                0x00009814                SDL_JoystickNumAxes
+                0x00009820                SDL_InitSubSystem
+                0x0000982c                SDL_LockSurface
+                0x00009838                strrchr@@GLIBC_2.4
+                0x00009844                SDL_VideoDriverName
+                0x00009850                SDL_JoystickEventState
+                0x0000985c                SDL_CreateRGBSurfaceFrom
+                0x00009868                SDL_SetVideoMode
+                0x00009874                SDL_NumJoysticks
+                0x00009880                SDL_Linked_Version
+                0x0000988c                free@@GLIBC_2.4
+                0x00009898                read@@GLIBC_2.4
+                0x000098a4                write@@GLIBC_2.4
+                0x000098b0                SDL_JoystickNumButtons
+                0x000098bc                fseek@@GLIBC_2.4
+                0x000098c8                SDL_GetVideoInfo
+                0x000098d4                SDL_Init
+                0x000098e0                strlen@@GLIBC_2.4
+                0x000098ec                strtoul@@GLIBC_2.4
+                0x000098f8                SDL_SetPalette
+                0x00009904                memcpy@@GLIBC_2.4
+                0x00009910                feof@@GLIBC_2.4
+                0x0000991c                ftell@@GLIBC_2.4
+                0x00009928                strtol@@GLIBC_2.4
+                0x00009934                strcpy@@GLIBC_2.4
+                0x00009940                atol@@GLIBC_2.4
+                0x0000994c                printf@@GLIBC_2.4
+                0x00009958                raise@@GLIBC_2.4
+                0x00009964                atoi@@GLIBC_2.4
+                0x00009970                close@@GLIBC_2.4
+                0x0000997c                fwrite@@GLIBC_2.4
+                0x00009988                closedir@@GLIBC_2.4
+                0x00009994                strncasecmp@@GLIBC_2.4
+                0x000099a0                SDL_EnableKeyRepeat
+                0x000099ac                setvbuf@@GLIBC_2.4
+                0x000099b8                fprintf@@GLIBC_2.4
+                0x000099c4                strdup@@GLIBC_2.4
+                0x000099d0                malloc@@GLIBC_2.4
+                0x000099dc                chdir@@GLIBC_2.4
+                0x000099e8                SDL_WM_GrabInput
+                0x000099f4                SDL_ListModes
+                0x00009a00                fputc@@GLIBC_2.4
+                0x00009a0c                getcwd@@GLIBC_2.4
+                0x00009a18                strcat@@GLIBC_2.4
+                0x00009a24                memmove@@GLIBC_2.4
+                0x00009a30                puts@@GLIBC_2.4
+                0x00009a3c                SDL_WM_SetIcon
+                0x00009a48                SDL_Flip
+                0x00009a54                SDL_Quit
+                0x00009a60                SDL_GetKeyName
+                0x00009a6c                lseek@@GLIBC_2.4
+                0x00009a78                __fxstat@@GLIBC_2.4
+                0x00009a84                vfprintf@@GLIBC_2.4
+                0x00009a90                SDL_JoystickNumHats
+                0x00009a9c                snprintf@@GLIBC_2.4
+                0x00009aa8                SDL_JoystickClose
+                0x00009ab4                fread@@GLIBC_2.4
+                0x00009ac0                SDL_GetError
+                0x00009acc                strncmp@@GLIBC_2.4
+                0x00009ad8                realloc@@GLIBC_2.4
+                0x00009ae4                readdir@@GLIBC_2.4
+                0x00009af0                tolower@@GLIBC_2.4
+                0x00009afc                strcmp@@GLIBC_2.4
+                0x00009b08                exit@@GLIBC_2.4
+                0x00009b14                __errno_location@@GLIBC_2.4
+                0x00009b20                sprintf@@GLIBC_2.4
+                0x00009b2c                fputs@@GLIBC_2.4
+                0x00009b38                SDL_EnableUNICODE
+
+.text           0x00009b48    0xa0308
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00009b48       0x38 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+                0x00009b48                _start
+ .text          0x00009b80       0x24 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .text          0x00009ba4       0x4c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .text          0x00009bf0     0xce80 obj/astub.o
+                0x00010a94                PrintStatus
+                0x00015ad0                ActorMem
+                0x0000a7d4                ExtGetWallCaption
+                0x0000c1fc                TotalMem
+                0x00010b38                SpriteName
+                0x00016380                SetGAMEPalette
+                0x000167c0                SearchSectorsBackward
+                0x00016508                SearchSectorsForward
+                0x000100b4                Show2dText
+                0x0001597c                Ver
+                0x00010c78                ReadPaletteTable
+                0x000106c8                ExtShowSpriteData
+                0x0000bd7c                ExtGetSpriteCaption
+                0x0000a594                ExtPreSaveMap
+                0x00010710                ExtEditSectorData
+                0x0000cdc8                ExtShowSectorData
+                0x000129a4                Keys2d
+                0x00014744                ExtCheckKeys
+                0x0000a424                putsprite
+                0x0000e668                ExtShowWallData
+                0x0000a5fc                ExtGetSectorCaption
+                0x00009c04                ExtLoadMap
+                0x000108ac                ExtEditSpriteData
+                0x00014f74                faketimerhandler
+                0x00016340                SetWATERPalette
+                0x00010db4                Keys3d
+                0x00010524                ShowHelpText
+                0x0000a2d0                overwritesprite
+                0x00013aec                ExtUnInit
+                0x000163c0                kensetpalette
+                0x00013c30                ExtAnalyzeSprites
+                0x00016300                SetSLIMEPalette
+                0x000102fc                Show3dText
+                0x00013878                ExtInit
+                0x00013b08                ExtPreCheckKeys
+                0x00010be0                ReadGamePalette
+                0x00009bf0                ExtPreLoadMap
+                0x0000a5a8                ExtSaveMap
+                0x00010758                ExtEditWallData
+                0x000162c0                SetBOSS1Palette
+ .text          0x00016a70        0x0 obj/build_icon.o
+ .text          0x00016a70    0x3b440 eobj/libbuild.a(build.o)
+                0x0004a9e4                getfilenames
+                0x00016a70                clearkeys
+                0x0004566c                getpoint
+                0x0004d5b0                updatenumsprites
+                0x000490f4                checksectorpointer
+                0x000513a0                AlignWalls
+                0x0004d680                copysector
+                0x0002b9b0                changechar
+                0x0005163c                AutoAlignWalls
+                0x0004b3c4                menuselect
+                0x00047dcc                deletepoint
+                0x0004cd64                loadnames
+                0x00050fcc                GetWallZPeg
+                0x00049b40                fixrepeats
+                0x0004883c                fixspritesectors
+                0x0004bce0                fillsector
+                0x00048288                deletesector
+                0x00048d50                movewalls
+                0x00045d1c                getpointhighlight
+                0x00046454                checkautoinsert
+                0x0004d2ac                printcoords16
+                0x00047388                insertpoint
+                0x0002d4ac                overheadeditor
+                0x00017610                showmouse
+                0x0004dc9c                showsectordata
+                0x0004c5a4                whitelinescan
+                0x0004a690                getnumber256
+                0x000507cc                printmessage16
+                0x00050ed8                initcrc
+                0x0004a4ac                getnumber16
+                0x0004a364                numloopsofsector
+                0x0004b220                sortfilenames
+                0x0004a904                clearfilenames
+                0x0002bab0                gettile
+                0x00046084                adjustmark
+                0x0002cb7c                drawtilescreen
+                0x0004e99c                showwalldata
+                0x00016d0c                app_main
+                0x00017724                editinput
+                0x000509d4                getclosestpointonwall
+                0x000508d0                printmessage256
+                0x00049fd8                loopinside
+                0x00050484                keytimerstuff
+                0x0004f6fc                showspritedata
+                0x00046ec0                flipwalls
+                0x00045814                getlinehighlight
+                0x00046808                clockdir
+                0x00049ea8                clearmidstatbar16
+ .text          0x00051eb0     0x117c eobj/libbuild.a(config.o)
+                0x00052198                loadsetup
+                0x00052d6c                writesetup
+ .text          0x0005302c     0x45e0 eobj/libengine.a(cache1d.o)
+                0x000531c8                allocache
+                0x00054d0c                kopen4load
+                0x00054480                initgroupfile
+                0x000559fc                beginsearchgroup
+                0x000564b8                dfread
+                0x000568f0                dfwrite
+                0x00054974                uninitsinglegroupfile
+                0x000541c4                openfrompath
+                0x00054bfc                uninitgroupfile
+                0x00055408                klseek
+                0x00055148                kread
+                0x0005400c                addsearchpath
+                0x00056d14                lzwcompress
+                0x000530f8                initcache
+                0x000558f4                kclose
+                0x00054328                fopenfrompath
+                0x00055638                kfilelength
+                0x00053944                suckcache
+                0x00053cd8                agecache
+                0x00056078                kdfread
+                0x00055e68                getsearchgroupnext
+                0x0005725c                lzwuncompress
+                0x000557a4                ktell
+ .text          0x0005760c      0xcac eobj/libengine.a(compat.o)
+                0x00057da4                Bstrtoken
+                0x00057f28                Bwildmatch
+                0x00057ab4                Bgetsystemdrives
+                0x00057bd8                Breaddir
+                0x0005760c                Bgethomedir
+                0x000580d8                Bstrlwr
+                0x00057b20                Bopendir
+                0x00057664                Bcorrectfilename
+                0x0005815c                Bstrupr
+                0x000581e0                Bgetsysmemsize
+                0x00057ad0                Bfilelength
+                0x00057d64                Bclosedir
+ .text          0x000582b8     0x1fc0 eobj/libengine.a(defs.o)
+                0x0005a214                loaddefinitionsfile
+ .text          0x0005a278    0x394e0 eobj/libengine.a(engine.o)
+                0x0007f114                ksqrt
+                0x00093700                setrollangle
+                0x000906e8                draw2dgrid
+                0x00092248                printext16
+                0x00093650                screencapture
+                0x0007eb40                inside
+                0x00092448                printext256
+                0x0008b77c                setviewtotile
+                0x0007e4ac                clipinsidebox
+                0x0008bea4                preparemirror
+                0x0008b3e8                setpalettefadeclamps
+                0x0008a050                rotatesprite
+                0x00076af4                drawmasks
+                0x0007c818                saveboard
+                0x0008dfdc                loopnumofsector
+                0x0008e150                setfirstwall
+                0x0007e004                allocatepermanenttile
+                0x0009371c                invalidatetile
+                0x00075888                uninitengine
+                0x0008cc60                getflorzofslope
+                0x000884e4                getzrange
+                0x00090a6c                draw2dscreen
+                0x0008d0e8                getzsofslope
+                0x0008c480                sectorofwall
+                0x0007e87c                clipinsideboxline
+                0x0007a634                loadboard
+                0x0008f344                drawline16
+                0x0007dcbc                loadtile
+                0x00088438                getmousevalues
+                0x00090628                clear2dscreen
+                0x000902e4                qsetmode640480
+                0x00082538                neartag
+                0x0008ad54                setbrightness
+                0x000901d0                qsetmode640350
+                0x0007e1f4                copytilepiece
+                0x0007792c                drawmapview
+                0x0008da88                alignflorslope
+                0x00093744                setpolymost2dview
+                0x000832a4                dragpoint
+                0x0007d150                nextpage
+                0x0008b508                clearview
+                0x000936c0                setrendermode
+                0x00087d54                updatesector
+                0x0008d53c                alignceilslope
+                0x0008b65c                plotpixel
+                0x000936e4                getrendermode
+                0x0005a2e8                hicsetpalettetint
+                0x0007f4bc                changespritesect
+                0x0008bc9c                squarerotatetile
+                0x0008ba34                setviewback
+                0x00089f38                setaspect
+                0x0005a278                kmalloc
+                0x0008a018                flushperms
+                0x00080154                hitscan
+                0x0007f77c                nextsectorneighborz
+                0x00087fcc                updatesectorz
+                0x0005a350                hicsetskybox
+                0x0007c7f4                loadmaphack
+                0x0008b048                setpalettefade
+                0x0008846c                krand
+                0x0008b6f0                getpixel
+                0x0005a37c                hicclearsubst
+                0x0007d500                loadpics
+                0x0005a3a4                polymost_drawtilescreen
+                0x0008c238                completemirror
+                0x0007f61c                changespritestat
+                0x0007f480                deletesprite
+                0x0007eea8                getangle
+                0x0008abe0                setvgapalette
+                0x0008fae8                drawcircle16
+                0x0008a844                makepalookup
+                0x0007f43c                insertsprite
+                0x00075604                initengine
+                0x00090440                qsetmodeany
+                0x0005a320                hicsetsubsttex
+                0x0007fafc                cansee
+                0x0005a2a0                kfree
+                0x000759c8                initspritelists
+                0x0007cda4                setgamemode
+                0x00083848                lastwall
+                0x00092ef8                screencapture_pcx
+                0x0008ec60                drawline256
+                0x0007f140                krecip
+                0x0007f168                setsprite
+                0x00092644                screencapture_tga
+                0x00089c64                setview
+                0x0005a2c0                getkensmessagecrc
+                0x000870dc                pushmove
+                0x0008b5f8                clearallviews
+                0x00075c74                drawrooms
+                0x0008c744                getceilzofslope
+                0x00088340                rotatepoint
+                0x00083978                clipmove
+ .text          0x00093758     0xb1e0 eobj/libengine.a(kplib.o)
+                0x0009cc54                kzuninit
+                0x0009e574                kzfilelength
+                0x0009c214                kprender
+                0x0009e5c0                kzseek
+                0x0009ccb4                kzaddstack
+                0x0009d1fc                kzopen
+                0x0009e6c0                kztell
+                0x0009e7f4                kpzload
+                0x0009d850                kzread
+                0x0009e7b8                kzclose
+                0x0009d588                kzfindfile
+                0x0009e70c                kzgetc
+                0x0009d548                kzfindfilestart
+                0x0009bc40                kpgetdim
+                0x0009e758                kzeof
+ .text          0x0009e938     0x3a5c eobj/libengine.a(osd.o)
+                0x000a0f70                OSD_Printf
+                0x000a1b98                OSD_RegisterVariable
+                0x0009ee5c                osd_internal_validate_string
+                0x0009f4bc                OSD_SetParameters
+                0x0009f15c                OSD_Cleanup
+                0x000a0944                OSD_ResizeDisplay
+                0x000a1168                OSD_DispatchQueued
+                0x0009f544                OSD_CaptureKey
+                0x0009f278                OSD_SetLogFile
+                0x0009f570                OSD_HandleKey
+                0x000a18cc                OSD_RegisterFunction
+                0x000a14a4                OSD_Dispatch
+                0x0009f314                OSD_SetFunctions
+                0x0009f1c4                OSD_Init
+                0x0009eea4                osd_internal_validate_boolean
+                0x000a0b70                OSD_ShowDisplay
+                0x0009ee80                osd_internal_validate_integer
+                0x000a0c10                OSD_Draw
+ .text          0x000a2394      0x4bc eobj/libengine.a(pragmas.o)
+                0x000a2740                copybufbyte
+                0x000a251c                copybuf
+                0x000a241c                qinterpolatedown16short
+                0x000a25a4                swapbuf4
+                0x000a24ac                clearbuf
+                0x000a264c                clearbufbyte
+                0x000a2394                qinterpolatedown16
+                0x000a27c8                copybufreverse
+ .text          0x000a2850     0x14ec eobj/libengine.a(scriptfile.o)
+                0x000a3ab4                scriptfile_getsymbolvalue
+                0x000a290c                scriptfile_gettoken
+                0x000a2bf0                scriptfile_getdouble
+                0x000a3ce0                scriptfile_clearsymbols
+                0x000a2e68                scriptfile_getbraces
+                0x000a38fc                scriptfile_close
+                0x000a2d74                scriptfile_getsymbol
+                0x000a37f0                scriptfile_fromstring
+                0x000a3b98                scriptfile_addsymbolvalue
+                0x000a36a8                scriptfile_fromfile
+                0x000a2a14                scriptfile_getnumber
+                0x000a3108                scriptfile_preparse
+                0x000a2984                scriptfile_getstring
+                0x000a3014                scriptfile_getlinum
+ .text          0x000a3d3c     0x2f40 eobj/libengine.a(sdlayer.o)
+                0x000a4a14                uninitmouse
+                0x000a4df0                getticks
+                0x000a4e08                gettimerfreq
+                0x000a4294                uninitsystem
+                0x000a6580                setgamma
+                0x000a3d3c                wm_msgbox
+                0x000a4cfc                sampletimer
+                0x000a492c                setkeypresscallback
+                0x000a6440                setpalette
+                0x000a3e54                wm_setapptitle
+                0x000a667c                handleevents
+                0x000a4958                setmousepresscallback
+                0x000a4c0c                inittimer
+                0x000a60a4                begindrawing
+                0x000a4370                initinput
+                0x000a4b28                readmousebstatus
+                0x000a4984                setjoypresscallback
+                0x000a4cc8                uninittimer
+                0x000a46f0                getjoyname
+                0x000a4bf8                releaseallbuttons
+                0x000a481c                bgetchar
+                0x000a48b8                bkbhit
+                0x000a42b0                initprintf
+                0x000a432c                debugprintf
+                0x000a49b0                initmouse
+                0x000a3d94                wm_ynbox
+                0x000a4f64                getvalidmodes
+                0x000a5cec                setvideomode
+                0x000a6070                resetvideomode
+                0x000a62a8                enddrawing
+                0x000a4a7c                readmousexy
+                0x000a5994                checkvideomode
+                0x000a3f00                initsystem
+                0x000a4a5c                grabmouse
+                0x000a63bc                showframe
+                0x000a4b90                setjoydeadzone
+                0x000a4690                getkeyname
+                0x000a464c                uninitinput
+                0x000a4e2c                installusertimercallback
+                0x000a48f4                bflushchars
+                0x000a4bb8                getjoydeadzone
+                0x000a3ea4                main
+ .text          0x000a6c7c     0x13e4 eobj/libengine.a(a-c.o)
+                0x000a721c                mvlineasm1
+                0x000a70f4                setupvlineasm
+                0x000a7300                setuptvlineasm
+                0x000a6f8c                slopevlin
+                0x000a6cf8                settransreverse
+                0x000a7c8c                tspritevline
+                0x000a76cc                thline
+                0x000a7eb4                setupdrawslab
+                0x000a6cd4                settransnormal
+                0x000a7508                msethlineshift
+                0x000a732c                tvlineasm1
+                0x000a768c                tsethlineshift
+                0x000a6ddc                hlineasm4
+                0x000a7ef4                drawslab
+                0x000a6d9c                setuphlineasm4
+                0x000a7548                mhline
+                0x000a7120                vlineasm1
+                0x000a6ca8                fixtransluscence
+                0x000a7fc8                stretchhline
+                0x000a7ab4                msetupspritevline
+                0x000a804c                mmxoverlay
+                0x000a71f0                setupmvlineasm
+                0x000a7c24                tsetupspritevline
+                0x000a6c7c                setvlinebpl
+                0x000a7958                setupspritevline
+                0x000a6f20                setupslopevlin
+                0x000a6d70                setpalookupaddress
+                0x000a79c0                spritevline
+                0x000a7b1c                mspritevline
+                0x000a6d1c                sethlinesizes
+ .text          0x000a8060      0x1b4 eobj/libengine.a(baselayer.o)
+                0x000a81b4                baselayer_init
+ .text          0x000a8214        0x0 eobj/libengine.a(engineinfo.o)
+ .text          0x000a8214      0x208 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+                0x000a8214                __udivsi3
+                0x000a8214                __aeabi_uidiv
+                0x000a8404                __aeabi_uidivmod
+ .text          0x000a841c      0x238 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+                0x000a841c                __divsi3
+                0x000a863c                __aeabi_idivmod
+                0x000a841c                __aeabi_idiv
+ .text          0x000a8654      0x3b8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+                0x000a8998                __floatundidf
+                0x000a8930                __floatsidf
+                0x000a890c                __aeabi_ui2d
+                0x000a8930                __aeabi_i2d
+                0x000a890c                __floatunsidf
+                0x000a865c                __subdf3
+                0x000a89ac                __floatdidf
+                0x000a8660                __adddf3
+                0x000a89ac                __aeabi_l2d
+                0x000a8958                __aeabi_f2d
+                0x000a8998                __aeabi_ul2d
+                0x000a8654                __aeabi_drsub
+                0x000a8958                __extendsfdf2
+                0x000a8660                __aeabi_dadd
+                0x000a865c                __aeabi_dsub
+ .text          0x000a8a0c      0x470 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+                0x000a8a0c                __muldf3
+                0x000a8c78                __divdf3
+                0x000a8a0c                __aeabi_dmul
+                0x000a8c78                __aeabi_ddiv
+ .text          0x000a8e7c       0x5c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+                0x000a8e7c                __fixdfsi
+                0x000a8e7c                __aeabi_d2iz
+ .text          0x000a8ed8       0x54 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+                0x000a8ed8                __fixunsdfsi
+                0x000a8ed8                __aeabi_d2uiz
+ .text          0x000a8f2c       0xa0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+                0x000a8f2c                __aeabi_d2f
+                0x000a8f2c                __truncdfsf2
+ .text          0x000a8fcc      0x250 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+                0x000a8fd8                __aeabi_fadd
+                0x000a91a0                __aeabi_l2f
+                0x000a9190                __aeabi_ul2f
+                0x000a8fd4                __subsf3
+                0x000a9170                __floatsisf
+                0x000a8fd8                __addsf3
+                0x000a8fcc                __aeabi_frsub
+                0x000a91a0                __floatdisf
+                0x000a8fd4                __aeabi_fsub
+                0x000a9168                __aeabi_ui2f
+                0x000a9170                __aeabi_i2f
+                0x000a9168                __floatunsisf
+                0x000a9190                __floatundisf
+ .text          0x000a921c       0x1c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+                0x000a921c                __aeabi_ldivmod
+ .text          0x000a9238       0x10 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+                0x000a9238                __div0
+ .text          0x000a9248       0x88 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+                0x000a928c                __gnu_ldivmod_helper
+                0x000a9248                __gnu_uldivmod_helper
+ .text          0x000a92d0      0x59c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+                0x000a92d0                __divdi3
+ .text          0x000a986c      0x530 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+                0x000a986c                __udivdi3
+ .text          0x000a9d9c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .text          0x000a9d9c       0x6c /usr/lib/libc_nonshared.a(elf-init.oS)
+                0x000a9d9c                __libc_csu_fini
+                0x000a9da0                __libc_csu_init
+ .text          0x000a9e08       0x28 /usr/lib/libc_nonshared.a(atexit.oS)
+                0x000a9e08                atexit
+ .text          0x000a9e30       0x10 /usr/lib/libc_nonshared.a(stat.oS)
+                0x000a9e30                __stat
+                0x000a9e30                stat
+ .text          0x000a9e40       0x10 /usr/lib/libc_nonshared.a(fstat.oS)
+                0x000a9e40                __fstat
+                0x000a9e40                fstat
+ .text          0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .text          0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(.text.*personality*)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .glue_7t       0x000a9e50        0x0 obj/astub.o
+ .glue_7t       0x000a9e50        0x0 obj/build_icon.o
+ .glue_7t       0x000a9e50        0x0 eobj/libbuild.a(build.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libbuild.a(config.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(cache1d.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(compat.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(defs.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(engine.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(kplib.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(osd.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(pragmas.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(scriptfile.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(sdlayer.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(a-c.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(baselayer.o)
+ .glue_7t       0x000a9e50        0x0 eobj/libengine.a(engineinfo.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libm.so
+ .glue_7t       0x000a9e50        0x0 /usr/local/lib/libSDL.so
+ .glue_7t       0x000a9e50        0x0 /lib/libpthread.so.0
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .glue_7t       0x000a9e50        0x0 /lib/libc.so.6
+ .glue_7t       0x000a9e50        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .glue_7t       0x000a9e50        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .glue_7t       0x000a9e50        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .glue_7t       0x000a9e50        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .glue_7t       0x000a9e50        0x0 /lib/ld-linux.so.3
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .glue_7t       0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(.glue_7)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .glue_7        0x000a9e50        0x0 obj/astub.o
+ .glue_7        0x000a9e50        0x0 obj/build_icon.o
+ .glue_7        0x000a9e50        0x0 eobj/libbuild.a(build.o)
+ .glue_7        0x000a9e50        0x0 eobj/libbuild.a(config.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(cache1d.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(compat.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(defs.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(engine.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(kplib.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(osd.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(pragmas.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(scriptfile.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(sdlayer.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(a-c.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(baselayer.o)
+ .glue_7        0x000a9e50        0x0 eobj/libengine.a(engineinfo.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libm.so
+ .glue_7        0x000a9e50        0x0 /usr/local/lib/libSDL.so
+ .glue_7        0x000a9e50        0x0 /lib/libpthread.so.0
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .glue_7        0x000a9e50        0x0 /lib/libc.so.6
+ .glue_7        0x000a9e50        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .glue_7        0x000a9e50        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .glue_7        0x000a9e50        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .glue_7        0x000a9e50        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .glue_7        0x000a9e50        0x0 /lib/ld-linux.so.3
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .glue_7        0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .vfp11_veneer  0x000a9e50        0x0 obj/astub.o
+ .vfp11_veneer  0x000a9e50        0x0 obj/build_icon.o
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libbuild.a(build.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libbuild.a(config.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(cache1d.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(compat.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(defs.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(engine.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(kplib.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(osd.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(pragmas.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(scriptfile.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(sdlayer.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(a-c.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(baselayer.o)
+ .vfp11_veneer  0x000a9e50        0x0 eobj/libengine.a(engineinfo.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libm.so
+ .vfp11_veneer  0x000a9e50        0x0 /usr/local/lib/libSDL.so
+ .vfp11_veneer  0x000a9e50        0x0 /lib/libpthread.so.0
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .vfp11_veneer  0x000a9e50        0x0 /lib/libc.so.6
+ .vfp11_veneer  0x000a9e50        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .vfp11_veneer  0x000a9e50        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .vfp11_veneer  0x000a9e50        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .vfp11_veneer  0x000a9e50        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .vfp11_veneer  0x000a9e50        0x0 /lib/ld-linux.so.3
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .vfp11_veneer  0x000a9e50        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+
+.fini           0x000a9e50        0x8
+ *(.fini)
+ .fini          0x000a9e50        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x000a9e50                _fini
+ .fini          0x000a9e54        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+                0x000a9e58                PROVIDE (__etext, .)
+                0x000a9e58                PROVIDE (_etext, .)
+                0x000a9e58                PROVIDE (etext, .)
+
+.rodata         0x000a9e58     0x4320
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.cst4   0x000a9e58        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+                0x000a9e58                _IO_stdin_used
+ .rodata        0x000a9e5c      0xd2c obj/astub.o
+ .rodata        0x000aab88      0xbc0 eobj/libbuild.a(build.o)
+ .rodata        0x000ab748      0xcb0 eobj/libbuild.a(config.o)
+ .rodata        0x000ac3f8      0x214 eobj/libengine.a(cache1d.o)
+ .rodata        0x000ac60c      0x124 eobj/libengine.a(compat.o)
+ .rodata        0x000ac730      0x884 eobj/libengine.a(defs.o)
+ .rodata        0x000acfb4      0x164 eobj/libengine.a(engine.o)
+ .rodata        0x000ad118       0x84 eobj/libengine.a(kplib.o)
+ .rodata        0x000ad19c      0x604 eobj/libengine.a(osd.o)
+ .rodata        0x000ad7a0       0x20 eobj/libengine.a(pragmas.o)
+ .rodata        0x000ad7c0       0xe0 eobj/libengine.a(scriptfile.o)
+ .rodata        0x000ad8a0      0x4b0 eobj/libengine.a(sdlayer.o)
+ .rodata        0x000add50      0x14c eobj/libengine.a(baselayer.o)
+ .rodata        0x000ade9c      0x1dc eobj/libengine.a(engineinfo.o)
+                0x000ade9c                _engine_cflags
+                0x000ae03c                _engine_compiler
+                0x000adfdc                _engine_uname
+                0x000adf9c                _engine_libs
+                0x000ae060                _engine_date
+ .rodata        0x000ae078      0x100 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+                0x000ae078                __clz_tab
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x000ae178        0x0
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab     0x000ae178        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .ARM.extab     0x000ae178        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .ARM.extab     0x000ae178        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+                0x000ae178                __exidx_start = .
+
+.ARM.exidx      0x000ae178       0x18
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x000ae178        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .ARM.exidx     0x000ae180        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x000ae188        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+                0x000ae190                __exidx_end = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x000ae190        0x4
+ *(.eh_frame)
+ .eh_frame      0x000ae190        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x000ae194                . = (ALIGN (0x8000) - ((0x8000 - .) & 0x7fff))
+                0x000b6194                . = (0x8000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x000b6194        0x0
+                0x000b6194                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x000b6194                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x000b6194        0x4
+                0x000b6194                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x000b6194        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+                0x000b6198                PROVIDE (__init_array_end, .)
+
+.fini_array     0x000b6198        0x4
+                0x000b6198                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ .fini_array    0x000b6198        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x000b619c                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr            0x000b619c        0x4
+ *(.jcr)
+ .jcr           0x000b619c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .jcr           0x000b619c        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x000b61a0      0x110
+ *(.dynamic)
+ .dynamic       0x000b61a0      0x110 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x000b61a0                _DYNAMIC
+                0x000b62b0                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.got            0x000b62b0      0x1bc
+ *(.got.plt)
+ .got.plt       0x000b62b0      0x1b0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x000b62b0                _GLOBAL_OFFSET_TABLE_
+ *(.got)
+ .got           0x000b6460        0xc /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.data           0x000b6470     0x4964
+                0x000b6470                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000b6470        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+                0x000b6470                data_start
+ .data          0x000b6474        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .data          0x000b6474        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+                0x000b6474                __dso_handle
+ .data          0x000b6478       0xf4 obj/astub.o
+                0x000b6489                keys
+                0x000b64c4                Mode32d
+                0x000b64e0                SKILLMODE
+                0x000b6565                skill
+                0x000b6528                Help3d
+                0x000b64a0                Help2d
+                0x000b6480                option
+                0x000b64f4                ALPHABEASTLOADOMAGA1
+                0x000b647c                defsfilename
+                0x000b6506                MinD
+                0x000b6566                framerateon
+                0x000b6478                Myname
+                0x000b6568                startwin_labeltext
+                0x000b6504                MinRate
+                0x000b6508                Slow
+ .data          0x000b656c     0x2818 obj/build_icon.o
+                0x000b8d6c                sdlappicon
+ .data          0x000b8d84      0x148 eobj/libbuild.a(build.o)
+                0x000b8d84                buildkeys
+                0x000b8db0                zlock
+                0x000b8db8                grid
+                0x000b8dac                bppgame
+                0x000b8d9c                xdim2d
+                0x000b8d98                horiz
+                0x000b8dca                somethingintab
+                0x000b8dc8                highlightsectorcnt
+                0x000b8da4                xdimgame
+                0x000b8dbc                showtags
+                0x000b8da8                ydimgame
+                0x000b8dc0                zoom
+                0x000b8dc4                gettilezoom
+                0x000b8dba                gridlock
+                0x000b8da0                ydim2d
+                0x000b8db4                kensplayerheight
+ .data          0x000b8ecc       0x68 eobj/libbuild.a(config.o)
+ .data          0x000b8f34      0x21c eobj/libengine.a(cache1d.o)
+ .data          0x000b9150        0x0 eobj/libengine.a(compat.o)
+ .data          0x000b9150      0x308 eobj/libengine.a(defs.o)
+ .data          0x000b9458     0x15e0 eobj/libengine.a(engine.o)
+                0x000baa2c                clipmoveboxtracenum
+                0x000baa30                drawlinepat
+                0x000ba518                hitscangoaly
+                0x000b9500                textfont
+                0x000b9478                pow2char
+                0x000b945c                dommxoverlay
+                0x000ba500                engineerrstr
+                0x000b9480                pow2long
+                0x000ba51c                vgapal16
+                0x000b9474                mapversion
+                0x000ba920                msens
+                0x000ba91c                searchx
+                0x000b9d00                smalltextfont
+                0x000ba508                xdimen
+                0x000b9460                beforedrawrooms
+                0x000ba92c                apptitle
+                0x000ba514                hitscangoalx
+ .data          0x000baa38      0x190 eobj/libengine.a(kplib.o)
+ .data          0x000babc8       0x44 eobj/libengine.a(osd.o)
+ .data          0x000bac0c        0x0 eobj/libengine.a(pragmas.o)
+ .data          0x000bac0c        0x0 eobj/libengine.a(scriptfile.o)
+ .data          0x000bac0c      0x1c4 eobj/libengine.a(sdlayer.o)
+                0x000bac10                appactive
+                0x000bac18                yres
+                0x000bac14                xres
+                0x000bac0c                _buildargc
+                0x000bac1c                modechange
+ .data          0x000badd0        0x0 eobj/libengine.a(a-c.o)
+ .data          0x000badd0        0x4 eobj/libengine.a(baselayer.o)
+                0x000badd0                baselayer_onvideomodechange
+ .data          0x000badd4        0x0 eobj/libengine.a(engineinfo.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .data          0x000badd4        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .data          0x000badd4        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .data          0x000badd4        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .data          0x000badd4        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .data          0x000badd4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(.gnu.linkonce.d.*personality*)
+
+.data1
+ *(.data1)
+                0x000badd4                _edata = .
+                0x000badd4                PROVIDE (edata, .)
+                0x000badd4                __bss_start = .
+                0x000badd4                __bss_start__ = .
+
+.bss            0x000badd8   0x37fe00
+ *(.dynbss)
+ *fill*         0x000badd8        0x0 00
+ .dynbss        0x000badd8        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x000badd8                stderr@@GLIBC_2.4
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000baddc        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .bss           0x000baddc        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .bss           0x000baddc        0x1 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ *fill*         0x000baddd        0x3 00
+ .bss           0x000bade0    0x204a0 obj/astub.o
+                0x000bade8                intro
+                0x000bade4                nosprites
+                0x000bade5                purpleon
+                0x000bade0                nextvoxid
+                0x000bade6                tabgraphic
+ .bss           0x000db280        0x0 obj/build_icon.o
+ .bss           0x000db280     0xd064 eobj/libbuild.a(build.o)
+                0x000db28a                asksave
+                0x000db288                defaultspritecstat
+                0x000db280                brightness
+                0x000db284                zmode
+ .bss           0x000e82e4        0x0 eobj/libbuild.a(config.o)
+ .bss           0x000e82e4     0x45f0 eobj/libengine.a(cache1d.o)
+                0x000e82e8                zerochar
+                0x000e82f0                cacnum
+                0x000e82ec                cachestart
+                0x000e82f4                agecount
+                0x000e82e4                cachecount
+ .bss           0x000ec8d4        0x0 eobj/libengine.a(compat.o)
+ .bss           0x000ec8d4        0x4 eobj/libengine.a(defs.o)
+ .bss           0x000ec8d8    0xa32c4 eobj/libengine.a(engine.o)
+                0x000ec8e0                cachesize
+                0x000ec8f8                palfadedelta
+                0x000ec8f4                palfadeclamp
+                0x000ec8dc                artsize
+                0x000ec8e8                transluc
+                0x000ec8ec                paletteloaded
+                0x000ec8d8                pic
+                0x000ec8ee                editstatus
+                0x000ec8e4                qsetmode
+                0x000ec8f9                cachedebug
+                0x000ec8f0                palfadergb
+ .bss           0x0018fb9c    0x3e77c eobj/libengine.a(kplib.o)
+ .bss           0x001ce318     0xc4b0 eobj/libengine.a(osd.o)
+ .bss           0x001da7c8        0x0 eobj/libengine.a(pragmas.o)
+ .bss           0x001da7c8        0xc eobj/libengine.a(scriptfile.o)
+ .bss           0x001da7d4     0x1eb4 eobj/libengine.a(sdlayer.o)
+                0x001da7d8                quitevent
+                0x001da7f8                mouseb
+                0x001da809                joynumaxes
+                0x001da7f4                mousey
+                0x001da7e4                frameplace
+                0x001da80b                joynumhats
+                0x001da814                mousepresscallback
+                0x001da7ef                inputdevices
+                0x001da7dc                bpp
+                0x001da804                joyhat
+                0x001da7f0                mousex
+                0x001da7ee                nofog
+                0x001da80c                joyaxespresent
+                0x001da7e8                lockcount
+                0x001da800                joyb
+                0x001da7e0                fullscreen
+                0x001da7d4                _buildargv
+                0x001da808                joyisgamepad
+                0x001da7ed                videomodereset
+                0x001da80a                joynumbuttons
+                0x001da818                joypresscallback
+                0x001da7ec                offscreenrendering
+                0x001da7fc                joyaxis
+                0x001da810                keypresscallback
+ .bss           0x001dc688       0x2c eobj/libengine.a(a-c.o)
+ .bss           0x001dc6b4        0x0 eobj/libengine.a(baselayer.o)
+ .bss           0x001dc6b4        0x0 eobj/libengine.a(engineinfo.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .bss           0x001dc6b4        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .bss           0x001dc6b4        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .bss           0x001dc6b4        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .bss           0x001dc6b4        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .bss           0x001dc6b4        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(COMMON)
+ COMMON         0x001dc6b4     0x121c obj/astub.o
+                0x001dc6b4                xoldtimerhandler
+                0x001dc6b8                mousxplc
+                0x001dc6bc                yvel
+                0x001dc6c0                timoff
+                0x001dc6c4                BOSS1palette
+                0x001dc9c4                REALMSpalette
+                0x001dccc4                SLIMEpalette
+                0x001dcfc4                WATERpalette
+                0x001dd2c4                GAMEpalette
+                0x001dd5c4                mousyplc
+                0x001dd5c8                ppointhighlight
+                0x001dd5cc                TITLEpalette
+                0x001dd8cc                xvel
+ COMMON         0x001dd8d0    0x43440 eobj/libbuild.a(build.o)
+                0x001dd8d0                tempbuf
+                0x001de8d0                names
+                0x00216cd0                tempextra
+                0x00216cd2                tempcstat
+                0x00216cd4                highlight
+                0x0021ecd4                temphitag
+                0x0021ecd6                templotag
+                0x0021ecd8                vel
+                0x0021ecdc                tempvis
+                0x0021ece0                posz
+                0x0021ece4                cursectnum
+                0x0021ece8                numsprites
+                0x0021ecec                temppicnum
+                0x0021ecee                tempyrepeat
+                0x0021ecef                tempshade
+                0x0021ecf0                posy
+                0x0021ecf4                temppal
+                0x0021ecf5                tempxrepeat
+                0x0021ecf8                hvel
+                0x0021ecfc                highlightsector
+                0x00220cfc                whitecol
+                0x00220d00                svel
+                0x00220d04                ang
+                0x00220d08                posx
+                0x00220d0c                angvel
+ COMMON         0x00220d10    0x1b000 eobj/libengine.a(cache1d.o)
+                0x00220d10                cac
+ COMMON         0x0023bd10   0x1fe930 eobj/libengine.a(engine.o)
+                0x0023bd10                globalbufplc
+                0x0023bd14                waloff
+                0x00244d14                xdimenscale
+                0x00244d18                singlobalang
+                0x00244d1c                searchsector
+                0x00244d20                validmode
+                0x00245d20                dplc
+                0x002469a0                prevspritestat
+                0x0024e9a0                numsectors
+                0x0024e9a2                globalpicnum
+                0x0024e9a4                asm4
+                0x0024e9a8                palookupoffse
+                0x0024e9b8                globalyscale
+                0x0024e9bc                fpuasm
+                0x0024e9c0                halfxdimen
+                0x0024e9c4                ydim
+                0x0024e9c8                vplce
+                0x0024e9d8                globaldclip
+                0x0024e9dc                globalx1
+                0x0024e9e0                parallaxyoffs
+                0x0024e9e4                ydimen
+                0x0024e9e8                wy2
+                0x0024e9ec                curpalettefaded
+                0x0024edec                sector
+                0x00276dec                searchit
+                0x00276dee                tilefilenum
+                0x002791f0                globaly2
+                0x002791f4                globalpalwritten
+                0x002791f8                globalx
+                0x002791fc                parallaxyscale
+                0x00279200                xdim
+                0x00279204                picanm
+                0x00282204                globalshade
+                0x00282208                picsiz
+                0x00284608                tilesizx
+                0x00288e08                captureformat
+                0x00288e0c                globalz
+                0x00288e10                startposx
+                0x00288e14                slopalookup
+                0x00298e14                globalposy
+                0x00298e18                totalclock
+                0x00298e1c                midydim16
+                0x00298e20                xdimscale
+                0x00298e24                globalorientation
+                0x00298e28                ebpbak
+                0x00298e2c                asm1
+                0x00298e30                startumost
+                0x00299ab0                dmost
+                0x0029a730                globalvisibility
+                0x0029a734                automapping
+                0x0029a738                globalxpanning
+                0x0029a73c                globalx2
+                0x0029a740                lastageclock
+                0x0029a744                pointhighlight
+                0x0029a748                wy1
+                0x0029a74c                nextspritestat
+                0x002a274c                pskyoff
+                0x002a294c                randomseed
+                0x002a2950                globaly3
+                0x002a2954                globaluclip
+                0x002a2958                bufplce
+                0x002a2968                wx2
+                0x002a296c                startdmost
+                0x002a35ec                globalyshift
+                0x002a35f0                tilefileoffs
+                0x002ac5f0                showinvisibility
+                0x002ac5f4                globalypanning
+                0x002ac5f8                visibility
+                0x002ac5fc                viewingrange
+                0x002ac600                globalposz
+                0x002ac604                numscans
+                0x002ac606                globalang
+                0x002ac608                xdimenrecip
+                0x002ac60c                show2dsector
+                0x002ac80c                searchstat
+                0x002ac810                globalhisibility
+                0x002ac814                globalcursectnum
+                0x002ac818                ydim16
+                0x002ac81c                windowy2
+                0x002ac820                asm2
+                0x002ac824                espbak
+                0x002ac828                parallaxtype
+                0x002ac82c                guniqhudid
+                0x002ac830                startposz
+                0x002ac834                numframes
+                0x002ac838                frameoffset
+                0x002ac83c                palette
+                0x002acb3c                validmodecnt
+                0x002acb40                numpalookups
+                0x002acb42                numhits
+                0x002acb44                halfxdim16
+                0x002acb48                sinviewingrangeglobalang
+                0x002acb4c                globalx3
+                0x002acb50                windowx2
+                0x002acb54                reciptable
+                0x002aeb54                globalcisibility
+                0x002aeb58                globalzx
+                0x002aeb5c                spriteext
+                0x002df75c                xyaspect
+                0x002df760                numbunches
+                0x002df762                headspritestat
+                0x002dff64                yxaspect
+                0x002dff68                show2dsprite
+                0x002e0768                gotpic
+                0x002e0be8                tsprite
+                0x002ebbe8                britable
+                0x002ecbe8                nextspritesect
+                0x002f4be8                show2dwall
+                0x002f53e8                globparaceilclip
+                0x002f53e9                globparaflorclip
+                0x002f53ea                sintable
+                0x002f63ec                globalzd
+                0x002f63f0                headspritesect
+                0x002f83f2                uplc
+                0x002f9072                numwalls
+                0x002f9074                viewingrangerecip
+                0x002f9078                cosglobalang
+                0x002f907c                globalxshift
+                0x002f9080                wx1
+                0x002f9084                globvis
+                0x002f9088                parallaxvisibility
+                0x002f908c                palookup
+                0x002f948c                asm3
+                0x002f9490                windowy1
+                0x002f9494                gotsector
+                0x002f9694                prevspritesect
+                0x00301694                curpalette
+                0x00301a94                umost
+                0x00302714                startposy
+                0x00302718                numpages
+                0x0030271c                highlightcnt
+                0x0030271e                linehighlight
+                0x00302720                startang
+                0x00302724                globalhoriz
+                0x00302728                cosviewingrangeglobalang
+                0x0030272c                windowx1
+                0x00302730                globalshiftval
+                0x00302734                spritesortcnt
+                0x00302738                artversion
+                0x0030273c                pageoffset
+                0x00302740                walock
+                0x00304b40                searchwall
+                0x00304b44                globalpisibility
+                0x00304b48                wall
+                0x00384b48                globalposx
+                0x00384b4c                startsectnum
+                0x00384b50                numtiles
+                0x00384b54                globaly
+                0x00384b58                searchy
+                0x00384b5c                pskybits
+                0x00384b60                globalpal
+                0x00384b64                totalclocklock
+                0x00384b68                globaly1
+                0x00384b6c                sprite
+                0x00434b6c                ylookup
+                0x00435e30                vince
+                0x00435e40                tilesizy
+ COMMON         0x0043a640      0x406 eobj/libengine.a(kplib.o)
+                0x0043a640                paleng
+                0x0043a644                palcol
+                0x0043aa44                coltype
+                0x0043aa45                bitdepth
+ *fill*         0x0043aa46        0x2 00
+ COMMON         0x0043aa48        0x4 eobj/libengine.a(pragmas.o)
+                0x0043aa48                dmval
+ COMMON         0x0043aa4c      0x18c eobj/libengine.a(sdlayer.o)
+                0x0043aa4c                keyasciififoplc
+                0x0043aa4d                keyasciififo
+                0x0043aa8d                keyfifoend
+                0x0043aa8e                keyasciififoend
+                0x0043aa8f                keyfifo
+                0x0043aacf                keyfifoplc
+                0x0043aad0                bytesperline
+                0x0043aad4                keystatus
+                0x0043abd4                imageSize
+                0x0043abd8                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0043abd8                _bss_end__ = .
+                0x0043abd8                __bss_end__ = .
+                0x0043abd8                . = ALIGN (0x4)
+                0x0043abd8                . = ALIGN (0x4)
+                0x0043abd8                __end__ = .
+                0x0043abd8                _end = .
+                0x0043abd8                PROVIDE (end, .)
+                0x0043abd8                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x370
+ *(.comment)
+ .comment       0x00000000       0x37 obj/astub.o
+ .comment       0x00000037       0x37 obj/build_icon.o
+ .comment       0x0000006e       0x37 eobj/libbuild.a(build.o)
+ .comment       0x000000a5       0x37 eobj/libbuild.a(config.o)
+ .comment       0x000000dc       0x37 eobj/libengine.a(cache1d.o)
+ .comment       0x00000113       0x37 eobj/libengine.a(compat.o)
+ .comment       0x0000014a       0x37 eobj/libengine.a(defs.o)
+ .comment       0x00000181       0x37 eobj/libengine.a(engine.o)
+ .comment       0x000001b8       0x37 eobj/libengine.a(kplib.o)
+ .comment       0x000001ef       0x37 eobj/libengine.a(osd.o)
+ .comment       0x00000226       0x37 eobj/libengine.a(pragmas.o)
+ .comment       0x0000025d       0x37 eobj/libengine.a(scriptfile.o)
+ .comment       0x00000294       0x37 eobj/libengine.a(sdlayer.o)
+ .comment       0x000002cb       0x37 eobj/libengine.a(a-c.o)
+ .comment       0x00000302       0x37 eobj/libengine.a(baselayer.o)
+ .comment       0x00000339       0x37 eobj/libengine.a(engineinfo.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x1c0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 obj/astub.o
+ .debug_aranges
+                0x00000020       0x20 eobj/libbuild.a(build.o)
+ .debug_aranges
+                0x00000040       0x20 eobj/libbuild.a(config.o)
+ .debug_aranges
+                0x00000060       0x20 eobj/libengine.a(cache1d.o)
+ .debug_aranges
+                0x00000080       0x20 eobj/libengine.a(compat.o)
+ .debug_aranges
+                0x000000a0       0x20 eobj/libengine.a(defs.o)
+ .debug_aranges
+                0x000000c0       0x20 eobj/libengine.a(engine.o)
+ .debug_aranges
+                0x000000e0       0x20 eobj/libengine.a(kplib.o)
+ .debug_aranges
+                0x00000100       0x20 eobj/libengine.a(osd.o)
+ .debug_aranges
+                0x00000120       0x20 eobj/libengine.a(pragmas.o)
+ .debug_aranges
+                0x00000140       0x20 eobj/libengine.a(scriptfile.o)
+ .debug_aranges
+                0x00000160       0x20 eobj/libengine.a(sdlayer.o)
+ .debug_aranges
+                0x00000180       0x20 eobj/libengine.a(a-c.o)
+ .debug_aranges
+                0x000001a0       0x20 eobj/libengine.a(baselayer.o)
+
+.debug_pubnames
+                0x00000000     0x2acb
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x4b9 obj/astub.o
+ .debug_pubnames
+                0x000004b9       0x21 obj/build_icon.o
+ .debug_pubnames
+                0x000004da      0x594 eobj/libbuild.a(build.o)
+ .debug_pubnames
+                0x00000a6e       0x2f eobj/libbuild.a(config.o)
+ .debug_pubnames
+                0x00000a9d      0x1c3 eobj/libengine.a(cache1d.o)
+ .debug_pubnames
+                0x00000c60       0xcc eobj/libengine.a(compat.o)
+ .debug_pubnames
+                0x00000d2c       0x2a eobj/libengine.a(defs.o)
+ .debug_pubnames
+                0x00000d56     0x10e3 eobj/libengine.a(engine.o)
+ .debug_pubnames
+                0x00001e39      0x104 eobj/libengine.a(kplib.o)
+ .debug_pubnames
+                0x00001f3d      0x197 eobj/libengine.a(osd.o)
+ .debug_pubnames
+                0x000020d4       0xa9 eobj/libengine.a(pragmas.o)
+ .debug_pubnames
+                0x0000217d      0x176 eobj/libengine.a(scriptfile.o)
+ .debug_pubnames
+                0x000022f3      0x50a eobj/libengine.a(sdlayer.o)
+ .debug_pubnames
+                0x000027fd      0x21b eobj/libengine.a(a-c.o)
+ .debug_pubnames
+                0x00002a18       0x45 eobj/libengine.a(baselayer.o)
+ .debug_pubnames
+                0x00002a5d       0x6e eobj/libengine.a(engineinfo.o)
+
+.debug_info     0x00000000    0x1f480
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x232c obj/astub.o
+ .debug_info    0x0000232c      0x209 obj/build_icon.o
+ .debug_info    0x00002535     0x3d06 eobj/libbuild.a(build.o)
+ .debug_info    0x0000623b      0x6d5 eobj/libbuild.a(config.o)
+ .debug_info    0x00006910     0x1885 eobj/libengine.a(cache1d.o)
+ .debug_info    0x00008195     0x1955 eobj/libengine.a(compat.o)
+ .debug_info    0x00009aea     0x1148 eobj/libengine.a(defs.o)
+ .debug_info    0x0000ac32     0xa9b5 eobj/libengine.a(engine.o)
+ .debug_info    0x000155e7     0x30e0 eobj/libengine.a(kplib.o)
+ .debug_info    0x000186c7     0x199b eobj/libengine.a(osd.o)
+ .debug_info    0x0001a062      0x4a5 eobj/libengine.a(pragmas.o)
+ .debug_info    0x0001a507      0x89d eobj/libengine.a(scriptfile.o)
+ .debug_info    0x0001ada4     0x35b0 eobj/libengine.a(sdlayer.o)
+ .debug_info    0x0001e354      0xc31 eobj/libengine.a(a-c.o)
+ .debug_info    0x0001ef85      0x38b eobj/libengine.a(baselayer.o)
+ .debug_info    0x0001f310      0x170 eobj/libengine.a(engineinfo.o)
+
+.debug_abbrev   0x00000000     0x1791
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1d5 obj/astub.o
+ .debug_abbrev  0x000001d5       0x97 obj/build_icon.o
+ .debug_abbrev  0x0000026c      0x1df eobj/libbuild.a(build.o)
+ .debug_abbrev  0x0000044b       0xfe eobj/libbuild.a(config.o)
+ .debug_abbrev  0x00000549      0x1e7 eobj/libengine.a(cache1d.o)
+ .debug_abbrev  0x00000730      0x13c eobj/libengine.a(compat.o)
+ .debug_abbrev  0x0000086c      0x129 eobj/libengine.a(defs.o)
+ .debug_abbrev  0x00000995      0x2a6 eobj/libengine.a(engine.o)
+ .debug_abbrev  0x00000c3b      0x23a eobj/libengine.a(kplib.o)
+ .debug_abbrev  0x00000e75      0x244 eobj/libengine.a(osd.o)
+ .debug_abbrev  0x000010b9       0x90 eobj/libengine.a(pragmas.o)
+ .debug_abbrev  0x00001149      0x140 eobj/libengine.a(scriptfile.o)
+ .debug_abbrev  0x00001289      0x2d1 eobj/libengine.a(sdlayer.o)
+ .debug_abbrev  0x0000155a       0xda eobj/libengine.a(a-c.o)
+ .debug_abbrev  0x00001634      0x10b eobj/libengine.a(baselayer.o)
+ .debug_abbrev  0x0000173f       0x52 eobj/libengine.a(engineinfo.o)
+
+.debug_line     0x00000000     0x6eda
+ *(.debug_line)
+ .debug_line    0x00000000      0x85d obj/astub.o
+ .debug_line    0x0000085d       0x52 obj/build_icon.o
+ .debug_line    0x000008af     0x2093 eobj/libbuild.a(build.o)
+ .debug_line    0x00002942      0x1b4 eobj/libbuild.a(config.o)
+ .debug_line    0x00002af6      0x4a8 eobj/libengine.a(cache1d.o)
+ .debug_line    0x00002f9e      0x173 eobj/libengine.a(compat.o)
+ .debug_line    0x00003111      0x226 eobj/libengine.a(defs.o)
+ .debug_line    0x00003337     0x2598 eobj/libengine.a(engine.o)
+ .debug_line    0x000058cf      0x98b eobj/libengine.a(kplib.o)
+ .debug_line    0x0000625a      0x450 eobj/libengine.a(osd.o)
+ .debug_line    0x000066aa       0x77 eobj/libengine.a(pragmas.o)
+ .debug_line    0x00006721      0x16d eobj/libengine.a(scriptfile.o)
+ .debug_line    0x0000688e      0x44c eobj/libengine.a(sdlayer.o)
+ .debug_line    0x00006cda      0x13f eobj/libengine.a(a-c.o)
+ .debug_line    0x00006e19       0x8c eobj/libengine.a(baselayer.o)
+ .debug_line    0x00006ea5       0x35 eobj/libengine.a(engineinfo.o)
+
+.debug_frame    0x00000000     0x3f70
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x4a4 obj/astub.o
+ .debug_frame   0x000004a4      0x730 eobj/libbuild.a(build.o)
+ .debug_frame   0x00000bd4       0x78 eobj/libbuild.a(config.o)
+ .debug_frame   0x00000c4c      0x328 eobj/libengine.a(cache1d.o)
+ .debug_frame   0x00000f74      0x168 eobj/libengine.a(compat.o)
+ .debug_frame   0x000010dc       0x6c eobj/libengine.a(defs.o)
+ .debug_frame   0x00001148     0x180c eobj/libengine.a(engine.o)
+ .debug_frame   0x00002954      0x5a8 eobj/libengine.a(kplib.o)
+ .debug_frame   0x00002efc      0x3a8 eobj/libengine.a(osd.o)
+ .debug_frame   0x000032a4       0xd0 eobj/libengine.a(pragmas.o)
+ .debug_frame   0x00003374      0x1fc eobj/libengine.a(scriptfile.o)
+ .debug_frame   0x00003570      0x4e4 eobj/libengine.a(sdlayer.o)
+ .debug_frame   0x00003a54      0x2e4 eobj/libengine.a(a-c.o)
+ .debug_frame   0x00003d38       0x7c eobj/libengine.a(baselayer.o)
+ .debug_frame   0x00003db4       0x28 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .debug_frame   0x00003ddc       0x28 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .debug_frame   0x00003e04       0x58 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .debug_frame   0x00003e5c       0x38 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .debug_frame   0x00003e94       0x38 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .debug_frame   0x00003ecc       0x44 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_frame   0x00003f10       0x20 /usr/lib/libc_nonshared.a(atexit.oS)
+ .debug_frame   0x00003f30       0x20 /usr/lib/libc_nonshared.a(stat.oS)
+ .debug_frame   0x00003f50       0x20 /usr/lib/libc_nonshared.a(fstat.oS)
+
+.debug_str      0x00000000      0x648
+ *(.debug_str)
+ .debug_str     0x00000000       0x31 obj/astub.o
+ .debug_str     0x00000031        0xb obj/build_icon.o
+ .debug_str     0x0000003c       0xc3 eobj/libbuild.a(build.o)
+ .debug_str     0x000000ff       0x61 eobj/libengine.a(cache1d.o)
+ .debug_str     0x00000160       0x60 eobj/libengine.a(defs.o)
+ .debug_str     0x000001c0      0x22b eobj/libengine.a(engine.o)
+ .debug_str     0x000003eb       0x8c eobj/libengine.a(kplib.o)
+ .debug_str     0x00000477       0x23 eobj/libengine.a(osd.o)
+ .debug_str     0x0000049a      0x18b eobj/libengine.a(sdlayer.o)
+ .debug_str     0x00000625       0x23 eobj/libengine.a(a-c.o)
+
+.debug_loc      0x00000000     0x5bc7
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x6e3 obj/astub.o
+ .debug_loc     0x000006e3      0xa6a eobj/libbuild.a(build.o)
+ .debug_loc     0x0000114d       0x81 eobj/libbuild.a(config.o)
+ .debug_loc     0x000011ce      0x489 eobj/libengine.a(cache1d.o)
+ .debug_loc     0x00001657      0x204 eobj/libengine.a(compat.o)
+ .debug_loc     0x0000185b       0x81 eobj/libengine.a(defs.o)
+ .debug_loc     0x000018dc     0x229a eobj/libengine.a(engine.o)
+ .debug_loc     0x00003b76      0x8e7 eobj/libengine.a(kplib.o)
+ .debug_loc     0x0000445d      0x5c2 eobj/libengine.a(osd.o)
+ .debug_loc     0x00004a1f      0x158 eobj/libengine.a(pragmas.o)
+ .debug_loc     0x00004b77      0x2db eobj/libengine.a(scriptfile.o)
+ .debug_loc     0x00004e52      0x7bf eobj/libengine.a(sdlayer.o)
+ .debug_loc     0x00005611      0x50a eobj/libengine.a(a-c.o)
+ .debug_loc     0x00005b1b       0xac eobj/libengine.a(baselayer.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(build elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x37
+ .ARM.attributes
+                0x00000000       0x2d /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .ARM.attributes
+                0x0000002d       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .ARM.attributes
+                0x0000005c       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .ARM.attributes
+                0x0000008b       0x2f obj/astub.o
+ .ARM.attributes
+                0x000000ba       0x2d obj/build_icon.o
+ .ARM.attributes
+                0x000000e7       0x2f eobj/libbuild.a(build.o)
+ .ARM.attributes
+                0x00000116       0x2f eobj/libbuild.a(config.o)
+ .ARM.attributes
+                0x00000145       0x2f eobj/libengine.a(cache1d.o)
+ .ARM.attributes
+                0x00000174       0x2f eobj/libengine.a(compat.o)
+ .ARM.attributes
+                0x000001a3       0x2f eobj/libengine.a(defs.o)
+ .ARM.attributes
+                0x000001d2       0x2f eobj/libengine.a(engine.o)
+ .ARM.attributes
+                0x00000201       0x2f eobj/libengine.a(kplib.o)
+ .ARM.attributes
+                0x00000230       0x2f eobj/libengine.a(osd.o)
+ .ARM.attributes
+                0x0000025f       0x2f eobj/libengine.a(pragmas.o)
+ .ARM.attributes
+                0x0000028e       0x2f eobj/libengine.a(scriptfile.o)
+ .ARM.attributes
+                0x000002bd       0x2f eobj/libengine.a(sdlayer.o)
+ .ARM.attributes
+                0x000002ec       0x2f eobj/libengine.a(a-c.o)
+ .ARM.attributes
+                0x0000031b       0x2f eobj/libengine.a(baselayer.o)
+ .ARM.attributes
+                0x0000034a       0x2d eobj/libengine.a(engineinfo.o)
+ .ARM.attributes
+                0x00000377       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000038b       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x0000039f       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x000003b3       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x000003c7       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x000003db       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x000003ef       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x00000403       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x00000417       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x0000042b       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x0000043f       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x0000046e       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x0000049d       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x000004cc       0x2d /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .ARM.attributes
+                0x000004f9       0x2f /usr/lib/libc_nonshared.a(elf-init.oS)
+ .ARM.attributes
+                0x00000528       0x2f /usr/lib/libc_nonshared.a(atexit.oS)
+ .ARM.attributes
+                0x00000557       0x2f /usr/lib/libc_nonshared.a(stat.oS)
+ .ARM.attributes
+                0x00000586       0x2f /usr/lib/libc_nonshared.a(fstat.oS)
+ .ARM.attributes
+                0x000005b5       0x2d /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .ARM.attributes
+                0x000005e2       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o

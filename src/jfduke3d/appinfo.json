@@ -1,0 +1,16 @@
+{
+       "title": "Duke3D",
+       "id": "org.webosinternals.duke3d",
+       "version": "1.0.0",
+       "release_date": "25-Feb-2010",
+       "vendor": "WebOS Internals",
+       "vendor_email": "support@webos-internals.org",
+       "vendor_url": "http://www.webos-internals.org/wiki/Application:Duke3D",
+       "type": "game",
+       "main": "duke3d",
+       "icon": "icon.png",
+       "removable": "true",
+       "noWindow": true,
+       "noDeprecatedStyles": true
+}
+

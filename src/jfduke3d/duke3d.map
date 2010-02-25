@@ -1,0 +1,3494 @@
+Archive member included because of file (symbol)
+
+eobj/libengine.a(cache1d.o)   obj/game.o (cacnum)
+eobj/libengine.a(compat.o)    obj/game.o (Bgethomedir)
+eobj/libengine.a(crc32.o)     obj/osdcmds.o (crc32init)
+eobj/libengine.a(defs.o)      obj/game.o (loaddefinitionsfile)
+eobj/libengine.a(engine.o)    eobj/libengine.a(cache1d.o) (kmalloc)
+eobj/libengine.a(kplib.o)     eobj/libengine.a(cache1d.o) (kzaddstack)
+eobj/libengine.a(mmulti.o)    obj/game.o (myconnectindex)
+eobj/libengine.a(osd.o)       obj/osdcmds.o (osd_internal_validate_boolean)
+eobj/libengine.a(pragmas.o)   eobj/libengine.a(engine.o) (qinterpolatedown16)
+eobj/libengine.a(scriptfile.o)
+                              eobj/libengine.a(defs.o) (scriptfile_gettoken)
+eobj/libengine.a(sdlayer.o)   obj/game.o (_buildargc)
+eobj/libengine.a(a-c.o)       eobj/libengine.a(engine.o) (setvlinebpl)
+eobj/libengine.a(baselayer.o)
+                              eobj/libengine.a(sdlayer.o) (baselayer_init)
+eobj/libengine.a(engineinfo.o)
+                              eobj/libengine.a(baselayer.o) (_engine_cflags)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+                              eobj/libengine.a(sdlayer.o) (__aeabi_uidiv)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+                              obj/game.o (__aeabi_idiv)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+                              eobj/libengine.a(engine.o) (__aeabi_dadd)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+                              eobj/libengine.a(engine.o) (__aeabi_dmul)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+                              eobj/libengine.a(engine.o) (__aeabi_d2uiz)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+                              eobj/libengine.a(defs.o) (__aeabi_d2f)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+                              obj/menues.o (__aeabi_i2f)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+                              obj/game.o (__aeabi_ldivmod)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o) (__div0)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o) (__gnu_ldivmod_helper)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o) (__divdi3)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o) (__udivdi3)
+/srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o) (__clz_tab)
+/usr/lib/libc_nonshared.a(elf-init.oS)
+                              /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o (__libc_csu_fini)
+/usr/lib/libc_nonshared.a(atexit.oS)
+                              eobj/libengine.a(osd.o) (atexit)
+/usr/lib/libc_nonshared.a(stat.oS)
+                              eobj/libengine.a(cache1d.o) (stat)
+/usr/lib/libc_nonshared.a(fstat.oS)
+                              eobj/libengine.a(compat.o) (fstat)
+
+Allocating common symbols
+Common symbol       size              file
+
+AutoAim             0x4               obj/config.o
+MouseFunctions      0x30              obj/config.o
+globalbufplc        0x4               eobj/libengine.a(engine.o)
+waloff              0x9000            eobj/libengine.a(engine.o)
+xdimenscale         0x4               eobj/libengine.a(engine.o)
+singlobalang        0x4               eobj/libengine.a(engine.o)
+playerquitflag      0x10              obj/global.o
+quotebotgoal        0x4               obj/game.o
+curipos             0x2000            obj/global.o
+spriteq             0x800             obj/global.o
+searchsector        0x2               eobj/libengine.a(engine.o)
+myang               0x2               obj/global.o
+soundsiz            0x708             obj/global.o
+JoystickAnalogueDead
+                    0x20              obj/config.o
+osdcmd_cheatsinfo_stat
+                    0xc               obj/osdcmds.o
+tempbuf             0x800             obj/global.o
+validmode           0x1000            eobj/libengine.a(engine.o)
+dplc                0xc80             eobj/libengine.a(engine.o)
+rpgblastradius      0x4               obj/global.o
+playerreadyflag     0x10              obj/global.o
+prevspritestat      0x8000            eobj/libengine.a(engine.o)
+numsectors          0x2               eobj/libengine.a(engine.o)
+dashow2dsector      0x200             obj/player.o
+JoystickAnalogueSaturate
+                    0x20              obj/config.o
+qe                  0x1               obj/game.o
+myyvel              0x4               obj/global.o
+KB_LastScan         0x1               obj/keyboard.o
+globalpicnum        0x2               eobj/libengine.a(engine.o)
+dmval               0x4               eobj/libengine.a(pragmas.o)
+asm4                0x4               eobj/libengine.a(engine.o)
+palookupoffse       0x10              eobj/libengine.a(engine.o)
+globalyscale        0x4               eobj/libengine.a(engine.o)
+multiwho            0x1               obj/global.o
+multipos            0x1               obj/global.o
+neartagsector       0x2               obj/global.o
+fpuasm              0x4               eobj/libengine.a(engine.o)
+halfxdimen          0x4               eobj/libengine.a(engine.o)
+bouncemineblastradius
+                    0x4               obj/global.o
+haltsoundhack       0x1               obj/sector.o
+ReverseStereo       0x4               obj/config.o
+ydim                0x4               eobj/libengine.a(engine.o)
+user_quote_time     0x8               obj/game.o
+cheatbuflen         0x1               obj/game.o
+syncval             0x1000            obj/global.o
+vplce               0x10              eobj/libengine.a(engine.o)
+buttonstat          0x2               obj/menues.o
+recfilep            0x4               obj/game.o
+msy                 0x2000            obj/global.o
+searchparent        0x2000            obj/player.o
+mymembuf            0x4               obj/global.o
+shrinkerblastradius
+                    0x4               obj/global.o
+connectpoint2       0x40              eobj/libengine.a(mmulti.o)
+insptr              0x4               obj/global.o
+globaldclip         0x4               eobj/libengine.a(engine.o)
+globalx1            0x4               eobj/libengine.a(engine.o)
+frags               0x200             obj/global.o
+mirrorsector        0x80              obj/global.o
+screenpeek          0x2               obj/global.o
+sbar                0x66              obj/global.o
+killit_flag         0x1               obj/global.o
+myhoriz             0x2               obj/global.o
+mycursectnum        0x2               obj/global.o
+parallaxyoffs       0x4               eobj/libengine.a(engine.o)
+avgavel             0x4               obj/global.o
+numlumps            0x4               obj/rts.o
+ydimen              0x4               eobj/libengine.a(engine.o)
+global_random       0x2               obj/global.o
+wy2                 0x4               eobj/libengine.a(engine.o)
+curpalettefaded     0x400             eobj/libengine.a(engine.o)
+typebuflen          0x1               obj/global.o
+FXDevice            0x4               obj/config.o
+paleng              0x4               eobj/libengine.a(kplib.o)
+sector              0x28000           eobj/libengine.a(engine.o)
+searchit            0x2               eobj/libengine.a(engine.o)
+tilefilenum         0x2400            eobj/libengine.a(engine.o)
+ototalclock         0x4               obj/global.o
+globaly2            0x4               eobj/libengine.a(engine.o)
+globalpalwritten    0x4               eobj/libengine.a(engine.o)
+globalx             0x4               eobj/libengine.a(engine.o)
+parallaxyscale      0x4               eobj/libengine.a(engine.o)
+clouds              0x100             obj/global.o
+max_ammo_amount     0x30              obj/global.o
+myhorizoff          0x2               obj/global.o
+xdim                0x4               eobj/libengine.a(engine.o)
+tripbombblastradius
+                    0x4               obj/global.o
+multiwhat           0x1               obj/global.o
+picanm              0x9000            eobj/libengine.a(engine.o)
+titlepal            0x300             obj/game.o
+globalshade         0x4               eobj/libengine.a(engine.o)
+impact_damage       0x4               obj/global.o
+picsiz              0x2400            eobj/libengine.a(engine.o)
+ps                  0x3a80            obj/global.o
+myx                 0x4               obj/global.o
+tilesizx            0x4800            eobj/libengine.a(engine.o)
+MusicDevice         0x4               obj/config.o
+myminlag            0x40              obj/global.o
+soundvo             0x384             obj/global.o
+omyang              0x2               obj/global.o
+po                  0x100             obj/global.o
+betaname            0x50              obj/global.o
+env_music_fn        0x34              obj/global.o
+captureformat       0x1               eobj/libengine.a(engine.o)
+globalz             0x4               eobj/libengine.a(engine.o)
+omyhorizoff         0x2               obj/global.o
+startposx           0x4               eobj/libengine.a(engine.o)
+spriteqloc          0x2               obj/global.o
+MouseDigitalFunctions
+                    0x10              obj/config.o
+labelcnt            0x4               obj/global.o
+display_mirror      0x1               obj/global.o
+horiz               0x4               obj/global.o
+keyasciififoplc     0x1               eobj/libengine.a(sdlayer.o)
+slopalookup         0x10000           eobj/libengine.a(engine.o)
+globalposy          0x4               eobj/libengine.a(engine.o)
+totalclock          0x4               eobj/libengine.a(engine.o)
+playerswhenstarted  0x1               obj/game.o
+labeltype           0x4               obj/global.o
+midydim16           0x4               eobj/libengine.a(engine.o)
+animategoal         0x100             obj/global.o
+syncstat            0x1               obj/global.o
+xdimscale           0x4               eobj/libengine.a(engine.o)
+globalorientation   0x4               eobj/libengine.a(engine.o)
+syncvaltottail      0x4               obj/global.o
+mirrorcnt           0x2               obj/global.o
+mi                  0x4               obj/menues.o
+keyasciififo        0x40              eobj/libengine.a(sdlayer.o)
+ebpbak              0x4               eobj/libengine.a(engine.o)
+lastcontroltime     0x4               obj/player.o
+hittype             0x120000          obj/global.o
+designertime        0xb0              obj/global.o
+multiflag           0x1               obj/global.o
+actortype           0x2400            obj/global.o
+asm1                0x4               eobj/libengine.a(engine.o)
+avgsvel             0x4               obj/global.o
+cac                 0x1b000           eobj/libengine.a(cache1d.o)
+morterblastradius   0x4               obj/global.o
+msx                 0x2000            obj/global.o
+startumost          0xc80             eobj/libengine.a(engine.o)
+recbuf              0x50              obj/game.o
+palcol              0x400             eobj/libengine.a(kplib.o)
+dmost               0xc80             eobj/libengine.a(engine.o)
+soundm              0x1c2             obj/global.o
+nonsharedtimer      0x4               obj/game.o
+slimepal            0x300             obj/game.o
+globalvisibility    0x4               eobj/libengine.a(engine.o)
+automapping         0x1               eobj/libengine.a(engine.o)
+deletespot          0x2               obj/menues.o
+packbuf             0x240             obj/global.o
+globalxpanning      0x4               eobj/libengine.a(engine.o)
+globalx2            0x4               eobj/libengine.a(engine.o)
+lastageclock        0x4               eobj/libengine.a(engine.o)
+numcyclers          0x2               obj/global.o
+pointhighlight      0x2               eobj/libengine.a(engine.o)
+omyz                0x4               obj/global.o
+VoiceToggle         0x4               obj/config.o
+wy1                 0x4               eobj/libengine.a(engine.o)
+loc                 0xc               obj/global.o
+mirrorwall          0x80              obj/global.o
+vel                 0x4               obj/global.o
+nextspritestat      0x8000            eobj/libengine.a(engine.o)
+ready2send          0x1               obj/global.o
+numplayers          0x4               eobj/libengine.a(mmulti.o)
+last_fifty          0x2               obj/menues.o
+pskyoff             0x200             eobj/libengine.a(engine.o)
+soundps             0x384             obj/global.o
+myxvel              0x4               obj/global.o
+user_quote          0x200             obj/game.o
+ControllerType      0x4               obj/config.o
+animwall            0x1000            obj/global.o
+neartagwall         0x2               obj/global.o
+randomseed          0x4               eobj/libengine.a(engine.o)
+myhorizbak          0x400             obj/global.o
+globaly3            0x4               eobj/libengine.a(engine.o)
+animatevel          0x100             obj/global.o
+last_menu           0x2               obj/menues.o
+sh                  0x2               obj/menues.o
+music_fn            0x23c             obj/global.o
+restorepalette      0x1               obj/game.o
+myjumpingcounter    0x2               obj/global.o
+typebuf             0x29              obj/global.o
+globaluclip         0x4               eobj/libengine.a(engine.o)
+bufplce             0x10              eobj/libengine.a(engine.o)
+cloudx              0x100             obj/global.o
+wx2                 0x4               eobj/libengine.a(engine.o)
+cp                  0x1               obj/game.o
+startdmost          0xc80             eobj/libengine.a(engine.o)
+cyclers             0xc00             obj/global.o
+globalyshift        0x1               eobj/libengine.a(engine.o)
+totalreccnt         0x4               obj/game.o
+tilefileoffs        0x9000            eobj/libengine.a(engine.o)
+showinvisibility    0x1               eobj/libengine.a(engine.o)
+globalypanning      0x4               eobj/libengine.a(engine.o)
+visibility          0x4               eobj/libengine.a(engine.o)
+minfo               0x18              obj/menues.o
+pub                 0x1               obj/global.o
+viewingrange        0x4               eobj/libengine.a(engine.o)
+myname              0x20              obj/global.o
+globalposz          0x4               eobj/libengine.a(engine.o)
+turnheldtime        0x4               obj/player.o
+recsync             0x7620            obj/global.o
+oldipos             0x2000            obj/global.o
+numscans            0x2               eobj/libengine.a(engine.o)
+keyfifoend          0x1               eobj/libengine.a(sdlayer.o)
+globalang           0x2               eobj/libengine.a(engine.o)
+connecthead         0x4               eobj/libengine.a(mmulti.o)
+xdimenrecip         0x4               eobj/libengine.a(engine.o)
+coltype             0x1               eobj/libengine.a(kplib.o)
+partime             0xb0              obj/global.o
+show2dsector        0x200             eobj/libengine.a(engine.o)
+level_names         0x5ac             obj/global.o
+level_file_names    0x1600            obj/global.o
+searchstat          0x2               eobj/libengine.a(engine.o)
+searchsect          0x2000            obj/player.o
+omyy                0x4               obj/global.o
+globalhisibility    0x4               eobj/libengine.a(engine.o)
+globalcursectnum    0x2               eobj/libengine.a(engine.o)
+ydim16              0x4               eobj/libengine.a(engine.o)
+animatecnt          0x4               obj/global.o
+windowy2            0x4               eobj/libengine.a(engine.o)
+onbar               0x2               obj/menues.o
+avgbits             0x4               obj/global.o
+tempwallptr         0x4               obj/game.o
+asm2                0x4               eobj/libengine.a(engine.o)
+espbak              0x4               eobj/libengine.a(engine.o)
+parallaxtype        0x1               eobj/libengine.a(engine.o)
+bitdepth            0x1               eobj/libengine.a(kplib.o)
+earthquaketime      0x1               obj/global.o
+guniqhudid          0x4               eobj/libengine.a(engine.o)
+startposz           0x4               eobj/libengine.a(engine.o)
+max_armour_amount   0x4               obj/global.o
+animatesect         0x80              obj/global.o
+numframes           0x4               eobj/libengine.a(engine.o)
+myybak              0x400             obj/global.o
+actorscrptr         0x9000            obj/global.o
+frameoffset         0x4               eobj/libengine.a(engine.o)
+palette             0x300             eobj/libengine.a(engine.o)
+parsing_actor       0x4               obj/global.o
+seenineblastradius  0x4               obj/global.o
+error               0x1               obj/global.o
+myonground          0x1               obj/global.o
+validmodecnt        0x4               eobj/libengine.a(engine.o)
+numpalookups        0x2               eobj/libengine.a(engine.o)
+JoystickAnalogueAxes
+                    0x20              obj/config.o
+tempsectorpicnum    0x4000            obj/game.o
+NumVoices           0x4               obj/config.o
+camerashitable      0x1               obj/global.o
+quotebot            0x4               obj/game.o
+labelcode           0x4               obj/global.o
+movefifosendplc     0x4               obj/global.o
+numhits             0x2               eobj/libengine.a(engine.o)
+halfxdim16          0x4               eobj/libengine.a(engine.o)
+rtsptr              0x4               obj/game.o
+dsync               0xc0              obj/global.o
+lastvisinc          0x4               obj/player.o
+sinviewingrangeglobalang
+                    0x4               eobj/libengine.a(engine.o)
+globalx3            0x4               eobj/libengine.a(engine.o)
+windowx2            0x4               eobj/libengine.a(engine.o)
+reciptable          0x2000            eobj/libengine.a(engine.o)
+numclouds           0x2               obj/global.o
+myzbak              0x400             obj/global.o
+keyasciififoend     0x1               eobj/libengine.a(sdlayer.o)
+globalcisibility    0x4               eobj/libengine.a(engine.o)
+MusicPtr            0x23280           obj/global.o
+music_pointer       0x4               obj/global.o
+textptr             0x4               obj/global.o
+globalzx            0x4               eobj/libengine.a(engine.o)
+fakemovefifoplc     0x4               obj/global.o
+spriteext           0x30c00           eobj/libengine.a(engine.o)
+soundpr             0x1c2             obj/global.o
+xyaspect            0x4               eobj/libengine.a(engine.o)
+JoystickDigitalFunctions
+                    0x40              obj/config.o
+numbunches          0x2               eobj/libengine.a(engine.o)
+keyfifo             0x40              eobj/libengine.a(sdlayer.o)
+avghorz             0x4               obj/global.o
+JoystickFunctions   0x120             obj/config.o
+KeyboardKeys        0x6a              obj/config.o
+headspritestat      0x802             eobj/libengine.a(engine.o)
+avgfvel             0x4               obj/global.o
+Sound               0x1c20            obj/global.o
+myxbak              0x400             obj/global.o
+numplayersprites    0x1               obj/global.o
+yxaspect            0x4               eobj/libengine.a(engine.o)
+show2dsprite        0x800             eobj/libengine.a(engine.o)
+gotpic              0x480             eobj/libengine.a(engine.o)
+MouseAnalogueAxes   0x8               obj/config.o
+AmbienceToggle      0x4               obj/config.o
+cloudy              0x100             obj/global.o
+tsprite             0xb000            eobj/libengine.a(engine.o)
+fta_quotes          0x3000            obj/global.o
+britable            0x1000            eobj/libengine.a(engine.o)
+label               0x4               obj/global.o
+nextspritesect      0x8000            eobj/libengine.a(engine.o)
+show2dwall          0x800             eobj/libengine.a(engine.o)
+MixRate             0x4               obj/config.o
+omyhoriz            0x2               obj/global.o
+nomorelogohack      0x1               obj/game.o
+syncvalhead         0x40              obj/global.o
+myz                 0x4               obj/global.o
+screencapt          0x1               obj/game.o
+title_zoom          0x2               obj/global.o
+globparaceilclip    0x1               eobj/libengine.a(engine.o)
+globparaflorclip    0x1               eobj/libengine.a(engine.o)
+sintable            0x1000            eobj/libengine.a(engine.o)
+globalzd            0x4               eobj/libengine.a(engine.o)
+fricyv              0x4               obj/global.o
+music_select        0x1               obj/global.o
+camsprite           0x2               obj/global.o
+headspritesect      0x2002            eobj/libengine.a(engine.o)
+uplc                0xc80             eobj/libengine.a(engine.o)
+movefifoplc         0x4               obj/global.o
+cheatbuf            0xa               obj/game.o
+numwalls            0x2               eobj/libengine.a(engine.o)
+viewingrangerecip   0x4               eobj/libengine.a(engine.o)
+sounds              0x189c            obj/global.o
+scriptptr           0x4               obj/global.o
+MouseAnalogueScale  0x8               obj/config.o
+MusicVolume         0x4               obj/config.o
+cosglobalang        0x4               eobj/libengine.a(engine.o)
+globalxshift        0x1               eobj/libengine.a(engine.o)
+wx1                 0x4               eobj/libengine.a(engine.o)
+globvis             0x4               eobj/libengine.a(engine.o)
+inputfifo           0xc000            obj/global.o
+max_player_health   0x4               obj/global.o
+myjumpingtoggle     0x1               obj/global.o
+myangbak            0x200             obj/global.o
+buf                 0x400             obj/global.o
+show_shareware      0x4               obj/global.o
+waterpal            0x300             obj/game.o
+script              0x16840           obj/global.o
+parallaxvisibility  0x4               eobj/libengine.a(engine.o)
+omyx                0x4               obj/global.o
+myreturntocenter    0x1               obj/global.o
+last_zero           0x2               obj/menues.o
+lumplockbyte        0xb               obj/rts.o
+palookup            0x400             eobj/libengine.a(engine.o)
+asm3                0x4               eobj/libengine.a(engine.o)
+ud                  0x94c             obj/global.o
+windowy1            0x4               eobj/libengine.a(engine.o)
+gotsector           0x200             eobj/libengine.a(engine.o)
+prevspritesect      0x8000            eobj/libengine.a(engine.o)
+keyfifoplc          0x1               eobj/libengine.a(sdlayer.o)
+otherp              0x2               obj/actors.o
+mymaxlag            0x4               obj/global.o
+pipebombblastradius
+                    0x4               obj/global.o
+curpalette          0x400             eobj/libengine.a(engine.o)
+numanimwalls        0x2               obj/global.o
+backflag            0x4               obj/sounds.o
+umost               0xc80             eobj/libengine.a(engine.o)
+SoundOwner          0x3840            obj/global.o
+bytesperline        0x4               eobj/libengine.a(sdlayer.o)
+startposy           0x4               eobj/libengine.a(engine.o)
+myzvel              0x4               obj/global.o
+MouseAiming         0x4               obj/config.o
+JoystickAnalogueScale
+                    0x20              obj/config.o
+myhardlanding       0x1               obj/global.o
+rtsplaying          0x1               obj/global.o
+numenvsnds          0x4               obj/sounds.o
+keystatus           0x100             eobj/libengine.a(sdlayer.o)
+numpages            0x4               eobj/libengine.a(engine.o)
+highlightcnt        0x2               eobj/libengine.a(engine.o)
+linehighlight       0x2               eobj/libengine.a(engine.o)
+svel                0x4               obj/global.o
+syncvaltail         0x4               obj/global.o
+warning             0x1               obj/global.o
+tempsectorz         0x4000            obj/game.o
+NumChannels         0x4               obj/config.o
+startang            0x2               eobj/libengine.a(engine.o)
+animateptr          0x100             obj/global.o
+globalhoriz         0x4               eobj/libengine.a(engine.o)
+cosviewingrangeglobalang
+                    0x4               eobj/libengine.a(engine.o)
+FXVolume            0x4               obj/config.o
+windowx1            0x4               eobj/libengine.a(engine.o)
+MusicToggle         0x4               obj/config.o
+endingpal           0x300             obj/game.o
+lockclock           0x4               obj/global.o
+bakipos             0x2000            obj/global.o
+pus                 0x1               obj/global.o
+globalshiftval      0x2               eobj/libengine.a(engine.o)
+spritesortcnt       0x4               eobj/libengine.a(engine.o)
+fistsign            0x2               obj/player.o
+artversion          0x4               eobj/libengine.a(engine.o)
+checksume           0x4               obj/global.o
+pageoffset          0x4               eobj/libengine.a(engine.o)
+NumBits             0x4               obj/config.o
+walock              0x2400            eobj/libengine.a(engine.o)
+searchwall          0x2               eobj/libengine.a(engine.o)
+globalpisibility    0x4               eobj/libengine.a(engine.o)
+wall                0x80000           eobj/libengine.a(engine.o)
+everyothertime      0x1               obj/global.o
+globalposx          0x4               eobj/libengine.a(engine.o)
+otherminlag         0x4               obj/global.o
+drealms             0x300             obj/game.o
+startsectnum        0x2               eobj/libengine.a(engine.o)
+numtiles            0x4               eobj/libengine.a(engine.o)
+neartagsprite       0x2               obj/global.o
+soundpe             0x384             obj/global.o
+globaly             0x4               eobj/libengine.a(engine.o)
+neartaghitdist      0x4               obj/global.o
+imageSize           0x4               eobj/libengine.a(sdlayer.o)
+searchy             0x4               eobj/libengine.a(engine.o)
+angvel              0x4               obj/global.o
+RunMode             0x4               obj/config.o
+pskybits            0x2               eobj/libengine.a(engine.o)
+globalpal           0x4               eobj/libengine.a(engine.o)
+totalclocklock      0x4               eobj/libengine.a(engine.o)
+usemodels           0x4               obj/game.o
+groupfile           0x4               obj/global.o
+globaly1            0x4               eobj/libengine.a(engine.o)
+sprite              0xb0000           eobj/libengine.a(engine.o)
+SoundToggle         0x4               obj/config.o
+movefifoend         0x40              obj/global.o
+myconnectindex      0x4               eobj/libengine.a(mmulti.o)
+fricxv              0x4               obj/global.o
+ylookup             0x12c4            eobj/libengine.a(engine.o)
+vince               0x10              eobj/libengine.a(engine.o)
+myy                 0x4               obj/global.o
+tilesizy            0x4800            eobj/libengine.a(engine.o)
+current_menu        0x4               obj/global.o
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/game.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/actors.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/gamedef.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/global.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/menues.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/player.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/premap.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/sector.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/sounds.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/rts.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/config.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/animlib.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/testcd.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/osdfuncs.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/osdcmds.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/missing.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/util_lib.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/file_lib.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/control.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/keyboard.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/mouse.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/mathutil.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/scriplib.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/game_icon.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/audiolib_musicstub.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/audiolib_fxstub.o
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(cache1d.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(compat.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(crc32.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(defs.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(engine.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(kplib.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(mmulti.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(osd.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(pragmas.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(scriptfile.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(sdlayer.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(a-c.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(baselayer.o)
+ .note.GNU-stack
+                0x00000000        0x0 eobj/libengine.a(engineinfo.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .note.GNU-stack
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+LOAD obj/game.o
+LOAD obj/actors.o
+LOAD obj/gamedef.o
+LOAD obj/global.o
+LOAD obj/menues.o
+LOAD obj/player.o
+LOAD obj/premap.o
+LOAD obj/sector.o
+LOAD obj/sounds.o
+LOAD obj/rts.o
+LOAD obj/config.o
+LOAD obj/animlib.o
+LOAD obj/testcd.o
+LOAD obj/osdfuncs.o
+LOAD obj/osdcmds.o
+LOAD obj/missing.o
+LOAD obj/util_lib.o
+LOAD obj/file_lib.o
+LOAD obj/control.o
+LOAD obj/keyboard.o
+LOAD obj/mouse.o
+LOAD obj/mathutil.o
+LOAD obj/scriplib.o
+LOAD obj/game_icon.o
+LOAD obj/audiolib_musicstub.o
+LOAD obj/audiolib_fxstub.o
+LOAD eobj/libengine.a
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libm.so
+LOAD /usr/local/lib/libSDL.so
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libpthread.so
+START GROUP
+LOAD /lib/libpthread.so.0
+LOAD /usr/lib/libpthread_nonshared.a
+END GROUP
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libc.so
+START GROUP
+LOAD /lib/libc.so.6
+LOAD /usr/lib/libc_nonshared.a
+LOAD /lib/ld-linux.so.3
+END GROUP
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+LOAD /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+                0x00008000                PROVIDE (__executable_start, 0x8000)
+                0x00008134                . = (0x8000 + SIZEOF_HEADERS)
+
+.interp         0x00008134       0x13
+ *(.interp)
+ .interp        0x00008134       0x13 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.note.ABI-tag   0x00008148       0x20
+ .note.ABI-tag  0x00008148       0x20 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x00008168      0x42c
+ *(.hash)
+ .hash          0x00008168      0x42c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x00008594      0x860
+ *(.dynsym)
+ .dynsym        0x00008594      0x860 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.dynstr         0x00008df4      0x582
+ *(.dynstr)
+ .dynstr        0x00008df4      0x582 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.gnu.version    0x00009376      0x10c
+ *(.gnu.version)
+ .gnu.version   0x00009376      0x10c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.gnu.version_d  0x00009484        0x0 load address 0x00009482
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.gnu.version_r  0x00009484       0x80
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00009484       0x80 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.rel.dyn        0x00009504       0x10
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00009504        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x0000950c        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt        0x00009514      0x3b0
+ *(.rel.plt)
+ .rel.plt       0x00009514      0x3b0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x000098c4        0xc
+ *(.init)
+ .init          0x000098c4        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x000098c4                _init
+ .init          0x000098cc        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+
+.plt            0x000098d0      0x59c
+ *(.plt)
+ .plt           0x000098d0      0x59c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x000098e4                SDL_FreeSurface
+                0x000098f0                open@@GLIBC_2.4
+                0x000098fc                SDL_JoystickOpen
+                0x00009908                qsort@@GLIBC_2.4
+                0x00009914                strerror@@GLIBC_2.4
+                0x00009920                fileno@@GLIBC_2.4
+                0x0000992c                mkdir@@GLIBC_2.4
+                0x00009938                abort@@GLIBC_2.4
+                0x00009944                vprintf@@GLIBC_2.4
+                0x00009950                localtime@@GLIBC_2.4
+                0x0000995c                opendir@@GLIBC_2.4
+                0x00009968                sysconf@@GLIBC_2.4
+                0x00009974                getchar@@GLIBC_2.4
+                0x00009980                __xstat@@GLIBC_2.4
+                0x0000998c                __libc_start_main@@GLIBC_2.4
+                0x00009998                inet_ntoa@@GLIBC_2.4
+                0x000099a4                SDL_JoystickName
+                0x000099b0                SDL_WM_SetCaption
+                0x000099c8                vsnprintf@@GLIBC_2.4
+                0x000099d4                inet_addr@@GLIBC_2.4
+                0x000099e0                vsprintf@@GLIBC_2.4
+                0x000099ec                pow@@GLIBC_2.4
+                0x000099f8                SDL_ShowCursor
+                0x00009a04                strncpy@@GLIBC_2.4
+                0x00009a10                fclose@@GLIBC_2.4
+                0x00009a1c                getenv@@GLIBC_2.4
+                0x00009a28                strtod@@GLIBC_2.4
+                0x00009a34                strchr@@GLIBC_2.4
+                0x00009a40                strcasecmp@@GLIBC_2.4
+                0x00009a4c                __cxa_atexit@@GLIBC_2.4
+                0x00009a58                toupper@@GLIBC_2.4
+                0x00009a64                calloc@@GLIBC_2.4
+                0x00009a70                sendto@@GLIBC_2.4
+                0x00009a7c                SDL_GetTicks
+                0x00009a88                htons@@GLIBC_2.4
+                0x00009a94                fopen@@GLIBC_2.4
+                0x00009aa0                SDL_UnlockSurface
+                0x00009aac                SDL_SetColors
+                0x00009ab8                memset@@GLIBC_2.4
+                0x00009ac4                SDL_PollEvent
+                0x00009ad0                SDL_JoystickNumAxes
+                0x00009adc                SDL_InitSubSystem
+                0x00009ae8                SDL_LockSurface
+                0x00009af4                strrchr@@GLIBC_2.4
+                0x00009b00                SDL_VideoDriverName
+                0x00009b0c                SDL_JoystickEventState
+                0x00009b18                SDL_CreateRGBSurfaceFrom
+                0x00009b24                SDL_SetVideoMode
+                0x00009b30                SDL_NumJoysticks
+                0x00009b3c                SDL_Linked_Version
+                0x00009b48                free@@GLIBC_2.4
+                0x00009b54                read@@GLIBC_2.4
+                0x00009b60                write@@GLIBC_2.4
+                0x00009b6c                access@@GLIBC_2.4
+                0x00009b78                SDL_JoystickNumButtons
+                0x00009b84                gettimeofday@@GLIBC_2.4
+                0x00009b90                fseek@@GLIBC_2.4
+                0x00009b9c                SDL_GetVideoInfo
+                0x00009ba8                socket@@GLIBC_2.4
+                0x00009bb4                SDL_Init
+                0x00009bc0                ioctl@@GLIBC_2.4
+                0x00009bcc                ntohs@@GLIBC_2.4
+                0x00009bd8                strlen@@GLIBC_2.4
+                0x00009be4                strtoul@@GLIBC_2.4
+                0x00009bf0                SDL_SetPalette
+                0x00009bfc                memcpy@@GLIBC_2.4
+                0x00009c08                ftell@@GLIBC_2.4
+                0x00009c14                strtol@@GLIBC_2.4
+                0x00009c20                strcpy@@GLIBC_2.4
+                0x00009c2c                atol@@GLIBC_2.4
+                0x00009c38                printf@@GLIBC_2.4
+                0x00009c44                raise@@GLIBC_2.4
+                0x00009c50                bind@@GLIBC_2.4
+                0x00009c5c                close@@GLIBC_2.4
+                0x00009c68                fwrite@@GLIBC_2.4
+                0x00009c74                closedir@@GLIBC_2.4
+                0x00009c80                strncasecmp@@GLIBC_2.4
+                0x00009c8c                SDL_EnableKeyRepeat
+                0x00009c98                setvbuf@@GLIBC_2.4
+                0x00009ca4                __ctype_b_loc@@GLIBC_2.4
+                0x00009cb0                fprintf@@GLIBC_2.4
+                0x00009cbc                strdup@@GLIBC_2.4
+                0x00009cc8                malloc@@GLIBC_2.4
+                0x00009cd4                gethostname@@GLIBC_2.4
+                0x00009ce0                chdir@@GLIBC_2.4
+                0x00009cec                SDL_WM_GrabInput
+                0x00009cf8                SDL_ListModes
+                0x00009d04                fputc@@GLIBC_2.4
+                0x00009d10                getcwd@@GLIBC_2.4
+                0x00009d1c                strcat@@GLIBC_2.4
+                0x00009d28                memmove@@GLIBC_2.4
+                0x00009d34                puts@@GLIBC_2.4
+                0x00009d40                SDL_WM_SetIcon
+                0x00009d4c                SDL_Flip
+                0x00009d58                SDL_Quit
+                0x00009d64                SDL_GetKeyName
+                0x00009d70                lseek@@GLIBC_2.4
+                0x00009d7c                rand@@GLIBC_2.4
+                0x00009d88                __fxstat@@GLIBC_2.4
+                0x00009d94                vfprintf@@GLIBC_2.4
+                0x00009da0                SDL_JoystickNumHats
+                0x00009dac                snprintf@@GLIBC_2.4
+                0x00009db8                SDL_JoystickClose
+                0x00009dc4                fread@@GLIBC_2.4
+                0x00009dd0                SDL_GetError
+                0x00009ddc                strncmp@@GLIBC_2.4
+                0x00009de8                gethostbyname@@GLIBC_2.4
+                0x00009df4                realloc@@GLIBC_2.4
+                0x00009e00                recvfrom@@GLIBC_2.4
+                0x00009e0c                readdir@@GLIBC_2.4
+                0x00009e18                tolower@@GLIBC_2.4
+                0x00009e24                strcmp@@GLIBC_2.4
+                0x00009e30                exit@@GLIBC_2.4
+                0x00009e3c                __errno_location@@GLIBC_2.4
+                0x00009e48                sprintf@@GLIBC_2.4
+                0x00009e54                fputs@@GLIBC_2.4
+                0x00009e60                SDL_EnableUNICODE
+
+.text           0x00009e70   0x1696ac
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00009e70       0x38 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+                0x00009e70                _start
+ .text          0x00009ea8       0x24 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .text          0x00009ecc       0x4c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .text          0x00009f18    0x40200 obj/game.o
+                0x0001682c                showtwoscreens
+                0x0004a0b8                UpperLeft
+                0x0002eca8                animatesprites
+                0x00010eb0                orderweaponnum
+                0x00047be0                cameratext
+                0x0003cfbc                printstr
+                0x0001e59c                LocateTheLocator
+                0x00040504                playback
+                0x000108b4                myospal
+                0x00048be4                spriteglass
+                0x0003e214                sendscore
+                0x00044c24                dobonus
+                0x00017a94                moveclouds
+                0x0000b418                adduserquote
+                0x0000a39c                setgamepalette
+                0x00011070                weaponnum
+                0x0003e754                backtomenu
+                0x0001594c                tics
+                0x0000f704                caches
+                0x0003e730                copyprotect
+                0x0003f890                opendemoread
+                0x00012e54                digitalnumber
+                0x00010764                myos
+                0x0001043c                badguypic
+                0x0003ff58                opendemowrite
+                0x0003db28                loadtmb
+                0x00013974                displayfragbar
+                0x0001ca78                displayrooms
+                0x000100c8                badguy
+                0x00016b30                gameexit
+                0x0003c114                checkcommandline
+                0x0000a878                gametextpal
+                0x00017184                typemode
+                0x00039bdc                nonsharedkeys
+                0x0000b500                getpackets
+                0x000415ec                fakedomovethings
+                0x00015a38                coords
+                0x00010a04                invennum
+                0x00016d3c                strget
+                0x00010008                inventory
+                0x0004469c                doorders
+                0x0003dbac                Shutdown
+                0x00019eb4                drawbackground
+                0x0001ae98                SE40_Draw
+                0x0004a100                CenterRudder
+                0x0000b290                gamenumber
+                0x0001f250                wallswitchcheck
+                0x00016054                operatefta
+                0x0001959c                view
+                0x0004a07c                GetTime
+                0x00043a4c                domovethings
+                0x0003dd4c                Startup
+                0x000166a0                FTA
+                0x0004a0a0                CenterCenter
+                0x000402e0                record
+                0x0004a0e8                CenterThrottle
+                0x00017e34                displayrest
+                0x000130ac                displayinventory
+                0x0001225c                weapon_amounts
+                0x000493b4                lotsofcolourglass
+                0x0000d720                faketimerhandler
+                0x0000fb44                check_fta_sounds
+                0x0003e264                getnames
+                0x0000aeb0                minitext
+                0x0003c0e0                comlinehelp
+                0x0000f8d8                checksync
+                0x0004a0d0                LowerRight
+                0x0001174c                weaponnum999
+                0x0003cfe4                Logo
+                0x00009f6c                patchstatusbar
+                0x00013e08                coolgaugetext
+                0x0000a58c                gametext
+                0x00009f18                setstatusbarscale
+                0x0000ab64                gametextpart
+                0x0000b2f0                allowtimetocorrecterrorswhenquitting
+                0x00048258                lotsofglass
+                0x00047f40                vglass
+                0x00048f40                ceilingglass
+                0x00041150                moveloop
+                0x0003e7e8                app_main
+                0x0001f3f4                spawn
+                0x00049e00                SetupGameButtons
+                0x0003e6a8                writestring
+                0x0000b098                minitextshade
+                0x00036c1c                cheats
+                0x0004128c                fakedomovethingscorrect
+                0x0001c8a8                se40code
+                0x00040420                closedemowrite
+                0x0001e6ec                EGS
+                0x0003dbd4                compilecons
+ .text          0x0004a118    0x4b128 obj/actors.o
+                0x0004a32c                dointerpolations
+                0x000512d8                movefta
+                0x00056f3c                movestandables
+                0x0004a488                restoreinterpolations
+                0x0004f4b0                ssp
+                0x00050894                setsectinterpolate
+                0x00069718                moveactors
+                0x0004fd30                lotsofpaper
+                0x0004ffac                guts
+                0x0004a4f4                ceilingspace
+                0x0004fab4                lotsofmail
+                0x0004a74c                addammo
+                0x00050520                gutsdir
+                0x00051fbc                ifhitbyweapon
+                0x00055f28                movefallers
+                0x0004f66c                insertspriteq
+                0x00055018                movefx
+                0x0004ab84                checkavailweapon
+                0x00052ca8                movecyclers
+                0x00051e7c                ifhitsectors
+                0x0004b2d8                hitradius
+                0x000530a4                movedummyplayers
+                0x0005fab0                moveweapons
+                0x00053ce8                moveplayers
+                0x0004a118                updateinterpolations
+                0x0004a834                addweapon
+                0x00063c60                movetransports
+                0x0004a620                floorspace
+                0x0004a248                stopinterpolation
+                0x0005f134                bounce
+                0x00050b44                clearsectinterpolate
+                0x0004a184                setinterpolation
+                0x0004aee0                ifsquished
+                0x00050de4                ms
+                0x0004dd8c                movesprite
+                0x00075480                moveexplosions
+                0x00079e88                moveeffectors
+                0x0004aa18                checkavailinven
+                0x0004f838                lotsofmoney
+ .text          0x00095240    0x15690 obj/gamedef.o
+                0x00096950                transword
+                0x00095e18                makeitfall
+                0x000955b8                getglobalz
+                0x0009bd0c                furthestangle
+                0x0009b7e0                dodge
+                0x000a9f08                execute
+                0x00095474                ispecial
+                0x00096810                keyword
+                0x0009530c                getincangle
+                0x00095500                isaltok
+                0x000966bc                getlabel
+                0x0009b280                copydefaultcons
+                0x0009d3e4                move
+                0x00096d3c                transnum
+                0x00097204                parsecommand
+                0x0009b230                passone
+                0x0009ff3c                parse
+                0x0009c624                alterang
+                0x0009feb0                parseifelse
+                0x0009b370                loadefs
+                0x0009c0d0                furthestcanseepoint
+ .text          0x000aa8d0        0x0 obj/global.o
+ .text          0x000aa8d0    0x1a728 obj/menues.o
+                0x000c4a18                playanm
+                0x000af7d8                bar
+                0x000b0258                getfilenames
+                0x000afd50                dispnames
+                0x000ae2e4                probe
+                0x000c4858                endanimvol41
+                0x000b0d28                menus
+                0x000c2134                drawoverheadmap
+                0x000c4634                logoanimsounds
+                0x000c475c                first4animsounds
+                0x000c4828                intro42animsounds
+                0x000aaa44                getangplayers
+                0x000c4684                intro4animsounds
+                0x000c49a0                endanimvol43
+                0x000acfcc                saveplayer
+                0x000aeb58                menutext
+                0x000aadcc                loadpheader
+                0x000af1ec                menutextc
+                0x000aa8d0                cmenu
+                0x000aa9ec                savetemp
+                0x000ab0f8                loadplayer
+                0x000b0af8                sortfilenames
+                0x000b0178                clearfilenames
+                0x000c2068                palto
+                0x000c48a8                endanimvol42
+                0x000c4418                endanimsounds
+ .text          0x000c4ff8    0x22d40 obj/player.o
+                0x000d2ec8                displayweapon
+                0x000c56f0                forceplayerangle
+                0x000c4ff8                setpal
+                0x000c6400                hitawall
+                0x000e1c9c                computergetinput
+                0x000d0d48                displayloogie
+                0x000d2260                animatetip
+                0x000d1454                animateknee
+                0x000d1a14                animateknuckles
+                0x000d26e4                animateaccess
+                0x000c6550                aim
+                0x000d6628                getinput
+                0x000d10c8                animatefist
+                0x000c5ef0                hitasprite
+                0x000d8490                checkweapons
+                0x000c77f0                shoot
+                0x000c5784                tracers
+                0x000c5148                incur_damage
+                0x000c54f0                quickkill
+                0x000d8574                processinput
+                0x000d1ecc                displaymasks
+                0x000e118c                getspritescore
+                0x000c5af8                hits
+                0x000d7748                doincrements
+ .text          0x000e7d38     0x8e04 obj/premap.o
+                0x000ed450                resetpspritevars
+                0x000ef3c8                dofrontscreens
+                0x000ea674                resetinventory
+                0x000e908c                cacheit
+                0x000ead10                prelevel
+                0x000eee84                clearfrags
+                0x000e9434                docacheit
+                0x000e9f18                resetplayerstats
+                0x000ef030                genspriteremaps
+                0x000e889c                cachegoodsprites
+                0x000e8fec                precachenecessarysounds
+                0x000e9a64                vscrn
+                0x000e9d68                pickrandomspot
+                0x000ef20c                waitforeverybody
+                0x000ed0bc                newgame
+                0x000eef80                resettimevars
+                0x000e8078                cachespritenum
+                0x000ef970                resetmys
+                0x000ea4f0                resetweapons
+                0x000eab58                setupbackdrop
+                0x000ef7c4                clearfifo
+                0x000e8da8                getsound
+                0x000ea7bc                resetprestat
+                0x000efda4                enterlevel
+                0x000e96ac                xyzmirror
+ .text          0x000f0b3c    0x19c84 obj/sector.o
+                0x000f3024                animatecamsprite
+                0x000f18f4                isanunderoperator
+                0x000f19e4                checkcursectnums
+                0x000fc7c0                activatebysector
+                0x000f8da4                operateactivators
+                0x000f2e3c                getanimationgoal
+                0x000ff4d0                checkhitsprite
+                0x000f1af8                ldist
+                0x000f1d5c                findplayer
+                0x000febd0                checkhitceiling
+                0x000fe4cc                checkplayerhurt
+                0x000f24e0                doanimations
+                0x000f1410                check_activator_motion
+                0x000f1784                isadoorwall
+                0x000f9eac                operateforcefields
+                0x000fc9c4                checkhitwall
+                0x000f8aac                operaterespawns
+                0x00107aa0                checksectors
+                0x000f34b0                animatewalls
+                0x000f0b3c                callsound
+                0x000f2208                findotherplayer
+                0x000f3cdc                activatewarpelevators
+                0x00105d3c                cheatkeys
+                0x000f1bf4                dist
+                0x000f196c                isanearoperator
+                0x000f9cfc                operatemasterswitches
+                0x000f2ec0                setanimation
+                0x000fc91c                breakwall
+                0x000fa190                checkhitswitch
+                0x00105818                allignwarpelevators
+                0x000f4258                operatesectors
+ .text          0x0010a7c0     0x34ec obj/sounds.o
+                0x0010ae68                xyzsound
+                0x0010ca24                stopenvsound
+                0x0010c80c                spritesound
+                0x0010a94c                MusicStartup
+                0x0010c984                stopsound
+                0x0010a7c0                SoundStartup
+                0x0010a9e4                MusicShutdown
+                0x0010aa44                MusicUpdate
+                0x0010ab8c                playmusic
+                0x0010aadc                intomenusounds
+                0x0010aa54                USRHOOKS_GetMem
+                0x0010a8f0                SoundShutdown
+                0x0010aab4                USRHOOKS_FreeMem
+                0x0010c350                sound
+                0x0010d7e8                testcallback
+                0x0010dbd0                clearsoundlocks
+                0x0010cb24                pan3dsound
+                0x0010ac58                loadsound
+ .text          0x0010dcac      0x6dc obj/rts.o
+                0x0010e064                RTS_SoundLength
+                0x0010e03c                RTS_NumSounds
+                0x0010df80                RTS_Init
+                0x0010e0dc                RTS_GetSoundName
+                0x0010e218                RTS_GetSound
+                0x0010e150                RTS_ReadLump
+                0x0010dcac                RTS_AddFile
+ .text          0x0010e388     0x2c54 obj/config.o
+                0x0010e408                CONFIG_FunctionNumToName
+                0x0010e458                CONFIG_AnalogNameToNum
+                0x0010e520                CONFIG_AnalogNumToName
+                0x0010e5b4                CONFIG_SetDefaults
+                0x00110228                CONFIG_WriteSetup
+                0x0010fa04                CONFIG_ReadSetup
+                0x0010ecf0                CONFIG_ReadKeys
+                0x0010e388                CONFIG_FunctionNameToNum
+                0x0010f82c                readsavenames
+                0x0010ef04                CONFIG_SetupMouse
+                0x0010f358                CONFIG_SetupJoystick
+ .text          0x00110fdc      0x9c8 obj/animlib.o
+                0x001115c8                drawframe
+                0x00111128                loadpage
+                0x00111644                ANIM_LoadAnim
+                0x00111474                renderframe
+                0x00111864                ANIM_DrawFrame
+                0x00111804                ANIM_FreeAnim
+                0x00111838                ANIM_NumFrames
+                0x00110fdc                CheckAnimStarted
+                0x0011123c                CPlayRunSkipDump
+                0x00111018                findpage
+                0x00111974                ANIM_GetPalette
+ .text          0x001119a4       0x24 obj/testcd.o
+                0x001119a4                testcd
+ .text          0x001119c8      0x768 obj/osdfuncs.o
+                0x00111ea0                GAME_clearbackground
+                0x00111e18                GAME_onshowosd
+                0x00111c8c                GAME_drawosdcursor
+                0x00111ad4                GAME_drawosdstr
+                0x00111db4                GAME_getcolumnwidth
+                0x001119c8                GAME_drawosdchar
+                0x00111df0                GAME_getrowheight
+ .text          0x00112130     0x16f0 obj/osdcmds.o
+                0x00113404                onvideomodechange
+                0x001125d8                osdcmd_map
+                0x00112958                osdcmd_fileinfo
+                0x001121c4                osdcmd_echo
+                0x00113600                registerosdcommands
+                0x00112810                osdcmd_god
+                0x00112260                osdcmd_changelevel
+                0x001128b4                osdcmd_noclip
+                0x00112130                osdcmd_quit
+ .text          0x00113820       0x48 obj/missing.o
+                0x00113844                polymost_precache
+                0x00113820                md_tilehasmodel
+ .text          0x00113868      0x37c obj/util_lib.o
+                0x00113a88                SafeRealloc
+                0x00113b1c                ParseNum
+                0x00113b9c                MotoLong
+                0x00113868                RegisterShutdownFunction
+                0x00113bc0                IntelLong
+                0x00113894                Error
+                0x00113a50                SafeFree
+                0x00113b4c                MotoShort
+                0x0011390c                CheckParm
+                0x00113a00                SafeMalloc
+                0x00113b74                IntelShort
+                0x00113aec                ParseHex
+ .text          0x00113be4      0x3ac obj/file_lib.o
+                0x00113ec8                SafeRead
+                0x00113e34                SafeFileExists
+                0x00113e80                SafeFileLength
+                0x00113d7c                SafeClose
+                0x00113ce8                SafeOpenRead
+                0x00113be4                SafeOpen
+ .text          0x00113f90     0x2b88 obj/control.o
+                0x00114c28                CONTROL_SetAnalogAxisScale
+                0x001166b0                CONTROL_WaitRelease
+                0x00114e1c                CONTROL_ClearAssignments
+                0x00115aa4                CONTROL_AxisFunctionState
+                0x001142a4                CONTROL_GetTime
+                0x00114768                CONTROL_MapKey
+                0x001142dc                CONTROL_CheckRange
+                0x00116428                CONTROL_ClearButton
+                0x00114638                CONTROL_DefineFlag
+                0x001140d8                CONTROL_GetMouseSensitivity
+                0x001158b8                CONTROL_PollDevices
+                0x001153dc                CONTROL_DigitizeAxis
+                0x00114200                CONTROL_SetJoyScale
+                0x0011416c                CONTROL_FilterJoyDelta
+                0x00114100                CONTROL_SetMouseSensitivity
+                0x0011628c                CONTROL_ClearUserInput
+                0x00114158                CONTROL_GetJoyAbs
+                0x00114cc0                CONTROL_MapDigitalAxis
+                0x001147d8                CONTROL_PrintKeyMap
+                0x00116acc                CONTROL_Shutdown
+                0x001164e4                CONTROL_GetInput
+                0x00114180                CONTROL_GetJoyDelta
+                0x00114dbc                CONTROL_ClearFlags
+                0x00114854                CONTROL_PrintControlFlag
+                0x001156e4                CONTROL_ApplyAxis
+                0x0011455c                CONTROL_ClearKeyboardFunction
+                0x001151c4                CONTROL_GetDeviceButtons
+                0x00114704                CONTROL_FlagActive
+                0x0011423c                CONTROL_StartJoy
+                0x00114130                CONTROL_StartMouse
+                0x001155b0                CONTROL_ScaleAxis
+                0x001166d8                CONTROL_Startup
+                0x00113f90                CONTROL_GetMouseDelta
+                0x00115ebc                CONTROL_GetUserInput
+                0x00115c98                CONTROL_ButtonFunctionState
+                0x00114320                CONTROL_SetFlag
+                0x00114a98                CONTROL_MapButton
+                0x00114214                CONTROL_CenterJoystick
+                0x00114b80                CONTROL_MapAnalogAxis
+                0x001166c4                CONTROL_Ack
+                0x00114920                CONTROL_PrintAxes
+                0x00114278                CONTROL_ShutJoy
+                0x00114428                CONTROL_KeyboardFunctionPressed
+ .text          0x00116b18      0x2b0 obj/keyboard.o
+                0x00116d8c                KB_Startup
+                0x00116b48                KB_Addch
+                0x00116bb0                KB_ScanCodeToString
+                0x00116db4                KB_Shutdown
+                0x00116b78                KB_ClearKeysDown
+                0x00116b18                KB_KeyWaiting
+                0x00116ce0                KB_TurnKeypadOn
+                0x00116c48                KB_StringToScanCode
+                0x00116b30                KB_Getch
+                0x00116d04                KB_TurnKeypadOff
+                0x00116b68                KB_FlushKeyboardQueue
+                0x00116d28                KB_KeypadActive
+ .text          0x00116dc8      0x120 obj/mouse.o
+                0x00116ea0                MOUSE_GetPosition
+                0x00116e58                MOUSE_ClearButton
+                0x00116e08                MOUSE_ShowCursor
+                0x00116e30                MOUSE_GetButtons
+                0x00116dc8                MOUSE_Init
+                0x00116df8                MOUSE_Shutdown
+                0x00116ec0                MOUSE_GetDelta
+                0x00116e1c                MOUSE_HideCursor
+ .text          0x00116ee8      0x1dc obj/mathutil.o
+                0x00116ee8                FindDistance2D
+                0x00116fb4                FindDistance3D
+ .text          0x001170c4     0x2874 obj/scriplib.o
+                0x00118108                SCRIPT_Free
+                0x001176f0                SCRIPT_AddEntry
+                0x00118128                SCRIPT_Parse
+                0x00119818                SCRIPT_PutNumber
+                0x00117188                SCRIPT_Delete
+                0x00118234                SCRIPT_Save
+                0x00119690                SCRIPT_PutString
+                0x001195e8                SCRIPT_PutEOL
+                0x001183ac                SCRIPT_NumberSections
+                0x00119608                SCRIPT_PutMultiComment
+                0x00117610                SCRIPT_EntryExists
+                0x00119508                SCRIPT_GetDouble
+                0x001170c4                SCRIPT_New
+                0x00119734                SCRIPT_PutDoubleString
+                0x00117474                SCRIPT_AddSection
+                0x00117354                SCRIPT_SectionExists
+                0x00118744                SCRIPT_GetRaw
+                0x001178a8                SCRIPT_ParseBuffer
+                0x00118b34                SCRIPT_GetDoubleString
+                0x001198ec                SCRIPT_PutDouble
+                0x00119630                SCRIPT_PutSection
+                0x00118478                SCRIPT_Section
+                0x00119890                SCRIPT_PutBoolean
+                0x00119308                SCRIPT_GetBoolean
+                0x00118554                SCRIPT_NumberEntries
+                0x001172b4                SCRIPT_FreeSection
+                0x001180ac                SCRIPT_Init
+                0x00118804                SCRIPT_GetString
+                0x00119658                SCRIPT_PutRaw
+                0x00118644                SCRIPT_Entry
+                0x0011912c                SCRIPT_GetNumber
+                0x00118154                SCRIPT_Load
+                0x001195c4                SCRIPT_PutComment
+ .text          0x00119938        0x0 obj/game_icon.o
+ .text          0x00119938      0x3e8 obj/audiolib_musicstub.o
+                0x00119c1c                MUSIC_SetSongPosition
+                0x00119ac0                MUSIC_SetMidiChannelVolume
+                0x00119aa4                MUSIC_SetVolume
+                0x00119b10                MUSIC_SetLoopFlag
+                0x00119cbc                MUSIC_StopFade
+                0x00119a88                MUSIC_SetMaxFMMidiChannel
+                0x00119a60                MUSIC_Shutdown
+                0x00119bb4                MUSIC_SetContext
+                0x00119c40                MUSIC_GetSongPosition
+                0x00119cf0                MUSIC_RegisterTimbreBank
+                0x00119b70                MUSIC_StopSong
+                0x00119c78                MUSIC_FadeVolume
+                0x00119c5c                MUSIC_GetSongLength
+                0x00119be4                MUSIC_SetSongTick
+                0x00119b8c                MUSIC_PlaySong
+                0x00119b5c                MUSIC_Pause
+                0x00119d0c                MUSIC_Update
+                0x00119cd0                MUSIC_RerouteMidiChannel
+                0x00119c00                MUSIC_SetSongTime
+                0x00119bd0                MUSIC_GetContext
+                0x00119938                MUSIC_ErrorString
+                0x00119af4                MUSIC_GetVolume
+                0x00119a30                MUSIC_Init
+                0x00119ae0                MUSIC_ResetMidiChannelVolumes
+                0x00119ca0                MUSIC_FadeActive
+                0x00119b48                MUSIC_Continue
+                0x00119b2c                MUSIC_SongPlaying
+ .text          0x00119d20      0x2f0 obj/audiolib_fxstub.o
+                0x00119ed0                FX_PlayLoopedVOC
+                0x00119f90                FX_Pan3D
+                0x00119f60                FX_PlayWAV3D
+                0x00119db0                FX_Init
+                0x00119e90                FX_SetReverbDelay
+                0x00119de0                FX_Shutdown
+                0x00119e20                FX_SetVolume
+                0x00119f00                FX_PlayLoopedWAV
+                0x00119e3c                FX_SetReverseStereo
+                0x00119dfc                FX_SetCallBack
+                0x00119fe0                FX_StopAllSounds
+                0x00119eac                FX_VoiceAvailable
+                0x00119f30                FX_PlayVOC3D
+                0x00119ffc                AudioUpdate
+                0x00119e74                FX_SetReverb
+                0x00119e58                FX_GetReverseStereo
+                0x00119d20                FX_ErrorString
+                0x00119fbc                FX_StopSound
+ .text          0x0011a010     0x45e0 eobj/libengine.a(cache1d.o)
+                0x0011a1ac                allocache
+                0x0011bcf0                kopen4load
+                0x0011b464                initgroupfile
+                0x0011c9e0                beginsearchgroup
+                0x0011d49c                dfread
+                0x0011d8d4                dfwrite
+                0x0011b958                uninitsinglegroupfile
+                0x0011b1a8                openfrompath
+                0x0011bbe0                uninitgroupfile
+                0x0011c3ec                klseek
+                0x0011c12c                kread
+                0x0011aff0                addsearchpath
+                0x0011dcf8                lzwcompress
+                0x0011a0dc                initcache
+                0x0011c8d8                kclose
+                0x0011b30c                fopenfrompath
+                0x0011c61c                kfilelength
+                0x0011a928                suckcache
+                0x0011acbc                agecache
+                0x0011d05c                kdfread
+                0x0011ce4c                getsearchgroupnext
+                0x0011e240                lzwuncompress
+                0x0011c788                ktell
+ .text          0x0011e5f0      0xcac eobj/libengine.a(compat.o)
+                0x0011ed88                Bstrtoken
+                0x0011ef0c                Bwildmatch
+                0x0011ea98                Bgetsystemdrives
+                0x0011ebbc                Breaddir
+                0x0011e5f0                Bgethomedir
+                0x0011f0bc                Bstrlwr
+                0x0011eb04                Bopendir
+                0x0011e648                Bcorrectfilename
+                0x0011f140                Bstrupr
+                0x0011f1c4                Bgetsysmemsize
+                0x0011eab4                Bfilelength
+                0x0011ed48                Bclosedir
+ .text          0x0011f29c      0x228 eobj/libengine.a(crc32.o)
+                0x0011f488                crc32finish
+                0x0011f3ac                crc32init
+                0x0011f35c                crc32
+                0x0011f3e0                crc32block
+                0x0011f29c                initcrc32table
+ .text          0x0011f4c4     0x1fc0 eobj/libengine.a(defs.o)
+                0x00121420                loaddefinitionsfile
+ *fill*         0x00121484        0x4 00000000
+ .text          0x00121488    0x394e0 eobj/libengine.a(engine.o)
+                0x00146324                ksqrt
+                0x0015a910                setrollangle
+                0x001578f8                draw2dgrid
+                0x00159458                printext16
+                0x0015a860                screencapture
+                0x00145d50                inside
+                0x00159658                printext256
+                0x0015298c                setviewtotile
+                0x001456bc                clipinsidebox
+                0x001530b4                preparemirror
+                0x001525f8                setpalettefadeclamps
+                0x00151260                rotatesprite
+                0x0013dd04                drawmasks
+                0x00143a28                saveboard
+                0x001551ec                loopnumofsector
+                0x00155360                setfirstwall
+                0x00145214                allocatepermanenttile
+                0x0015a92c                invalidatetile
+                0x0013ca98                uninitengine
+                0x00153e70                getflorzofslope
+                0x0014f6f4                getzrange
+                0x00157c7c                draw2dscreen
+                0x001542f8                getzsofslope
+                0x00153690                sectorofwall
+                0x00145a8c                clipinsideboxline
+                0x00141844                loadboard
+                0x00156554                drawline16
+                0x00144ecc                loadtile
+                0x0014f648                getmousevalues
+                0x00157838                clear2dscreen
+                0x001574f4                qsetmode640480
+                0x00149748                neartag
+                0x00151f64                setbrightness
+                0x001573e0                qsetmode640350
+                0x00145404                copytilepiece
+                0x0013eb3c                drawmapview
+                0x00154c98                alignflorslope
+                0x0015a954                setpolymost2dview
+                0x0014a4b4                dragpoint
+                0x00144360                nextpage
+                0x00152718                clearview
+                0x0015a8d0                setrendermode
+                0x0014ef64                updatesector
+                0x0015474c                alignceilslope
+                0x0015286c                plotpixel
+                0x0015a8f4                getrendermode
+                0x001214f8                hicsetpalettetint
+                0x001466cc                changespritesect
+                0x00152eac                squarerotatetile
+                0x00152c44                setviewback
+                0x00151148                setaspect
+                0x00121488                kmalloc
+                0x00151228                flushperms
+                0x00147364                hitscan
+                0x0014698c                nextsectorneighborz
+                0x0014f1dc                updatesectorz
+                0x00121560                hicsetskybox
+                0x00143a04                loadmaphack
+                0x00152258                setpalettefade
+                0x0014f67c                krand
+                0x00152900                getpixel
+                0x0012158c                hicclearsubst
+                0x00144710                loadpics
+                0x001215b4                polymost_drawtilescreen
+                0x00153448                completemirror
+                0x0014682c                changespritestat
+                0x00146690                deletesprite
+                0x001460b8                getangle
+                0x00151df0                setvgapalette
+                0x00156cf8                drawcircle16
+                0x00151a54                makepalookup
+                0x0014664c                insertsprite
+                0x0013c814                initengine
+                0x00157650                qsetmodeany
+                0x00121530                hicsetsubsttex
+                0x00146d0c                cansee
+                0x001214b0                kfree
+                0x0013cbd8                initspritelists
+                0x00143fb4                setgamemode
+                0x0014aa58                lastwall
+                0x0015a108                screencapture_pcx
+                0x00155e70                drawline256
+                0x00146350                krecip
+                0x00146378                setsprite
+                0x00159854                screencapture_tga
+                0x00150e74                setview
+                0x001214d0                getkensmessagecrc
+                0x0014e2ec                pushmove
+                0x00152808                clearallviews
+                0x0013ce84                drawrooms
+                0x00153954                getceilzofslope
+                0x0014f550                rotatepoint
+                0x0014ab88                clipmove
+ .text          0x0015a968     0xb1e0 eobj/libengine.a(kplib.o)
+                0x00163e64                kzuninit
+                0x00165784                kzfilelength
+                0x00163424                kprender
+                0x001657d0                kzseek
+                0x00163ec4                kzaddstack
+                0x0016440c                kzopen
+                0x001658d0                kztell
+                0x00165a04                kpzload
+                0x00164a60                kzread
+                0x001659c8                kzclose
+                0x00164798                kzfindfile
+                0x0016591c                kzgetc
+                0x00164758                kzfindfilestart
+                0x00162e50                kpgetdim
+                0x00165968                kzeof
+ .text          0x00165b48     0x2518 eobj/libengine.a(mmulti.o)
+                0x00165c0c                netinit
+                0x0016621c                genericmultifunction
+                0x001662a4                sendlogoff
+                0x001677bc                getpacket
+                0x001665a4                initmultiplayersparms
+                0x00167694                sendpacket
+                0x00165bdc                netuninit
+                0x00165db8                netsend
+                0x00165fb4                isvalidipaddress
+                0x00166290                sendlogon
+                0x001671d8                initmultiplayers
+                0x00166244                getoutputcirclesize
+                0x00167240                dosendpackets
+                0x001661fc                setpackettimeout
+                0x00165e80                netread
+                0x00166fbc                initmultiplayerscycle
+                0x00166260                setsocket
+                0x00166464                uninitmultiplayers
+                0x0016627c                flushpackets
+ .text          0x00168060     0x3a5c eobj/libengine.a(osd.o)
+                0x0016a698                OSD_Printf
+                0x0016b2c0                OSD_RegisterVariable
+                0x00168584                osd_internal_validate_string
+                0x00168be4                OSD_SetParameters
+                0x00168884                OSD_Cleanup
+                0x0016a06c                OSD_ResizeDisplay
+                0x0016a890                OSD_DispatchQueued
+                0x00168c6c                OSD_CaptureKey
+                0x001689a0                OSD_SetLogFile
+                0x00168c98                OSD_HandleKey
+                0x0016aff4                OSD_RegisterFunction
+                0x0016abcc                OSD_Dispatch
+                0x00168a3c                OSD_SetFunctions
+                0x001688ec                OSD_Init
+                0x001685cc                osd_internal_validate_boolean
+                0x0016a298                OSD_ShowDisplay
+                0x001685a8                osd_internal_validate_integer
+                0x0016a338                OSD_Draw
+ .text          0x0016babc      0x4bc eobj/libengine.a(pragmas.o)
+                0x0016be68                copybufbyte
+                0x0016bc44                copybuf
+                0x0016bb44                qinterpolatedown16short
+                0x0016bccc                swapbuf4
+                0x0016bbd4                clearbuf
+                0x0016bd74                clearbufbyte
+                0x0016babc                qinterpolatedown16
+                0x0016bef0                copybufreverse
+ .text          0x0016bf78     0x14ec eobj/libengine.a(scriptfile.o)
+                0x0016d1dc                scriptfile_getsymbolvalue
+                0x0016c034                scriptfile_gettoken
+                0x0016c318                scriptfile_getdouble
+                0x0016d408                scriptfile_clearsymbols
+                0x0016c590                scriptfile_getbraces
+                0x0016d024                scriptfile_close
+                0x0016c49c                scriptfile_getsymbol
+                0x0016cf18                scriptfile_fromstring
+                0x0016d2c0                scriptfile_addsymbolvalue
+                0x0016cdd0                scriptfile_fromfile
+                0x0016c13c                scriptfile_getnumber
+                0x0016c830                scriptfile_preparse
+                0x0016c0ac                scriptfile_getstring
+                0x0016c73c                scriptfile_getlinum
+ .text          0x0016d464     0x2f40 eobj/libengine.a(sdlayer.o)
+                0x0016e13c                uninitmouse
+                0x0016e518                getticks
+                0x0016e530                gettimerfreq
+                0x0016d9bc                uninitsystem
+                0x0016fca8                setgamma
+                0x0016d464                wm_msgbox
+                0x0016e424                sampletimer
+                0x0016e054                setkeypresscallback
+                0x0016fb68                setpalette
+                0x0016d57c                wm_setapptitle
+                0x0016fda4                handleevents
+                0x0016e080                setmousepresscallback
+                0x0016e334                inittimer
+                0x0016f7cc                begindrawing
+                0x0016da98                initinput
+                0x0016e250                readmousebstatus
+                0x0016e0ac                setjoypresscallback
+                0x0016e3f0                uninittimer
+                0x0016de18                getjoyname
+                0x0016e320                releaseallbuttons
+                0x0016df44                bgetchar
+                0x0016dfe0                bkbhit
+                0x0016d9d8                initprintf
+                0x0016da54                debugprintf
+                0x0016e0d8                initmouse
+                0x0016d4bc                wm_ynbox
+                0x0016e68c                getvalidmodes
+                0x0016f414                setvideomode
+                0x0016f798                resetvideomode
+                0x0016f9d0                enddrawing
+                0x0016e1a4                readmousexy
+                0x0016f0bc                checkvideomode
+                0x0016d628                initsystem
+                0x0016e184                grabmouse
+                0x0016fae4                showframe
+                0x0016e2b8                setjoydeadzone
+                0x0016ddb8                getkeyname
+                0x0016dd74                uninitinput
+                0x0016e554                installusertimercallback
+                0x0016e01c                bflushchars
+                0x0016e2e0                getjoydeadzone
+                0x0016d5cc                main
+ .text          0x001703a4     0x13e4 eobj/libengine.a(a-c.o)
+                0x00170944                mvlineasm1
+                0x0017081c                setupvlineasm
+                0x00170a28                setuptvlineasm
+                0x001706b4                slopevlin
+                0x00170420                settransreverse
+                0x001713b4                tspritevline
+                0x00170df4                thline
+                0x001715dc                setupdrawslab
+                0x001703fc                settransnormal
+                0x00170c30                msethlineshift
+                0x00170a54                tvlineasm1
+                0x00170db4                tsethlineshift
+                0x00170504                hlineasm4
+                0x0017161c                drawslab
+                0x001704c4                setuphlineasm4
+                0x00170c70                mhline
+                0x00170848                vlineasm1
+                0x001703d0                fixtransluscence
+                0x001716f0                stretchhline
+                0x001711dc                msetupspritevline
+                0x00171774                mmxoverlay
+                0x00170918                setupmvlineasm
+                0x0017134c                tsetupspritevline
+                0x001703a4                setvlinebpl
+                0x00171080                setupspritevline
+                0x00170648                setupslopevlin
+                0x00170498                setpalookupaddress
+                0x001710e8                spritevline
+                0x00171244                mspritevline
+                0x00170444                sethlinesizes
+ .text          0x00171788      0x1b4 eobj/libengine.a(baselayer.o)
+                0x001718dc                baselayer_init
+ .text          0x0017193c        0x0 eobj/libengine.a(engineinfo.o)
+ .text          0x0017193c      0x208 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+                0x0017193c                __udivsi3
+                0x0017193c                __aeabi_uidiv
+                0x00171b2c                __aeabi_uidivmod
+ .text          0x00171b44      0x238 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+                0x00171b44                __divsi3
+                0x00171d64                __aeabi_idivmod
+                0x00171b44                __aeabi_idiv
+ .text          0x00171d7c      0x3b8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+                0x001720c0                __floatundidf
+                0x00172058                __floatsidf
+                0x00172034                __aeabi_ui2d
+                0x00172058                __aeabi_i2d
+                0x00172034                __floatunsidf
+                0x00171d84                __subdf3
+                0x001720d4                __floatdidf
+                0x00171d88                __adddf3
+                0x001720d4                __aeabi_l2d
+                0x00172080                __aeabi_f2d
+                0x001720c0                __aeabi_ul2d
+                0x00171d7c                __aeabi_drsub
+                0x00172080                __extendsfdf2
+                0x00171d88                __aeabi_dadd
+                0x00171d84                __aeabi_dsub
+ .text          0x00172134      0x470 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+                0x00172134                __muldf3
+                0x001723a0                __divdf3
+                0x00172134                __aeabi_dmul
+                0x001723a0                __aeabi_ddiv
+ .text          0x001725a4       0x54 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+                0x001725a4                __fixunsdfsi
+                0x001725a4                __aeabi_d2uiz
+ .text          0x001725f8       0xa0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+                0x001725f8                __aeabi_d2f
+                0x001725f8                __truncdfsf2
+ .text          0x00172698      0x250 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+                0x001726a4                __aeabi_fadd
+                0x0017286c                __aeabi_l2f
+                0x0017285c                __aeabi_ul2f
+                0x001726a0                __subsf3
+                0x0017283c                __floatsisf
+                0x001726a4                __addsf3
+                0x00172698                __aeabi_frsub
+                0x0017286c                __floatdisf
+                0x001726a0                __aeabi_fsub
+                0x00172834                __aeabi_ui2f
+                0x0017283c                __aeabi_i2f
+                0x00172834                __floatunsisf
+                0x0017285c                __floatundisf
+ .text          0x001728e8       0x1c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+                0x001728e8                __aeabi_ldivmod
+ .text          0x00172904       0x10 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+                0x00172904                __div0
+ .text          0x00172914       0x88 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+                0x00172958                __gnu_ldivmod_helper
+                0x00172914                __gnu_uldivmod_helper
+ .text          0x0017299c      0x59c /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+                0x0017299c                __divdi3
+ .text          0x00172f38      0x530 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+                0x00172f38                __udivdi3
+ .text          0x00173468        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .text          0x00173468       0x6c /usr/lib/libc_nonshared.a(elf-init.oS)
+                0x00173468                __libc_csu_fini
+                0x0017346c                __libc_csu_init
+ .text          0x001734d4       0x28 /usr/lib/libc_nonshared.a(atexit.oS)
+                0x001734d4                atexit
+ .text          0x001734fc       0x10 /usr/lib/libc_nonshared.a(stat.oS)
+                0x001734fc                __stat
+                0x001734fc                stat
+ .text          0x0017350c       0x10 /usr/lib/libc_nonshared.a(fstat.oS)
+                0x0017350c                __fstat
+                0x0017350c                fstat
+ .text          0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .text          0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(.text.*personality*)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .glue_7t       0x0017351c        0x0 obj/game.o
+ .glue_7t       0x0017351c        0x0 obj/actors.o
+ .glue_7t       0x0017351c        0x0 obj/gamedef.o
+ .glue_7t       0x0017351c        0x0 obj/global.o
+ .glue_7t       0x0017351c        0x0 obj/menues.o
+ .glue_7t       0x0017351c        0x0 obj/player.o
+ .glue_7t       0x0017351c        0x0 obj/premap.o
+ .glue_7t       0x0017351c        0x0 obj/sector.o
+ .glue_7t       0x0017351c        0x0 obj/sounds.o
+ .glue_7t       0x0017351c        0x0 obj/rts.o
+ .glue_7t       0x0017351c        0x0 obj/config.o
+ .glue_7t       0x0017351c        0x0 obj/animlib.o
+ .glue_7t       0x0017351c        0x0 obj/testcd.o
+ .glue_7t       0x0017351c        0x0 obj/osdfuncs.o
+ .glue_7t       0x0017351c        0x0 obj/osdcmds.o
+ .glue_7t       0x0017351c        0x0 obj/missing.o
+ .glue_7t       0x0017351c        0x0 obj/util_lib.o
+ .glue_7t       0x0017351c        0x0 obj/file_lib.o
+ .glue_7t       0x0017351c        0x0 obj/control.o
+ .glue_7t       0x0017351c        0x0 obj/keyboard.o
+ .glue_7t       0x0017351c        0x0 obj/mouse.o
+ .glue_7t       0x0017351c        0x0 obj/mathutil.o
+ .glue_7t       0x0017351c        0x0 obj/scriplib.o
+ .glue_7t       0x0017351c        0x0 obj/game_icon.o
+ .glue_7t       0x0017351c        0x0 obj/audiolib_musicstub.o
+ .glue_7t       0x0017351c        0x0 obj/audiolib_fxstub.o
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(cache1d.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(compat.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(crc32.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(defs.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(engine.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(kplib.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(mmulti.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(osd.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(pragmas.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(scriptfile.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(sdlayer.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(a-c.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(baselayer.o)
+ .glue_7t       0x0017351c        0x0 eobj/libengine.a(engineinfo.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libm.so
+ .glue_7t       0x0017351c        0x0 /usr/local/lib/libSDL.so
+ .glue_7t       0x0017351c        0x0 /lib/libpthread.so.0
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .glue_7t       0x0017351c        0x0 /lib/libc.so.6
+ .glue_7t       0x0017351c        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .glue_7t       0x0017351c        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .glue_7t       0x0017351c        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .glue_7t       0x0017351c        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .glue_7t       0x0017351c        0x0 /lib/ld-linux.so.3
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .glue_7t       0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(.glue_7)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .glue_7        0x0017351c        0x0 obj/game.o
+ .glue_7        0x0017351c        0x0 obj/actors.o
+ .glue_7        0x0017351c        0x0 obj/gamedef.o
+ .glue_7        0x0017351c        0x0 obj/global.o
+ .glue_7        0x0017351c        0x0 obj/menues.o
+ .glue_7        0x0017351c        0x0 obj/player.o
+ .glue_7        0x0017351c        0x0 obj/premap.o
+ .glue_7        0x0017351c        0x0 obj/sector.o
+ .glue_7        0x0017351c        0x0 obj/sounds.o
+ .glue_7        0x0017351c        0x0 obj/rts.o
+ .glue_7        0x0017351c        0x0 obj/config.o
+ .glue_7        0x0017351c        0x0 obj/animlib.o
+ .glue_7        0x0017351c        0x0 obj/testcd.o
+ .glue_7        0x0017351c        0x0 obj/osdfuncs.o
+ .glue_7        0x0017351c        0x0 obj/osdcmds.o
+ .glue_7        0x0017351c        0x0 obj/missing.o
+ .glue_7        0x0017351c        0x0 obj/util_lib.o
+ .glue_7        0x0017351c        0x0 obj/file_lib.o
+ .glue_7        0x0017351c        0x0 obj/control.o
+ .glue_7        0x0017351c        0x0 obj/keyboard.o
+ .glue_7        0x0017351c        0x0 obj/mouse.o
+ .glue_7        0x0017351c        0x0 obj/mathutil.o
+ .glue_7        0x0017351c        0x0 obj/scriplib.o
+ .glue_7        0x0017351c        0x0 obj/game_icon.o
+ .glue_7        0x0017351c        0x0 obj/audiolib_musicstub.o
+ .glue_7        0x0017351c        0x0 obj/audiolib_fxstub.o
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(cache1d.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(compat.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(crc32.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(defs.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(engine.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(kplib.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(mmulti.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(osd.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(pragmas.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(scriptfile.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(sdlayer.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(a-c.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(baselayer.o)
+ .glue_7        0x0017351c        0x0 eobj/libengine.a(engineinfo.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libm.so
+ .glue_7        0x0017351c        0x0 /usr/local/lib/libSDL.so
+ .glue_7        0x0017351c        0x0 /lib/libpthread.so.0
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .glue_7        0x0017351c        0x0 /lib/libc.so.6
+ .glue_7        0x0017351c        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .glue_7        0x0017351c        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .glue_7        0x0017351c        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .glue_7        0x0017351c        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .glue_7        0x0017351c        0x0 /lib/ld-linux.so.3
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .glue_7        0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .vfp11_veneer  0x0017351c        0x0 obj/game.o
+ .vfp11_veneer  0x0017351c        0x0 obj/actors.o
+ .vfp11_veneer  0x0017351c        0x0 obj/gamedef.o
+ .vfp11_veneer  0x0017351c        0x0 obj/global.o
+ .vfp11_veneer  0x0017351c        0x0 obj/menues.o
+ .vfp11_veneer  0x0017351c        0x0 obj/player.o
+ .vfp11_veneer  0x0017351c        0x0 obj/premap.o
+ .vfp11_veneer  0x0017351c        0x0 obj/sector.o
+ .vfp11_veneer  0x0017351c        0x0 obj/sounds.o
+ .vfp11_veneer  0x0017351c        0x0 obj/rts.o
+ .vfp11_veneer  0x0017351c        0x0 obj/config.o
+ .vfp11_veneer  0x0017351c        0x0 obj/animlib.o
+ .vfp11_veneer  0x0017351c        0x0 obj/testcd.o
+ .vfp11_veneer  0x0017351c        0x0 obj/osdfuncs.o
+ .vfp11_veneer  0x0017351c        0x0 obj/osdcmds.o
+ .vfp11_veneer  0x0017351c        0x0 obj/missing.o
+ .vfp11_veneer  0x0017351c        0x0 obj/util_lib.o
+ .vfp11_veneer  0x0017351c        0x0 obj/file_lib.o
+ .vfp11_veneer  0x0017351c        0x0 obj/control.o
+ .vfp11_veneer  0x0017351c        0x0 obj/keyboard.o
+ .vfp11_veneer  0x0017351c        0x0 obj/mouse.o
+ .vfp11_veneer  0x0017351c        0x0 obj/mathutil.o
+ .vfp11_veneer  0x0017351c        0x0 obj/scriplib.o
+ .vfp11_veneer  0x0017351c        0x0 obj/game_icon.o
+ .vfp11_veneer  0x0017351c        0x0 obj/audiolib_musicstub.o
+ .vfp11_veneer  0x0017351c        0x0 obj/audiolib_fxstub.o
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(cache1d.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(compat.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(crc32.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(defs.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(engine.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(kplib.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(mmulti.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(osd.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(pragmas.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(scriptfile.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(sdlayer.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(a-c.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(baselayer.o)
+ .vfp11_veneer  0x0017351c        0x0 eobj/libengine.a(engineinfo.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/usr/lib/libm.so
+ .vfp11_veneer  0x0017351c        0x0 /usr/local/lib/libSDL.so
+ .vfp11_veneer  0x0017351c        0x0 /lib/libpthread.so.0
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .vfp11_veneer  0x0017351c        0x0 /lib/libc.so.6
+ .vfp11_veneer  0x0017351c        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .vfp11_veneer  0x0017351c        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .vfp11_veneer  0x0017351c        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .vfp11_veneer  0x0017351c        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .vfp11_veneer  0x0017351c        0x0 /lib/ld-linux.so.3
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/arm-none-linux-gnueabi/libc/lib/libgcc_s.so
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .vfp11_veneer  0x0017351c        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+
+.fini           0x0017351c        0x8
+ *(.fini)
+ .fini          0x0017351c        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x0017351c                _fini
+ .fini          0x00173520        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+                0x00173524                PROVIDE (__etext, .)
+                0x00173524                PROVIDE (_etext, .)
+                0x00173524                PROVIDE (etext, .)
+
+.rodata         0x00173524     0x764c
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.cst4   0x00173524        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+                0x00173524                _IO_stdin_used
+ .rodata        0x00173528     0x1420 obj/game.o
+ .rodata        0x00174948       0x5c obj/actors.o
+ .rodata        0x001749a4     0x1210 obj/gamedef.o
+ .rodata        0x00175bb4     0x163c obj/menues.o
+ .rodata        0x001771f0      0x11c obj/player.o
+ .rodata        0x0017730c      0x17c obj/premap.o
+ .rodata        0x00177488       0x14 obj/sector.o
+ .rodata        0x0017749c       0xb8 obj/sounds.o
+ .rodata        0x00177554      0x130 obj/rts.o
+ .rodata        0x00177684      0x910 obj/config.o
+ .rodata        0x00177f94       0x80 obj/animlib.o
+ .rodata        0x00178014      0x5b0 obj/osdcmds.o
+ .rodata        0x001785c4       0x6c obj/util_lib.o
+ .rodata        0x00178630       0xd0 obj/file_lib.o
+ .rodata        0x00178700      0x100 obj/control.o
+ .rodata        0x00178800      0x23c obj/keyboard.o
+ .rodata        0x00178a3c      0x120 obj/scriplib.o
+ .rodata        0x00178b5c      0x110 obj/audiolib_musicstub.o
+ .rodata        0x00178c6c       0x90 obj/audiolib_fxstub.o
+ .rodata        0x00178cfc      0x214 eobj/libengine.a(cache1d.o)
+ .rodata        0x00178f10      0x124 eobj/libengine.a(compat.o)
+ .rodata        0x00179034      0x884 eobj/libengine.a(defs.o)
+ .rodata        0x001798b8      0x164 eobj/libengine.a(engine.o)
+ .rodata        0x00179a1c       0x84 eobj/libengine.a(kplib.o)
+ .rodata        0x00179aa0       0xf4 eobj/libengine.a(mmulti.o)
+ .rodata        0x00179b94      0x604 eobj/libengine.a(osd.o)
+ .rodata        0x0017a198       0x20 eobj/libengine.a(pragmas.o)
+ .rodata        0x0017a1b8       0xe0 eobj/libengine.a(scriptfile.o)
+ .rodata        0x0017a298      0x4b0 eobj/libengine.a(sdlayer.o)
+ .rodata        0x0017a748      0x14c eobj/libengine.a(baselayer.o)
+ .rodata        0x0017a894      0x1dc eobj/libengine.a(engineinfo.o)
+                0x0017a894                _engine_cflags
+                0x0017aa34                _engine_compiler
+                0x0017a9d4                _engine_uname
+                0x0017a994                _engine_libs
+                0x0017aa58                _engine_date
+ .rodata        0x0017aa70      0x100 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+                0x0017aa70                __clz_tab
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x0017ab70        0x0
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab     0x0017ab70        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .ARM.extab     0x0017ab70        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .ARM.extab     0x0017ab70        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+                0x0017ab70                __exidx_start = .
+
+.ARM.exidx      0x0017ab70       0x18
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x0017ab70        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .ARM.exidx     0x0017ab78        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x0017ab80        0x8 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+                0x0017ab88                __exidx_end = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x0017ab88        0x4
+ *(.eh_frame)
+ .eh_frame      0x0017ab88        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x0017ab8c                . = (ALIGN (0x8000) - ((0x8000 - .) & 0x7fff))
+                0x00183000                . = (0x8000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x00183000        0x0
+                0x00183000                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x00183000                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x00183000        0x4
+                0x00183000                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00183000        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+                0x00183004                PROVIDE (__init_array_end, .)
+
+.fini_array     0x00183004        0x4
+                0x00183004                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ .fini_array    0x00183004        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00183008                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr            0x00183008        0x4
+ *(.jcr)
+ .jcr           0x00183008        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .jcr           0x00183008        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x0018300c      0x110
+ *(.dynamic)
+ .dynamic       0x0018300c      0x110 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x0018300c                _DYNAMIC
+                0x0018311c                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.got            0x0018311c      0x1f0
+ *(.got.plt)
+ .got.plt       0x0018311c      0x1e4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x0018311c                _GLOBAL_OFFSET_TABLE_
+ *(.got)
+ .got           0x00183300        0xc /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+
+.data           0x00183310     0x5970
+                0x00183310                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00183310        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+                0x00183310                data_start
+ .data          0x00183314        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .data          0x00183314        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+                0x00183314                __dso_handle
+ .data          0x00183318      0x204 obj/game.o
+                0x00183398                sendmessagecommand
+                0x00183318                confilename
+                0x00183518                which_demo
+                0x001833a8                cheatquotes
+                0x00183514                startwin_labeltext
+ .data          0x0018351c        0x0 obj/actors.o
+ .data          0x0018351c      0x2e8 obj/gamedef.o
+                0x001837f8                defaultcons
+                0x0018351c                conversion
+ .data          0x00183804      0x168 obj/global.o
+                0x00183968                bufferjitter
+                0x0018395c                dukefriction
+                0x0018380a                volume_names
+                0x0018388e                skill_names
+                0x00183938                respawnitemtime
+                0x00183960                networkmode
+                0x00183964                numfreezebounces
+                0x00183961                movesperpacket
+                0x00183808                spriteqamount
+                0x0018393c                weaponsandammosprites
+                0x00183934                respawnactortime
+                0x00183804                gc
+ .data          0x0018396c       0x80 obj/menues.o
+                0x0018396c                globalskillsound
+                0x001839c8                lastsavedpos
+ .data          0x001839ec      0x258 obj/player.o
+                0x001839ec                weapon_sprites
+ .data          0x00183c44        0x4 obj/premap.o
+                0x00183c46                useprecache
+ .data          0x00183c48        0x0 obj/sector.o
+ .data          0x00183c48        0x0 obj/sounds.o
+ .data          0x00183c48        0x0 obj/rts.o
+ .data          0x00183c48      0x63c obj/config.o
+                0x00184178                ScreenHeight
+                0x00183c48                gamefunctions
+                0x0018417c                ScreenBPP
+                0x00184174                ScreenWidth
+                0x00184170                ScreenMode
+ .data          0x00184284        0x0 obj/animlib.o
+ .data          0x00184284        0x0 obj/testcd.o
+ .data          0x00184284        0x0 obj/osdfuncs.o
+ .data          0x00184284        0x0 obj/osdcmds.o
+ .data          0x00184284        0x0 obj/missing.o
+ .data          0x00184284        0x0 obj/util_lib.o
+ .data          0x00184284        0x0 obj/file_lib.o
+ .data          0x00184284       0x28 obj/control.o
+ .data          0x001842ac      0x338 obj/keyboard.o
+ .data          0x001845e4        0x0 obj/mouse.o
+ .data          0x001845e4        0x0 obj/mathutil.o
+ .data          0x001845e4        0x0 obj/scriplib.o
+ .data          0x001845e4     0x27f0 obj/game_icon.o
+                0x00186dbc                sdlappicon
+ .data          0x00186dd4        0x0 obj/audiolib_musicstub.o
+ .data          0x00186dd4        0x0 obj/audiolib_fxstub.o
+ .data          0x00186dd4      0x21c eobj/libengine.a(cache1d.o)
+ .data          0x00186ff0        0x0 eobj/libengine.a(compat.o)
+ .data          0x00186ff0        0x0 eobj/libengine.a(crc32.o)
+ .data          0x00186ff0      0x308 eobj/libengine.a(defs.o)
+ .data          0x001872f8     0x15e0 eobj/libengine.a(engine.o)
+                0x001888cc                clipmoveboxtracenum
+                0x001888d0                drawlinepat
+                0x001883b8                hitscangoaly
+                0x001873a0                textfont
+                0x00187318                pow2char
+                0x001872fc                dommxoverlay
+                0x001883a0                engineerrstr
+                0x00187320                pow2long
+                0x001883bc                vgapal16
+                0x00187314                mapversion
+                0x001887c0                msens
+                0x001887bc                searchx
+                0x00187ba0                smalltextfont
+                0x001883a8                xdimen
+                0x00187300                beforedrawrooms
+                0x001887cc                apptitle
+                0x001883b4                hitscangoalx
+ .data          0x001888d8      0x190 eobj/libengine.a(kplib.o)
+ .data          0x00188a68        0xc eobj/libengine.a(mmulti.o)
+ .data          0x00188a74       0x44 eobj/libengine.a(osd.o)
+ .data          0x00188ab8        0x0 eobj/libengine.a(pragmas.o)
+ .data          0x00188ab8        0x0 eobj/libengine.a(scriptfile.o)
+ .data          0x00188ab8      0x1c4 eobj/libengine.a(sdlayer.o)
+                0x00188abc                appactive
+                0x00188ac4                yres
+                0x00188ac0                xres
+                0x00188ab8                _buildargc
+                0x00188ac8                modechange
+ .data          0x00188c7c        0x0 eobj/libengine.a(a-c.o)
+ .data          0x00188c7c        0x4 eobj/libengine.a(baselayer.o)
+                0x00188c7c                baselayer_onvideomodechange
+ .data          0x00188c80        0x0 eobj/libengine.a(engineinfo.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .data          0x00188c80        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .data          0x00188c80        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .data          0x00188c80        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .data          0x00188c80        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .data          0x00188c80        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(.gnu.linkonce.d.*personality*)
+
+.data1
+ *(.data1)
+                0x00188c80                _edata = .
+                0x00188c80                PROVIDE (edata, .)
+                0x00188c80                __bss_start = .
+                0x00188c80                __bss_start__ = .
+
+.bss            0x00188c80   0x8cc89c
+ *(.dynbss)
+ .dynbss        0x00188c80        0x4 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+                0x00188c80                stderr@@GLIBC_2.4
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00188c84        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .bss           0x00188c84        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .bss           0x00188c84        0x1 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ *fill*         0x00188c85        0x3 00
+ .bss           0x00188c88      0x1d0 obj/game.o
+                0x00188df0                shareware
+                0x00188de5                actor_tog
+                0x00188de8                frecfilep
+                0x00188c88                cameradist
+                0x00188de4                debug_on
+                0x00188dec                inputloc
+                0x00188df4                in_menu
+                0x00188c90                boardfilename
+                0x00188de6                memorycheckoveride
+                0x00188c8c                cameraclock
+                0x00188d94                firstdemofile
+ .bss           0x00188e58        0x0 obj/actors.o
+ .bss           0x00188e58       0x18 obj/gamedef.o
+ .bss           0x00188e70       0x18 obj/global.o
+                0x00188e74                cloudtotalclock
+                0x00188e80                startofdynamicinterpolations
+                0x00188e78                totalmemory
+                0x00188e84                nextvoxid
+                0x00188e72                lasermode
+                0x00188e70                loadfromgrouponly
+                0x00188e71                freezerhurtowner
+                0x00188e7c                numinterpolations
+                0x00188e73                gamequit
+ .bss           0x00188e88     0x4218 obj/menues.o
+                0x00188e94                lastanimhack
+                0x00188e88                probey
+                0x00188e8c                last_threehundred
+                0x00188e8a                lastprobey
+                0x00188e90                quittimer
+ .bss           0x0018d0a0      0x20c obj/player.o
+                0x0018d0a4                myaimstat
+                0x0018d0a8                omyaimstat
+                0x0018d0a0                myaimmode
+ .bss           0x0018d2ac      0x904 obj/premap.o
+ .bss           0x0018dbb0        0x0 obj/sector.o
+ .bss           0x0018dbb0        0x1 obj/sounds.o
+                0x0018dbb0                menunum
+ *fill*         0x0018dbb1        0x3 00
+ .bss           0x0018dbb4        0xc obj/rts.o
+ .bss           0x0018dbc0        0x4 obj/config.o
+ .bss           0x0018dbc4        0x8 obj/animlib.o
+                0x0018dbc4                anim
+ .bss           0x0018dbcc        0x0 obj/testcd.o
+ .bss           0x0018dbcc        0x0 obj/osdfuncs.o
+ .bss           0x0018dbcc        0x0 obj/osdcmds.o
+ .bss           0x0018dbcc        0x0 obj/missing.o
+ .bss           0x0018dbcc        0x4 obj/util_lib.o
+ .bss           0x0018dbd0       0x50 obj/file_lib.o
+ .bss           0x0018dc20      0x6b0 obj/control.o
+                0x0018dc28                CONTROL_MousePresent
+                0x0018dc3c                CONTROL_ButtonHeldState2
+                0x0018dc30                CONTROL_ButtonState1
+                0x0018dc24                CONTROL_JoystickEnabled
+                0x0018dc20                CONTROL_JoyPresent
+                0x0018dc2c                CONTROL_MouseEnabled
+                0x0018dc34                CONTROL_ButtonHeldState1
+                0x0018dc38                CONTROL_ButtonState2
+ .bss           0x0018e2d0        0x4 obj/keyboard.o
+ .bss           0x0018e2d4        0x0 obj/mouse.o
+ .bss           0x0018e2d4        0x0 obj/mathutil.o
+ .bss           0x0018e2d4       0x50 obj/scriplib.o
+ .bss           0x0018e324        0x0 obj/game_icon.o
+ .bss           0x0018e324        0x4 obj/audiolib_musicstub.o
+                0x0018e324                MUSIC_ErrorCode
+ .bss           0x0018e328        0x4 obj/audiolib_fxstub.o
+                0x0018e328                FX_ErrorCode
+ .bss           0x0018e32c     0x45f0 eobj/libengine.a(cache1d.o)
+                0x0018e330                zerochar
+                0x0018e338                cacnum
+                0x0018e334                cachestart
+                0x0018e33c                agecount
+                0x0018e32c                cachecount
+ .bss           0x0019291c        0x0 eobj/libengine.a(compat.o)
+ .bss           0x0019291c      0x400 eobj/libengine.a(crc32.o)
+ .bss           0x00192d1c        0x4 eobj/libengine.a(defs.o)
+ .bss           0x00192d20    0xa32c4 eobj/libengine.a(engine.o)
+                0x00192d28                cachesize
+                0x00192d40                palfadedelta
+                0x00192d3c                palfadeclamp
+                0x00192d24                artsize
+                0x00192d30                transluc
+                0x00192d34                paletteloaded
+                0x00192d20                pic
+                0x00192d36                editstatus
+                0x00192d2c                qsetmode
+                0x00192d41                cachedebug
+                0x00192d38                palfadergb
+ .bss           0x00235fe4    0x3e77c eobj/libengine.a(kplib.o)
+ .bss           0x00274760   0x4116fc eobj/libengine.a(mmulti.o)
+                0x00274760                syncstate
+ .bss           0x00685e5c     0xc4b0 eobj/libengine.a(osd.o)
+ .bss           0x0069230c        0x0 eobj/libengine.a(pragmas.o)
+ .bss           0x0069230c        0xc eobj/libengine.a(scriptfile.o)
+ .bss           0x00692318     0x1eb4 eobj/libengine.a(sdlayer.o)
+                0x0069231c                quitevent
+                0x0069233c                mouseb
+                0x0069234d                joynumaxes
+                0x00692338                mousey
+                0x00692328                frameplace
+                0x0069234f                joynumhats
+                0x00692358                mousepresscallback
+                0x00692333                inputdevices
+                0x00692320                bpp
+                0x00692348                joyhat
+                0x00692334                mousex
+                0x00692332                nofog
+                0x00692350                joyaxespresent
+                0x0069232c                lockcount
+                0x00692344                joyb
+                0x00692324                fullscreen
+                0x00692318                _buildargv
+                0x0069234c                joyisgamepad
+                0x00692331                videomodereset
+                0x0069234e                joynumbuttons
+                0x0069235c                joypresscallback
+                0x00692330                offscreenrendering
+                0x00692340                joyaxis
+                0x00692354                keypresscallback
+ .bss           0x006941cc       0x2c eobj/libengine.a(a-c.o)
+ .bss           0x006941f8        0x0 eobj/libengine.a(baselayer.o)
+ .bss           0x006941f8        0x0 eobj/libengine.a(engineinfo.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .bss           0x006941f8        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .bss           0x006941f8        0x0 /usr/lib/libc_nonshared.a(atexit.oS)
+ .bss           0x006941f8        0x0 /usr/lib/libc_nonshared.a(stat.oS)
+ .bss           0x006941f8        0x0 /usr/lib/libc_nonshared.a(fstat.oS)
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .bss           0x006941f8        0x0 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+ *(COMMON)
+ COMMON         0x006941f8     0x9190 obj/game.o
+                0x006941f8                quotebotgoal
+                0x006941fc                qe
+                0x006941fe                user_quote_time
+                0x00694206                cheatbuflen
+                0x00694208                recfilep
+                0x0069420c                titlepal
+                0x0069450c                playerswhenstarted
+                0x0069450d                recbuf
+                0x00694560                nonsharedtimer
+                0x00694564                slimepal
+                0x00694864                user_quote
+                0x00694a64                restorepalette
+                0x00694a65                cp
+                0x00694a68                totalreccnt
+                0x00694a6c                tempwallptr
+                0x00694a70                tempsectorpicnum
+                0x00698a70                quotebot
+                0x00698a74                rtsptr
+                0x00698a78                nomorelogohack
+                0x00698a79                screencapt
+                0x00698a7a                cheatbuf
+                0x00698a84                waterpal
+                0x00698d84                tempsectorz
+                0x0069cd84                endingpal
+                0x0069d084                drealms
+                0x0069d384                usemodels
+ COMMON         0x0069d388        0x2 obj/actors.o
+                0x0069d388                otherp
+ *fill*         0x0069d38a        0x2 00
+ COMMON         0x0069d38c   0x199d38 obj/global.o
+                0x0069d38c                playerquitflag
+                0x0069d39c                curipos
+                0x0069f39c                spriteq
+                0x0069fb9c                myang
+                0x0069fba0                soundsiz
+                0x006a02a8                tempbuf
+                0x006a0aa8                rpgblastradius
+                0x006a0aac                playerreadyflag
+                0x006a0abc                myyvel
+                0x006a0ac0                multiwho
+                0x006a0ac1                multipos
+                0x006a0ac2                neartagsector
+                0x006a0ac4                bouncemineblastradius
+                0x006a0ac8                syncval
+                0x006a1ac8                msy
+                0x006a3ac8                mymembuf
+                0x006a3acc                shrinkerblastradius
+                0x006a3ad0                insptr
+                0x006a3ad4                frags
+                0x006a3cd4                mirrorsector
+                0x006a3d54                screenpeek
+                0x006a3d56                sbar
+                0x006a3dbc                killit_flag
+                0x006a3dbe                myhoriz
+                0x006a3dc0                mycursectnum
+                0x006a3dc4                avgavel
+                0x006a3dc8                global_random
+                0x006a3dca                typebuflen
+                0x006a3dcc                ototalclock
+                0x006a3dd0                clouds
+                0x006a3ed0                max_ammo_amount
+                0x006a3f00                myhorizoff
+                0x006a3f04                tripbombblastradius
+                0x006a3f08                multiwhat
+                0x006a3f0c                impact_damage
+                0x006a3f10                ps
+                0x006a7990                myx
+                0x006a7994                myminlag
+                0x006a79d4                soundvo
+                0x006a7d58                omyang
+                0x006a7d5c                po
+                0x006a7e5c                betaname
+                0x006a7eac                env_music_fn
+                0x006a7ee0                omyhorizoff
+                0x006a7ee2                spriteqloc
+                0x006a7ee4                labelcnt
+                0x006a7ee8                display_mirror
+                0x006a7eec                horiz
+                0x006a7ef0                labeltype
+                0x006a7ef4                animategoal
+                0x006a7ff4                syncstat
+                0x006a7ff8                syncvaltottail
+                0x006a7ffc                mirrorcnt
+                0x006a8000                hittype
+                0x007c8000                designertime
+                0x007c80b0                multiflag
+                0x007c80b1                actortype
+                0x007ca4b4                avgsvel
+                0x007ca4b8                morterblastradius
+                0x007ca4bc                msx
+                0x007cc4bc                soundm
+                0x007cc67e                packbuf
+                0x007cc8be                numcyclers
+                0x007cc8c0                omyz
+                0x007cc8c4                loc
+                0x007cc8d0                mirrorwall
+                0x007cc950                vel
+                0x007cc954                ready2send
+                0x007cc956                soundps
+                0x007cccdc                myxvel
+                0x007ccce0                animwall
+                0x007cdce0                neartagwall
+                0x007cdce4                myhorizbak
+                0x007ce0e4                animatevel
+                0x007ce1e4                music_fn
+                0x007ce420                myjumpingcounter
+                0x007ce422                typebuf
+                0x007ce44c                cloudx
+                0x007ce54c                cyclers
+                0x007cf14c                pub
+                0x007cf14d                myname
+                0x007cf170                recsync
+                0x007d6790                oldipos
+                0x007d8790                partime
+                0x007d8840                level_names
+                0x007d8dec                level_file_names
+                0x007da3ec                omyy
+                0x007da3f0                animatecnt
+                0x007da3f4                avgbits
+                0x007da3f8                earthquaketime
+                0x007da3fc                max_armour_amount
+                0x007da400                animatesect
+                0x007da480                myybak
+                0x007da880                actorscrptr
+                0x007e3880                parsing_actor
+                0x007e3884                seenineblastradius
+                0x007e3888                error
+                0x007e3889                myonground
+                0x007e388a                camerashitable
+                0x007e388c                labelcode
+                0x007e3890                movefifosendplc
+                0x007e3894                dsync
+                0x007e3954                numclouds
+                0x007e3958                myzbak
+                0x007e3d58                MusicPtr
+                0x00806fd8                music_pointer
+                0x00806fdc                textptr
+                0x00806fe0                fakemovefifoplc
+                0x00806fe4                soundpr
+                0x008071a8                avghorz
+                0x008071ac                avgfvel
+                0x008071b0                Sound
+                0x00808dd0                myxbak
+                0x008091d0                numplayersprites
+                0x008091d2                cloudy
+                0x008092d2                fta_quotes
+                0x0080c2d4                label
+                0x0080c2d8                omyhoriz
+                0x0080c2dc                syncvalhead
+                0x0080c31c                myz
+                0x0080c320                title_zoom
+                0x0080c324                fricyv
+                0x0080c328                music_select
+                0x0080c32a                camsprite
+                0x0080c32c                movefifoplc
+                0x0080c330                sounds
+                0x0080dbcc                scriptptr
+                0x0080dbd0                inputfifo
+                0x00819bd0                max_player_health
+                0x00819bd4                myjumpingtoggle
+                0x00819bd6                myangbak
+                0x00819dd6                buf
+                0x0081a1d8                show_shareware
+                0x0081a1dc                script
+                0x00830a1c                omyx
+                0x00830a20                myreturntocenter
+                0x00830a24                ud
+                0x00831370                mymaxlag
+                0x00831374                pipebombblastradius
+                0x00831378                numanimwalls
+                0x0083137c                SoundOwner
+                0x00834bbc                myzvel
+                0x00834bc0                myhardlanding
+                0x00834bc1                rtsplaying
+                0x00834bc4                svel
+                0x00834bc8                syncvaltail
+                0x00834bcc                warning
+                0x00834bd0                animateptr
+                0x00834cd0                lockclock
+                0x00834cd4                bakipos
+                0x00836cd4                pus
+                0x00836cd8                checksume
+                0x00836cdc                everyothertime
+                0x00836ce0                otherminlag
+                0x00836ce4                neartagsprite
+                0x00836ce6                soundpe
+                0x0083706c                neartaghitdist
+                0x00837070                angvel
+                0x00837074                groupfile
+                0x00837078                movefifoend
+                0x008370b8                fricxv
+                0x008370bc                myy
+                0x008370c0                current_menu
+ COMMON         0x008370c4       0x2c obj/menues.o
+                0x008370c4                buttonstat
+                0x008370c8                mi
+                0x008370cc                deletespot
+                0x008370ce                last_fifty
+                0x008370d0                last_menu
+                0x008370d2                sh
+                0x008370d4                minfo
+                0x008370ec                onbar
+                0x008370ee                last_zero
+ COMMON         0x008370f0     0x420e obj/player.o
+                0x008370f0                dashow2dsector
+                0x008372f0                searchparent
+                0x008392f0                lastcontroltime
+                0x008392f4                turnheldtime
+                0x008392f8                searchsect
+                0x0083b2f8                lastvisinc
+                0x0083b2fc                fistsign
+ COMMON         0x0083b2fe        0x1 obj/sector.o
+                0x0083b2fe                haltsoundhack
+ *fill*         0x0083b2ff        0x1 00
+ COMMON         0x0083b300        0x8 obj/sounds.o
+                0x0083b300                backflag
+                0x0083b304                numenvsnds
+ COMMON         0x0083b308        0xf obj/rts.o
+                0x0083b308                numlumps
+                0x0083b30c                lumplockbyte
+ *fill*         0x0083b317        0x1 00
+ COMMON         0x0083b318      0x2e0 obj/config.o
+                0x0083b318                AutoAim
+                0x0083b31c                MouseFunctions
+                0x0083b34c                JoystickAnalogueDead
+                0x0083b36c                JoystickAnalogueSaturate
+                0x0083b38c                ReverseStereo
+                0x0083b390                FXDevice
+                0x0083b394                MusicDevice
+                0x0083b398                MouseDigitalFunctions
+                0x0083b3a8                VoiceToggle
+                0x0083b3ac                ControllerType
+                0x0083b3b0                JoystickAnalogueAxes
+                0x0083b3d0                NumVoices
+                0x0083b3d4                JoystickDigitalFunctions
+                0x0083b414                JoystickFunctions
+                0x0083b534                KeyboardKeys
+                0x0083b5a0                MouseAnalogueAxes
+                0x0083b5a8                AmbienceToggle
+                0x0083b5ac                MixRate
+                0x0083b5b0                MouseAnalogueScale
+                0x0083b5b8                MusicVolume
+                0x0083b5bc                MouseAiming
+                0x0083b5c0                JoystickAnalogueScale
+                0x0083b5e0                NumChannels
+                0x0083b5e4                FXVolume
+                0x0083b5e8                MusicToggle
+                0x0083b5ec                NumBits
+                0x0083b5f0                RunMode
+                0x0083b5f4                SoundToggle
+ COMMON         0x0083b5f8        0xc obj/osdcmds.o
+                0x0083b5f8                osdcmd_cheatsinfo_stat
+ COMMON         0x0083b604        0x1 obj/keyboard.o
+                0x0083b604                KB_LastScan
+ *fill*         0x0083b605        0x3 00
+ COMMON         0x0083b608    0x1b000 eobj/libengine.a(cache1d.o)
+                0x0083b608                cac
+ COMMON         0x00856608   0x1fe930 eobj/libengine.a(engine.o)
+                0x00856608                globalbufplc
+                0x0085660c                waloff
+                0x0085f60c                xdimenscale
+                0x0085f610                singlobalang
+                0x0085f614                searchsector
+                0x0085f618                validmode
+                0x00860618                dplc
+                0x00861298                prevspritestat
+                0x00869298                numsectors
+                0x0086929a                globalpicnum
+                0x0086929c                asm4
+                0x008692a0                palookupoffse
+                0x008692b0                globalyscale
+                0x008692b4                fpuasm
+                0x008692b8                halfxdimen
+                0x008692bc                ydim
+                0x008692c0                vplce
+                0x008692d0                globaldclip
+                0x008692d4                globalx1
+                0x008692d8                parallaxyoffs
+                0x008692dc                ydimen
+                0x008692e0                wy2
+                0x008692e4                curpalettefaded
+                0x008696e4                sector
+                0x008916e4                searchit
+                0x008916e6                tilefilenum
+                0x00893ae8                globaly2
+                0x00893aec                globalpalwritten
+                0x00893af0                globalx
+                0x00893af4                parallaxyscale
+                0x00893af8                xdim
+                0x00893afc                picanm
+                0x0089cafc                globalshade
+                0x0089cb00                picsiz
+                0x0089ef00                tilesizx
+                0x008a3700                captureformat
+                0x008a3704                globalz
+                0x008a3708                startposx
+                0x008a370c                slopalookup
+                0x008b370c                globalposy
+                0x008b3710                totalclock
+                0x008b3714                midydim16
+                0x008b3718                xdimscale
+                0x008b371c                globalorientation
+                0x008b3720                ebpbak
+                0x008b3724                asm1
+                0x008b3728                startumost
+                0x008b43a8                dmost
+                0x008b5028                globalvisibility
+                0x008b502c                automapping
+                0x008b5030                globalxpanning
+                0x008b5034                globalx2
+                0x008b5038                lastageclock
+                0x008b503c                pointhighlight
+                0x008b5040                wy1
+                0x008b5044                nextspritestat
+                0x008bd044                pskyoff
+                0x008bd244                randomseed
+                0x008bd248                globaly3
+                0x008bd24c                globaluclip
+                0x008bd250                bufplce
+                0x008bd260                wx2
+                0x008bd264                startdmost
+                0x008bdee4                globalyshift
+                0x008bdee8                tilefileoffs
+                0x008c6ee8                showinvisibility
+                0x008c6eec                globalypanning
+                0x008c6ef0                visibility
+                0x008c6ef4                viewingrange
+                0x008c6ef8                globalposz
+                0x008c6efc                numscans
+                0x008c6efe                globalang
+                0x008c6f00                xdimenrecip
+                0x008c6f04                show2dsector
+                0x008c7104                searchstat
+                0x008c7108                globalhisibility
+                0x008c710c                globalcursectnum
+                0x008c7110                ydim16
+                0x008c7114                windowy2
+                0x008c7118                asm2
+                0x008c711c                espbak
+                0x008c7120                parallaxtype
+                0x008c7124                guniqhudid
+                0x008c7128                startposz
+                0x008c712c                numframes
+                0x008c7130                frameoffset
+                0x008c7134                palette
+                0x008c7434                validmodecnt
+                0x008c7438                numpalookups
+                0x008c743a                numhits
+                0x008c743c                halfxdim16
+                0x008c7440                sinviewingrangeglobalang
+                0x008c7444                globalx3
+                0x008c7448                windowx2
+                0x008c744c                reciptable
+                0x008c944c                globalcisibility
+                0x008c9450                globalzx
+                0x008c9454                spriteext
+                0x008fa054                xyaspect
+                0x008fa058                numbunches
+                0x008fa05a                headspritestat
+                0x008fa85c                yxaspect
+                0x008fa860                show2dsprite
+                0x008fb060                gotpic
+                0x008fb4e0                tsprite
+                0x009064e0                britable
+                0x009074e0                nextspritesect
+                0x0090f4e0                show2dwall
+                0x0090fce0                globparaceilclip
+                0x0090fce1                globparaflorclip
+                0x0090fce2                sintable
+                0x00910ce4                globalzd
+                0x00910ce8                headspritesect
+                0x00912cea                uplc
+                0x0091396a                numwalls
+                0x0091396c                viewingrangerecip
+                0x00913970                cosglobalang
+                0x00913974                globalxshift
+                0x00913978                wx1
+                0x0091397c                globvis
+                0x00913980                parallaxvisibility
+                0x00913984                palookup
+                0x00913d84                asm3
+                0x00913d88                windowy1
+                0x00913d8c                gotsector
+                0x00913f8c                prevspritesect
+                0x0091bf8c                curpalette
+                0x0091c38c                umost
+                0x0091d00c                startposy
+                0x0091d010                numpages
+                0x0091d014                highlightcnt
+                0x0091d016                linehighlight
+                0x0091d018                startang
+                0x0091d01c                globalhoriz
+                0x0091d020                cosviewingrangeglobalang
+                0x0091d024                windowx1
+                0x0091d028                globalshiftval
+                0x0091d02c                spritesortcnt
+                0x0091d030                artversion
+                0x0091d034                pageoffset
+                0x0091d038                walock
+                0x0091f438                searchwall
+                0x0091f43c                globalpisibility
+                0x0091f440                wall
+                0x0099f440                globalposx
+                0x0099f444                startsectnum
+                0x0099f448                numtiles
+                0x0099f44c                globaly
+                0x0099f450                searchy
+                0x0099f454                pskybits
+                0x0099f458                globalpal
+                0x0099f45c                totalclocklock
+                0x0099f460                globaly1
+                0x0099f464                sprite
+                0x00a4f464                ylookup
+                0x00a50728                vince
+                0x00a50738                tilesizy
+ COMMON         0x00a54f38      0x406 eobj/libengine.a(kplib.o)
+                0x00a54f38                paleng
+                0x00a54f3c                palcol
+                0x00a5533c                coltype
+                0x00a5533d                bitdepth
+ *fill*         0x00a5533e        0x2 00
+ COMMON         0x00a55340       0x4c eobj/libengine.a(mmulti.o)
+                0x00a55340                connectpoint2
+                0x00a55380                numplayers
+                0x00a55384                connecthead
+                0x00a55388                myconnectindex
+ COMMON         0x00a5538c        0x4 eobj/libengine.a(pragmas.o)
+                0x00a5538c                dmval
+ COMMON         0x00a55390      0x18c eobj/libengine.a(sdlayer.o)
+                0x00a55390                keyasciififoplc
+                0x00a55391                keyasciififo
+                0x00a553d1                keyfifoend
+                0x00a553d2                keyasciififoend
+                0x00a553d3                keyfifo
+                0x00a55413                keyfifoplc
+                0x00a55414                bytesperline
+                0x00a55418                keystatus
+                0x00a55518                imageSize
+                0x00a5551c                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00a5551c                _bss_end__ = .
+                0x00a5551c                __bss_end__ = .
+                0x00a5551c                . = ALIGN (0x4)
+                0x00a5551c                . = ALIGN (0x4)
+                0x00a5551c                __end__ = .
+                0x00a5551c                _end = .
+                0x00a5551c                PROVIDE (end, .)
+                0x00a5551c                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x898
+ *(.comment)
+ .comment       0x00000000       0x37 obj/game.o
+ .comment       0x00000037       0x37 obj/actors.o
+ .comment       0x0000006e       0x37 obj/gamedef.o
+ .comment       0x000000a5       0x37 obj/global.o
+ .comment       0x000000dc       0x37 obj/menues.o
+ .comment       0x00000113       0x37 obj/player.o
+ .comment       0x0000014a       0x37 obj/premap.o
+ .comment       0x00000181       0x37 obj/sector.o
+ .comment       0x000001b8       0x37 obj/sounds.o
+ .comment       0x000001ef       0x37 obj/rts.o
+ .comment       0x00000226       0x37 obj/config.o
+ .comment       0x0000025d       0x37 obj/animlib.o
+ .comment       0x00000294       0x37 obj/testcd.o
+ .comment       0x000002cb       0x37 obj/osdfuncs.o
+ .comment       0x00000302       0x37 obj/osdcmds.o
+ .comment       0x00000339       0x37 obj/missing.o
+ .comment       0x00000370       0x37 obj/util_lib.o
+ .comment       0x000003a7       0x37 obj/file_lib.o
+ .comment       0x000003de       0x37 obj/control.o
+ .comment       0x00000415       0x37 obj/keyboard.o
+ .comment       0x0000044c       0x37 obj/mouse.o
+ .comment       0x00000483       0x37 obj/mathutil.o
+ .comment       0x000004ba       0x37 obj/scriplib.o
+ .comment       0x000004f1       0x37 obj/game_icon.o
+ .comment       0x00000528       0x37 obj/audiolib_musicstub.o
+ .comment       0x0000055f       0x37 obj/audiolib_fxstub.o
+ .comment       0x00000596       0x37 eobj/libengine.a(cache1d.o)
+ .comment       0x000005cd       0x37 eobj/libengine.a(compat.o)
+ .comment       0x00000604       0x37 eobj/libengine.a(crc32.o)
+ .comment       0x0000063b       0x37 eobj/libengine.a(defs.o)
+ .comment       0x00000672       0x37 eobj/libengine.a(engine.o)
+ .comment       0x000006a9       0x37 eobj/libengine.a(kplib.o)
+ .comment       0x000006e0       0x37 eobj/libengine.a(mmulti.o)
+ .comment       0x00000717       0x37 eobj/libengine.a(osd.o)
+ .comment       0x0000074e       0x37 eobj/libengine.a(pragmas.o)
+ .comment       0x00000785       0x37 eobj/libengine.a(scriptfile.o)
+ .comment       0x000007bc       0x37 eobj/libengine.a(sdlayer.o)
+ .comment       0x000007f3       0x37 eobj/libengine.a(a-c.o)
+ .comment       0x0000082a       0x37 eobj/libengine.a(baselayer.o)
+ .comment       0x00000861       0x37 eobj/libengine.a(engineinfo.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x4a0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 obj/game.o
+ .debug_aranges
+                0x00000020       0x20 obj/actors.o
+ .debug_aranges
+                0x00000040       0x20 obj/gamedef.o
+ .debug_aranges
+                0x00000060       0x20 obj/menues.o
+ .debug_aranges
+                0x00000080       0x20 obj/player.o
+ .debug_aranges
+                0x000000a0       0x20 obj/premap.o
+ .debug_aranges
+                0x000000c0       0x20 obj/sector.o
+ .debug_aranges
+                0x000000e0       0x20 obj/sounds.o
+ .debug_aranges
+                0x00000100       0x20 obj/rts.o
+ .debug_aranges
+                0x00000120       0x20 obj/config.o
+ .debug_aranges
+                0x00000140       0x20 obj/animlib.o
+ .debug_aranges
+                0x00000160       0x20 obj/testcd.o
+ .debug_aranges
+                0x00000180       0x20 obj/osdfuncs.o
+ .debug_aranges
+                0x000001a0       0x20 obj/osdcmds.o
+ .debug_aranges
+                0x000001c0       0x20 obj/missing.o
+ .debug_aranges
+                0x000001e0       0x20 obj/util_lib.o
+ .debug_aranges
+                0x00000200       0x20 obj/file_lib.o
+ .debug_aranges
+                0x00000220       0x20 obj/control.o
+ .debug_aranges
+                0x00000240       0x20 obj/keyboard.o
+ .debug_aranges
+                0x00000260       0x20 obj/mouse.o
+ .debug_aranges
+                0x00000280       0x20 obj/mathutil.o
+ .debug_aranges
+                0x000002a0       0x20 obj/scriplib.o
+ .debug_aranges
+                0x000002c0       0x20 obj/audiolib_musicstub.o
+ .debug_aranges
+                0x000002e0       0x20 obj/audiolib_fxstub.o
+ .debug_aranges
+                0x00000300       0x20 eobj/libengine.a(cache1d.o)
+ .debug_aranges
+                0x00000320       0x20 eobj/libengine.a(compat.o)
+ .debug_aranges
+                0x00000340       0x20 eobj/libengine.a(crc32.o)
+ .debug_aranges
+                0x00000360       0x20 eobj/libengine.a(defs.o)
+ .debug_aranges
+                0x00000380       0x20 eobj/libengine.a(engine.o)
+ .debug_aranges
+                0x000003a0       0x20 eobj/libengine.a(kplib.o)
+ .debug_aranges
+                0x000003c0       0x20 eobj/libengine.a(mmulti.o)
+ .debug_aranges
+                0x000003e0       0x20 eobj/libengine.a(osd.o)
+ .debug_aranges
+                0x00000400       0x20 eobj/libengine.a(pragmas.o)
+ .debug_aranges
+                0x00000420       0x20 eobj/libengine.a(scriptfile.o)
+ .debug_aranges
+                0x00000440       0x20 eobj/libengine.a(sdlayer.o)
+ .debug_aranges
+                0x00000460       0x20 eobj/libengine.a(a-c.o)
+ .debug_aranges
+                0x00000480       0x20 eobj/libengine.a(baselayer.o)
+
+.debug_pubnames
+                0x00000000     0x5936
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x81f obj/game.o
+ .debug_pubnames
+                0x0000081f      0x2a8 obj/actors.o
+ .debug_pubnames
+                0x00000ac7      0x159 obj/gamedef.o
+ .debug_pubnames
+                0x00000c20      0xa95 obj/global.o
+ .debug_pubnames
+                0x000016b5      0x286 obj/menues.o
+ .debug_pubnames
+                0x0000193b      0x238 obj/player.o
+ .debug_pubnames
+                0x00001b73      0x1c9 obj/premap.o
+ .debug_pubnames
+                0x00001d3c      0x270 obj/sector.o
+ .debug_pubnames
+                0x00001fac      0x162 obj/sounds.o
+ .debug_pubnames
+                0x0000210e       0xaa obj/rts.o
+ .debug_pubnames
+                0x000021b8      0x370 obj/config.o
+ .debug_pubnames
+                0x00002528       0xdb obj/animlib.o
+ .debug_pubnames
+                0x00002603       0x1d obj/testcd.o
+ .debug_pubnames
+                0x00002620       0xac obj/osdfuncs.o
+ .debug_pubnames
+                0x000026cc       0xd6 obj/osdcmds.o
+ .debug_pubnames
+                0x000027a2       0x3c obj/missing.o
+ .debug_pubnames
+                0x000027de       0xc5 obj/util_lib.o
+ .debug_pubnames
+                0x000028a3       0x71 obj/file_lib.o
+ .debug_pubnames
+                0x00002914      0x512 obj/control.o
+ .debug_pubnames
+                0x00002e26      0x109 obj/keyboard.o
+ .debug_pubnames
+                0x00002f2f       0xb2 obj/mouse.o
+ .debug_pubnames
+                0x00002fe1       0x38 obj/mathutil.o
+ .debug_pubnames
+                0x00003019      0x2c0 obj/scriplib.o
+ .debug_pubnames
+                0x000032d9       0x21 obj/game_icon.o
+ .debug_pubnames
+                0x000032fa      0x284 obj/audiolib_musicstub.o
+ .debug_pubnames
+                0x0000357e      0x172 obj/audiolib_fxstub.o
+ .debug_pubnames
+                0x000036f0      0x1c3 eobj/libengine.a(cache1d.o)
+ .debug_pubnames
+                0x000038b3       0xcc eobj/libengine.a(compat.o)
+ .debug_pubnames
+                0x0000397f       0x5c eobj/libengine.a(crc32.o)
+ .debug_pubnames
+                0x000039db       0x2a eobj/libengine.a(defs.o)
+ .debug_pubnames
+                0x00003a05     0x10e3 eobj/libengine.a(engine.o)
+ .debug_pubnames
+                0x00004ae8      0x104 eobj/libengine.a(kplib.o)
+ .debug_pubnames
+                0x00004bec      0x1bc eobj/libengine.a(mmulti.o)
+ .debug_pubnames
+                0x00004da8      0x197 eobj/libengine.a(osd.o)
+ .debug_pubnames
+                0x00004f3f       0xa9 eobj/libengine.a(pragmas.o)
+ .debug_pubnames
+                0x00004fe8      0x176 eobj/libengine.a(scriptfile.o)
+ .debug_pubnames
+                0x0000515e      0x50a eobj/libengine.a(sdlayer.o)
+ .debug_pubnames
+                0x00005668      0x21b eobj/libengine.a(a-c.o)
+ .debug_pubnames
+                0x00005883       0x45 eobj/libengine.a(baselayer.o)
+ .debug_pubnames
+                0x000058c8       0x6e eobj/libengine.a(engineinfo.o)
+
+.debug_info     0x00000000    0x48066
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x6cd5 obj/game.o
+ .debug_info    0x00006cd5     0x3bda obj/actors.o
+ .debug_info    0x0000a8af     0x35e5 obj/gamedef.o
+ .debug_info    0x0000de94     0x2dcd obj/global.o
+ .debug_info    0x00010c61     0x5270 obj/menues.o
+ .debug_info    0x00015ed1     0x3f0f obj/player.o
+ .debug_info    0x00019de0     0x3579 obj/premap.o
+ .debug_info    0x0001d359     0x30bc obj/sector.o
+ .debug_info    0x00020415     0x26ce obj/sounds.o
+ .debug_info    0x00022ae3      0x543 obj/rts.o
+ .debug_info    0x00023026     0x297b obj/config.o
+ .debug_info    0x000259a1      0x888 obj/animlib.o
+ .debug_info    0x00026229       0xa6 obj/testcd.o
+ .debug_info    0x000262cf      0xbae obj/osdfuncs.o
+ .debug_info    0x00026e7d     0x1e8f obj/osdcmds.o
+ .debug_info    0x00028d0c       0xf0 obj/missing.o
+ .debug_info    0x00028dfc      0x485 obj/util_lib.o
+ .debug_info    0x00029281      0x37c obj/file_lib.o
+ .debug_info    0x000295fd     0x1cb1 obj/control.o
+ .debug_info    0x0002b2ae      0x46b obj/keyboard.o
+ .debug_info    0x0002b719      0x2bb obj/mouse.o
+ .debug_info    0x0002b9d4      0x1f4 obj/mathutil.o
+ .debug_info    0x0002bbc8     0x1724 obj/scriplib.o
+ .debug_info    0x0002d2ec      0x208 obj/game_icon.o
+ .debug_info    0x0002d4f4      0x86f obj/audiolib_musicstub.o
+ .debug_info    0x0002dd63      0x74c obj/audiolib_fxstub.o
+ .debug_info    0x0002e4af     0x1885 eobj/libengine.a(cache1d.o)
+ .debug_info    0x0002fd34     0x1955 eobj/libengine.a(compat.o)
+ .debug_info    0x00031689      0x210 eobj/libengine.a(crc32.o)
+ .debug_info    0x00031899     0x1148 eobj/libengine.a(defs.o)
+ .debug_info    0x000329e1     0xa9b5 eobj/libengine.a(engine.o)
+ .debug_info    0x0003d396     0x30e0 eobj/libengine.a(kplib.o)
+ .debug_info    0x00040476      0xe37 eobj/libengine.a(mmulti.o)
+ .debug_info    0x000412ad     0x199b eobj/libengine.a(osd.o)
+ .debug_info    0x00042c48      0x4a5 eobj/libengine.a(pragmas.o)
+ .debug_info    0x000430ed      0x89d eobj/libengine.a(scriptfile.o)
+ .debug_info    0x0004398a     0x35b0 eobj/libengine.a(sdlayer.o)
+ .debug_info    0x00046f3a      0xc31 eobj/libengine.a(a-c.o)
+ .debug_info    0x00047b6b      0x38b eobj/libengine.a(baselayer.o)
+ .debug_info    0x00047ef6      0x170 eobj/libengine.a(engineinfo.o)
+
+.debug_abbrev   0x00000000     0x3b8b
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x2dd obj/game.o
+ .debug_abbrev  0x000002dd      0x231 obj/actors.o
+ .debug_abbrev  0x0000050e      0x272 obj/gamedef.o
+ .debug_abbrev  0x00000780      0x10c obj/global.o
+ .debug_abbrev  0x0000088c      0x28a obj/menues.o
+ .debug_abbrev  0x00000b16      0x25a obj/player.o
+ .debug_abbrev  0x00000d70      0x214 obj/premap.o
+ .debug_abbrev  0x00000f84      0x229 obj/sector.o
+ .debug_abbrev  0x000011ad      0x224 obj/sounds.o
+ .debug_abbrev  0x000013d1      0x129 obj/rts.o
+ .debug_abbrev  0x000014fa      0x182 obj/config.o
+ .debug_abbrev  0x0000167c      0x195 obj/animlib.o
+ .debug_abbrev  0x00001811       0x50 obj/testcd.o
+ .debug_abbrev  0x00001861       0xe7 obj/osdfuncs.o
+ .debug_abbrev  0x00001948      0x1ca obj/osdcmds.o
+ .debug_abbrev  0x00001b12       0x5c obj/missing.o
+ .debug_abbrev  0x00001b6e       0xb9 obj/util_lib.o
+ .debug_abbrev  0x00001c27       0xd1 obj/file_lib.o
+ .debug_abbrev  0x00001cf8      0x20b obj/control.o
+ .debug_abbrev  0x00001f03      0x176 obj/keyboard.o
+ .debug_abbrev  0x00002079       0xc0 obj/mouse.o
+ .debug_abbrev  0x00002139       0x83 obj/mathutil.o
+ .debug_abbrev  0x000021bc      0x18d obj/scriplib.o
+ .debug_abbrev  0x00002349       0x97 obj/game_icon.o
+ .debug_abbrev  0x000023e0      0x19e obj/audiolib_musicstub.o
+ .debug_abbrev  0x0000257e      0x138 obj/audiolib_fxstub.o
+ .debug_abbrev  0x000026b6      0x1e7 eobj/libengine.a(cache1d.o)
+ .debug_abbrev  0x0000289d      0x13c eobj/libengine.a(compat.o)
+ .debug_abbrev  0x000029d9       0xa0 eobj/libengine.a(crc32.o)
+ .debug_abbrev  0x00002a79      0x129 eobj/libengine.a(defs.o)
+ .debug_abbrev  0x00002ba2      0x2a6 eobj/libengine.a(engine.o)
+ .debug_abbrev  0x00002e48      0x23a eobj/libengine.a(kplib.o)
+ .debug_abbrev  0x00003082      0x1ed eobj/libengine.a(mmulti.o)
+ .debug_abbrev  0x0000326f      0x244 eobj/libengine.a(osd.o)
+ .debug_abbrev  0x000034b3       0x90 eobj/libengine.a(pragmas.o)
+ .debug_abbrev  0x00003543      0x140 eobj/libengine.a(scriptfile.o)
+ .debug_abbrev  0x00003683      0x2d1 eobj/libengine.a(sdlayer.o)
+ .debug_abbrev  0x00003954       0xda eobj/libengine.a(a-c.o)
+ .debug_abbrev  0x00003a2e      0x10b eobj/libengine.a(baselayer.o)
+ .debug_abbrev  0x00003b39       0x52 eobj/libengine.a(engineinfo.o)
+
+.debug_line     0x00000000     0xeb14
+ *(.debug_line)
+ .debug_line    0x00000000     0x25c7 obj/game.o
+ .debug_line    0x000025c7     0x2007 obj/actors.o
+ .debug_line    0x000045ce      0xdb8 obj/gamedef.o
+ .debug_line    0x00005386       0x72 obj/global.o
+ .debug_line    0x000053f8     0x1408 obj/menues.o
+ .debug_line    0x00006800     0x1168 obj/player.o
+ .debug_line    0x00007968      0x672 obj/premap.o
+ .debug_line    0x00007fda      0xcf0 obj/sector.o
+ .debug_line    0x00008cca      0x2b4 obj/sounds.o
+ .debug_line    0x00008f7e       0xde obj/rts.o
+ .debug_line    0x0000905c      0x3a2 obj/config.o
+ .debug_line    0x000093fe       0xf3 obj/animlib.o
+ .debug_line    0x000094f1       0x42 obj/testcd.o
+ .debug_line    0x00009533       0xda obj/osdfuncs.o
+ .debug_line    0x0000960d      0x1e6 obj/osdcmds.o
+ .debug_line    0x000097f3       0x42 obj/missing.o
+ .debug_line    0x00009835      0x11f obj/util_lib.o
+ .debug_line    0x00009954       0x98 obj/file_lib.o
+ .debug_line    0x000099ec      0x306 obj/control.o
+ .debug_line    0x00009cf2       0xbc obj/keyboard.o
+ .debug_line    0x00009dae       0x8f obj/mouse.o
+ .debug_line    0x00009e3d       0x71 obj/mathutil.o
+ .debug_line    0x00009eae      0x37b obj/scriplib.o
+ .debug_line    0x0000a229       0x51 obj/game_icon.o
+ .debug_line    0x0000a27a       0xe6 obj/audiolib_musicstub.o
+ .debug_line    0x0000a360       0xb7 obj/audiolib_fxstub.o
+ .debug_line    0x0000a417      0x4a8 eobj/libengine.a(cache1d.o)
+ .debug_line    0x0000a8bf      0x173 eobj/libengine.a(compat.o)
+ .debug_line    0x0000aa32       0x58 eobj/libengine.a(crc32.o)
+ .debug_line    0x0000aa8a      0x226 eobj/libengine.a(defs.o)
+ .debug_line    0x0000acb0     0x2598 eobj/libengine.a(engine.o)
+ .debug_line    0x0000d248      0x98b eobj/libengine.a(kplib.o)
+ .debug_line    0x0000dbd3      0x2c1 eobj/libengine.a(mmulti.o)
+ .debug_line    0x0000de94      0x450 eobj/libengine.a(osd.o)
+ .debug_line    0x0000e2e4       0x77 eobj/libengine.a(pragmas.o)
+ .debug_line    0x0000e35b      0x16d eobj/libengine.a(scriptfile.o)
+ .debug_line    0x0000e4c8      0x44c eobj/libengine.a(sdlayer.o)
+ .debug_line    0x0000e914      0x13f eobj/libengine.a(a-c.o)
+ .debug_line    0x0000ea53       0x8c eobj/libengine.a(baselayer.o)
+ .debug_line    0x0000eadf       0x35 eobj/libengine.a(engineinfo.o)
+
+.debug_frame    0x00000000     0x73b0
+ *(.debug_frame)
+ .debug_frame   0x00000000      0xc00 obj/game.o
+ .debug_frame   0x00000c00      0x5d4 obj/actors.o
+ .debug_frame   0x000011d4      0x310 obj/gamedef.o
+ .debug_frame   0x000014e4      0x3cc obj/menues.o
+ .debug_frame   0x000018b0      0x424 obj/player.o
+ .debug_frame   0x00001cd4      0x310 obj/premap.o
+ .debug_frame   0x00001fe4      0x3a0 obj/sector.o
+ .debug_frame   0x00002384      0x250 obj/sounds.o
+ .debug_frame   0x000025d4       0xd4 obj/rts.o
+ .debug_frame   0x000026a8      0x154 obj/config.o
+ .debug_frame   0x000027fc      0x13c obj/animlib.o
+ .debug_frame   0x00002938       0x28 obj/testcd.o
+ .debug_frame   0x00002960       0xd0 obj/osdfuncs.o
+ .debug_frame   0x00002a30      0x180 obj/osdcmds.o
+ .debug_frame   0x00002bb0       0x40 obj/missing.o
+ .debug_frame   0x00002bf0      0x158 obj/util_lib.o
+ .debug_frame   0x00002d48       0xbc obj/file_lib.o
+ .debug_frame   0x00002e04      0x4f4 obj/control.o
+ .debug_frame   0x000032f8      0x164 obj/keyboard.o
+ .debug_frame   0x0000345c       0xe0 obj/mouse.o
+ .debug_frame   0x0000353c       0x40 obj/mathutil.o
+ .debug_frame   0x0000357c      0x3a4 obj/scriplib.o
+ .debug_frame   0x00003920      0x29c obj/audiolib_musicstub.o
+ .debug_frame   0x00003bbc      0x1c4 obj/audiolib_fxstub.o
+ .debug_frame   0x00003d80      0x328 eobj/libengine.a(cache1d.o)
+ .debug_frame   0x000040a8      0x168 eobj/libengine.a(compat.o)
+ .debug_frame   0x00004210       0x8c eobj/libengine.a(crc32.o)
+ .debug_frame   0x0000429c       0x6c eobj/libengine.a(defs.o)
+ .debug_frame   0x00004308     0x180c eobj/libengine.a(engine.o)
+ .debug_frame   0x00005b14      0x5a8 eobj/libengine.a(kplib.o)
+ .debug_frame   0x000060bc      0x280 eobj/libengine.a(mmulti.o)
+ .debug_frame   0x0000633c      0x3a8 eobj/libengine.a(osd.o)
+ .debug_frame   0x000066e4       0xd0 eobj/libengine.a(pragmas.o)
+ .debug_frame   0x000067b4      0x1fc eobj/libengine.a(scriptfile.o)
+ .debug_frame   0x000069b0      0x4e4 eobj/libengine.a(sdlayer.o)
+ .debug_frame   0x00006e94      0x2e4 eobj/libengine.a(a-c.o)
+ .debug_frame   0x00007178       0x7c eobj/libengine.a(baselayer.o)
+ .debug_frame   0x000071f4       0x28 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .debug_frame   0x0000721c       0x28 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .debug_frame   0x00007244       0x58 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .debug_frame   0x0000729c       0x38 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .debug_frame   0x000072d4       0x38 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .debug_frame   0x0000730c       0x44 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_frame   0x00007350       0x20 /usr/lib/libc_nonshared.a(atexit.oS)
+ .debug_frame   0x00007370       0x20 /usr/lib/libc_nonshared.a(stat.oS)
+ .debug_frame   0x00007390       0x20 /usr/lib/libc_nonshared.a(fstat.oS)
+
+.debug_str      0x00000000      0xbed
+ *(.debug_str)
+ .debug_str     0x00000000      0x178 obj/game.o
+ .debug_str     0x00000178       0x61 obj/actors.o
+ .debug_str     0x000001d9       0x26 obj/gamedef.o
+ .debug_str     0x000001ff       0xf0 obj/global.o
+ .debug_str     0x000002ef       0x8a obj/menues.o
+ .debug_str     0x00000379       0x37 obj/player.o
+ .debug_str     0x000003b0      0x111 obj/premap.o
+ .debug_str     0x000004c1       0x5c obj/sector.o
+ .debug_str     0x0000051d       0x1b obj/sounds.o
+ .debug_str     0x00000538       0x12 obj/rts.o
+ .debug_str     0x0000054a        0x9 obj/config.o
+ .debug_str     0x00000553       0x28 obj/animlib.o
+ .debug_str     0x0000057b        0x5 obj/osdcmds.o
+ .debug_str     0x00000580       0x10 obj/file_lib.o
+ .debug_str     0x00000590       0x49 obj/control.o
+ .debug_str     0x000005d9        0x9 obj/keyboard.o
+ .debug_str     0x000005e2       0x48 obj/scriplib.o
+ .debug_str     0x0000062a        0xb obj/game_icon.o
+ .debug_str     0x00000635       0x1e obj/audiolib_musicstub.o
+ .debug_str     0x00000653       0x34 obj/audiolib_fxstub.o
+ .debug_str     0x00000687       0x61 eobj/libengine.a(cache1d.o)
+ .debug_str     0x000006e8        0x7 eobj/libengine.a(crc32.o)
+ .debug_str     0x000006ef       0x60 eobj/libengine.a(defs.o)
+ .debug_str     0x0000074f      0x22b eobj/libengine.a(engine.o)
+ .debug_str     0x0000097a       0x8c eobj/libengine.a(kplib.o)
+ .debug_str     0x00000a06       0x16 eobj/libengine.a(mmulti.o)
+ .debug_str     0x00000a1c       0x23 eobj/libengine.a(osd.o)
+ .debug_str     0x00000a3f      0x18b eobj/libengine.a(sdlayer.o)
+ .debug_str     0x00000bca       0x23 eobj/libengine.a(a-c.o)
+
+.debug_loc      0x00000000     0xa8cd
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x1122 obj/game.o
+ .debug_loc     0x00001122      0x7e5 obj/actors.o
+ .debug_loc     0x00001907      0x433 obj/gamedef.o
+ .debug_loc     0x00001d3a      0x560 obj/menues.o
+ .debug_loc     0x0000229a      0x58b obj/player.o
+ .debug_loc     0x00002825      0x489 obj/premap.o
+ .debug_loc     0x00002cae      0x560 obj/sector.o
+ .debug_loc     0x0000320e      0x35c obj/sounds.o
+ .debug_loc     0x0000356a      0x12d obj/rts.o
+ .debug_loc     0x00003697      0x1d9 obj/config.o
+ .debug_loc     0x00003870      0x1d9 obj/animlib.o
+ .debug_loc     0x00003a49       0x2b obj/testcd.o
+ .debug_loc     0x00003a74      0x12d obj/osdfuncs.o
+ .debug_loc     0x00003ba1      0x22f obj/osdcmds.o
+ .debug_loc     0x00003dd0       0x56 obj/missing.o
+ .debug_loc     0x00003e26      0x210 obj/util_lib.o
+ .debug_loc     0x00004036      0x102 obj/file_lib.o
+ .debug_loc     0x00004138      0x7e5 obj/control.o
+ .debug_loc     0x0000491d      0x22f obj/keyboard.o
+ .debug_loc     0x00004b4c      0x158 obj/mouse.o
+ .debug_loc     0x00004ca4       0x56 obj/mathutil.o
+ .debug_loc     0x00004cfa      0x597 obj/scriplib.o
+ .debug_loc     0x00005291      0x489 obj/audiolib_musicstub.o
+ .debug_loc     0x0000571a      0x306 obj/audiolib_fxstub.o
+ .debug_loc     0x00005a20      0x489 eobj/libengine.a(cache1d.o)
+ .debug_loc     0x00005ea9      0x204 eobj/libengine.a(compat.o)
+ .debug_loc     0x000060ad       0xd7 eobj/libengine.a(crc32.o)
+ .debug_loc     0x00006184       0x81 eobj/libengine.a(defs.o)
+ .debug_loc     0x00006205     0x229a eobj/libengine.a(engine.o)
+ .debug_loc     0x0000849f      0x8e7 eobj/libengine.a(kplib.o)
+ .debug_loc     0x00008d86      0x3dd eobj/libengine.a(mmulti.o)
+ .debug_loc     0x00009163      0x5c2 eobj/libengine.a(osd.o)
+ .debug_loc     0x00009725      0x158 eobj/libengine.a(pragmas.o)
+ .debug_loc     0x0000987d      0x2db eobj/libengine.a(scriptfile.o)
+ .debug_loc     0x00009b58      0x7bf eobj/libengine.a(sdlayer.o)
+ .debug_loc     0x0000a317      0x50a eobj/libengine.a(a-c.o)
+ .debug_loc     0x0000a821       0xac eobj/libengine.a(baselayer.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0x18
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x18 obj/game.o
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(duke3d elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x37
+ .ARM.attributes
+                0x00000000       0x2d /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o
+ .ARM.attributes
+                0x0000002d       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o
+ .ARM.attributes
+                0x0000005c       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtbegin.o
+ .ARM.attributes
+                0x0000008b       0x2f obj/game.o
+ .ARM.attributes
+                0x000000ba       0x2f obj/actors.o
+ .ARM.attributes
+                0x000000e9       0x2f obj/gamedef.o
+ .ARM.attributes
+                0x00000118       0x2d obj/global.o
+ .ARM.attributes
+                0x00000145       0x2f obj/menues.o
+ .ARM.attributes
+                0x00000174       0x2f obj/player.o
+ .ARM.attributes
+                0x000001a3       0x2f obj/premap.o
+ .ARM.attributes
+                0x000001d2       0x2f obj/sector.o
+ .ARM.attributes
+                0x00000201       0x2f obj/sounds.o
+ .ARM.attributes
+                0x00000230       0x2f obj/rts.o
+ .ARM.attributes
+                0x0000025f       0x2f obj/config.o
+ .ARM.attributes
+                0x0000028e       0x2f obj/animlib.o
+ .ARM.attributes
+                0x000002bd       0x2f obj/testcd.o
+ .ARM.attributes
+                0x000002ec       0x2f obj/osdfuncs.o
+ .ARM.attributes
+                0x0000031b       0x2f obj/osdcmds.o
+ .ARM.attributes
+                0x0000034a       0x2f obj/missing.o
+ .ARM.attributes
+                0x00000379       0x2f obj/util_lib.o
+ .ARM.attributes
+                0x000003a8       0x2f obj/file_lib.o
+ .ARM.attributes
+                0x000003d7       0x2f obj/control.o
+ .ARM.attributes
+                0x00000406       0x2f obj/keyboard.o
+ .ARM.attributes
+                0x00000435       0x2f obj/mouse.o
+ .ARM.attributes
+                0x00000464       0x2f obj/mathutil.o
+ .ARM.attributes
+                0x00000493       0x2f obj/scriplib.o
+ .ARM.attributes
+                0x000004c2       0x2d obj/game_icon.o
+ .ARM.attributes
+                0x000004ef       0x2f obj/audiolib_musicstub.o
+ .ARM.attributes
+                0x0000051e       0x2f obj/audiolib_fxstub.o
+ .ARM.attributes
+                0x0000054d       0x2f eobj/libengine.a(cache1d.o)
+ .ARM.attributes
+                0x0000057c       0x2f eobj/libengine.a(compat.o)
+ .ARM.attributes
+                0x000005ab       0x2f eobj/libengine.a(crc32.o)
+ .ARM.attributes
+                0x000005da       0x2f eobj/libengine.a(defs.o)
+ .ARM.attributes
+                0x00000609       0x2f eobj/libengine.a(engine.o)
+ .ARM.attributes
+                0x00000638       0x2f eobj/libengine.a(kplib.o)
+ .ARM.attributes
+                0x00000667       0x2f eobj/libengine.a(mmulti.o)
+ .ARM.attributes
+                0x00000696       0x2f eobj/libengine.a(osd.o)
+ .ARM.attributes
+                0x000006c5       0x2f eobj/libengine.a(pragmas.o)
+ .ARM.attributes
+                0x000006f4       0x2f eobj/libengine.a(scriptfile.o)
+ .ARM.attributes
+                0x00000723       0x2f eobj/libengine.a(sdlayer.o)
+ .ARM.attributes
+                0x00000752       0x2f eobj/libengine.a(a-c.o)
+ .ARM.attributes
+                0x00000781       0x2f eobj/libengine.a(baselayer.o)
+ .ARM.attributes
+                0x000007b0       0x2d eobj/libengine.a(engineinfo.o)
+ .ARM.attributes
+                0x000007dd       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000007f1       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x00000805       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000819       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x0000082d       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x00000841       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x00000855       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x00000869       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x0000087d       0x14 /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x00000891       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x000008c0       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x000008ef       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x0000091e       0x2d /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_clz.o)
+ .ARM.attributes
+                0x0000094b       0x2f /usr/lib/libc_nonshared.a(elf-init.oS)
+ .ARM.attributes
+                0x0000097a       0x2f /usr/lib/libc_nonshared.a(atexit.oS)
+ .ARM.attributes
+                0x000009a9       0x2f /usr/lib/libc_nonshared.a(stat.oS)
+ .ARM.attributes
+                0x000009d8       0x2f /usr/lib/libc_nonshared.a(fstat.oS)
+ .ARM.attributes
+                0x00000a07       0x2d /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../lib/gcc/arm-none-linux-gnueabi/4.2.1/crtend.o
+ .ARM.attributes
+                0x00000a34       0x2f /srv/preware/cross-compile/toolchain/arm-2007q3/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
