@@ -1,0 +1,13 @@
+This is a WebOS port of JonoF's version of Duke Nukem 3D. You will find this version at 
+http://www.jonof.id.au/
+
+You need the following files in the same directory in which duke3d is:
+
+DEFS.CON
+DUKE3D.GRP
+GAME.CON
+USER.CON
+
+
+Regards
+Henk
