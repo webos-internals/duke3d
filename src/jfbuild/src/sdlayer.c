@@ -15,6 +15,12 @@
 #include "build.h"
 #include "osd.h"
 
+#define KB_KeyDown keystatus
+#define  sc_UpArrow      0xc8 //0x5a
+#define  sc_DownArrow    0xd0 //0x6a
+#define  sc_LeftArrow    0xcb //0x6b
+#define  sc_RightArrow   0xcd //0x6c
+
 #ifdef USE_OPENGL
 #include "glbuild.h"
 #endif
@@ -68,8 +74,8 @@ static unsigned char keytranslation[SDLK_LAST] = {
 	0, 0, 0, 0, 1, 0, 0, 0, 0, 57, 2, 40, 4, 5, 6, 8, 40, 10, 11, 9, 13, 51,
 	12, 52, 53, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 39, 39, 51, 13, 52, 53, 3, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	26, 43, 27, 7, 12, 41, 30, 48, 46, 32, 18, 33, 34, 35, 23, 36, 37, 38, 50,
-	49, 24, 25, 16, 19, 31, 20, 22, 47, 17, 45, 21, 44, 0, 0, 0, 0, 211, 0, 0,
+	26, 43, 27, 7, 12, 41, 30, 48, 46, 32, 18, 33, 34, 35, 23, 36, 0xd0/*37*/, 0xc8/*38*/, 0xcd/*50*/,
+	49, 24, 25, 16, 19, 31, 20, 22, 47, 0xcb/*17*/, 45, 21, 44, 0, 0, 0, 0, 211, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -455,7 +461,6 @@ unsigned char bgetchar(void)
 	if (keyasciififoplc == keyasciififoend) return 0;
 	c = keyasciififo[keyasciififoplc];
 	keyasciififoplc = ((keyasciififoplc+1)&(KEYFIFOSIZ-1));
-printf("%c\n", c);
 	return c;
 }
 
@@ -1313,6 +1318,7 @@ int handleevents(void)
 }
 
 	while (SDL_PollEvent(&ev)) {
+
 		switch (ev.type) {
 			case SDL_KEYDOWN:
 			case SDL_KEYUP:
@@ -1381,6 +1387,21 @@ int handleevents(void)
 				if (appactive) {
 					mousex += ev.motion.xrel;
 					mousey += ev.motion.yrel;
+					KB_KeyDown[sc_LeftArrow] = 0;
+					KB_KeyDown[sc_RightArrow] = 0;
+					KB_KeyDown[sc_UpArrow] = 0;
+					KB_KeyDown[sc_DownArrow] = 0;
+					if ((ev.motion.x < 80) && (ev.motion.y > 160))
+					{
+						if ((ev.motion.x < 30) && (ev.motion.y > 180) && (ev.motion.y < 220))
+							KB_KeyDown[sc_LeftArrow] = 1;
+						if ((ev.motion.x > 50) && (ev.motion.y > 180) && (ev.motion.y < 220))
+							KB_KeyDown[sc_RightArrow] = 1;
+						if ((ev.motion.y < 210) && (ev.motion.x > 20) && (ev.motion.x < 60))
+							KB_KeyDown[sc_UpArrow] = 1;
+						if ((ev.motion.y > 190) && (ev.motion.x > 20) && (ev.motion.x < 60))
+							KB_KeyDown[sc_DownArrow] = 1;
+					}
 				}
 				break;
 

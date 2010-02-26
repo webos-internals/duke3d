@@ -3064,7 +3064,7 @@ void displayrooms(short snum,long smoothratio)
                	else
                     setviewtotile(TILE_TILT,tiltcx>>(1-ud.detail),tiltcx>>(1-ud.detail));
        	        if ((tang&1023) == 512)
-               	{     //Block off unscreen section of 90ø tilted screen
+               	{     //Block off unscreen section of 90Ã¸ tilted screen
                     j = ((tiltcx-(60*tiltcs))>>(1-ud.detail));
        	            for(i=((60*tiltcs)>>(1-ud.detail))-1;i>=0;i--)
                	    {

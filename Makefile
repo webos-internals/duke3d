@@ -20,8 +20,9 @@ include ../../support/cross-compile.mk
 
 build/%.built: build/.unpacked
 	rm -f $@
-	( cd jfbuild ; ${SB2} make)
-	( cd jfduke3d ; ${SB2} make)
+	( cd src/jfbuild ; ${SB2} make)
+	( cd src/jfduke3d ; ${SB2} make)
+	cp src/jfduke3d/duke3d .
 	touch $@
 
 clobber::
