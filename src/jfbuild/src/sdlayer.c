@@ -15,11 +15,173 @@
 #include "build.h"
 #include "osd.h"
 
+// from keyboard.h from jfduke3d/jmact/
 #define KB_KeyDown keystatus
+#define  sc_None         0
+#define  sc_Bad          0xff
+#define  sc_Comma        0x33
+#define  sc_Period       0x34
+#define  sc_Return       0x1c
+#define  sc_Enter        sc_Return
+#define  sc_Escape       0x01
+#define  sc_Space        0x39
+#define  sc_BackSpace    0x0e
+#define  sc_Tab          0x0f
+#define  sc_LeftAlt      0x38
+#define  sc_LeftControl  0x1d
+#define  sc_CapsLock     0x3a
+#define  sc_LeftShift    0x2a
+#define  sc_RightShift   0x36
+#define  sc_F1           0x3b
+#define  sc_F2           0x3c
+#define  sc_F3           0x3d
+#define  sc_F4           0x3e
+#define  sc_F5           0x3f
+#define  sc_F6           0x40
+#define  sc_F7           0x41
+#define  sc_F8           0x42
+#define  sc_F9           0x43
+#define  sc_F10          0x44
+#define  sc_F11          0x57
+#define  sc_F12          0x58
+#define  sc_Kpad_Star    0x37
+#define  sc_Pause        0x59
+#define  sc_ScrollLock   0x46
+#define  sc_NumLock      0x45
+#define  sc_Slash        0x35
+#define  sc_SemiColon    0x27
+#define  sc_Quote        0x28
+#define  sc_Tilde        0x29
+#define  sc_BackSlash    0x2b
+
+#define  sc_OpenBracket  0x1a
+#define  sc_CloseBracket 0x1b
+
+#define  sc_1            0x02
+#define  sc_2            0x03
+#define  sc_3            0x04
+#define  sc_4            0x05
+#define  sc_5            0x06
+#define  sc_6            0x07
+#define  sc_7            0x08
+#define  sc_8            0x09
+#define  sc_9            0x0a
+#define  sc_0            0x0b
+#define  sc_Minus        0x0c
+#define  sc_Equals       0x0d
+#define  sc_Plus         0x0d
+
+#define  sc_kpad_1       0x4f
+#define  sc_kpad_2       0x50
+#define  sc_kpad_3       0x51
+#define  sc_kpad_4       0x4b
+#define  sc_kpad_5       0x4c
+#define  sc_kpad_6       0x4d
+#define  sc_kpad_7       0x47
+#define  sc_kpad_8       0x48
+#define  sc_kpad_9       0x49
+#define  sc_kpad_0       0x52
+#define  sc_kpad_Minus   0x4a
+#define  sc_kpad_Plus    0x4e
+#define  sc_kpad_Period  0x53
+
+#define  sc_A            0x1e
+#define  sc_B            0x30
+#define  sc_C            0x2e
+#define  sc_D            0x20
+#define  sc_E            0x12
+#define  sc_F            0x21
+#define  sc_G            0x22
+#define  sc_H            0x23
+#define  sc_I            0x17
+#define  sc_J            0x24
+#define  sc_K            0x25
+#define  sc_L            0x26
+#define  sc_M            0x32
+#define  sc_N            0x31
+#define  sc_O            0x18
+#define  sc_P            0x19
+#define  sc_Q            0x10
+#define  sc_R            0x13
+#define  sc_S            0x1f
+#define  sc_T            0x14
+#define  sc_U            0x16
+#define  sc_V            0x2f
+#define  sc_W            0x11
+#define  sc_X            0x2d
+#define  sc_Y            0x15
+#define  sc_Z            0x2c
+
+// Extended scan codes
+
 #define  sc_UpArrow      0xc8 //0x5a
 #define  sc_DownArrow    0xd0 //0x6a
 #define  sc_LeftArrow    0xcb //0x6b
 #define  sc_RightArrow   0xcd //0x6c
+#define  sc_Insert       0xd2 //0x5e
+#define  sc_Delete       0xd3 //0x5f
+#define  sc_Home         0xc7 //0x61
+#define  sc_End          0xcf //0x62
+#define  sc_PgUp         0xc9 //0x63
+#define  sc_PgDn         0xd1 //0x64
+#define  sc_RightAlt     0xb8 //0x65
+#define  sc_RightControl 0x9d //0x66
+#define  sc_kpad_Slash   0xb5 //0x67
+#define  sc_kpad_Enter   0x9c //0x68
+#define  sc_PrintScreen  0xb7 //0x69
+#define  sc_LastScanCode 0x6e
+
+
+#define    VIDHEIGHT    240
+#define    VIDWIDTH     320
+#define    FIRE_SIZE    160
+#define    JUMP_SIZE    120
+#define    JOY_SIZE     160
+#define    JOY_DEAD     10
+#define    JOY_X        80
+#define    JOY_Y        (VIDHEIGHT - 80)
+
+#define    JOY_IMAGE_FILENAME        "images/joystick.png"
+#define    JOY_PRESS_IMAGE_FILENAME  "images/joystick-press.png"
+#define    JUMP_IMAGE_FILENAME       "images/jump.png"
+#define    FIRE_IMAGE_FILENAME       "images/fire.png"
+
+#define    OVERLAY_ITEM_COUNT   4
+#define    OVERLAY_ALPHA       32
+
+int    autofire = 0;
+int    mousedown = 0;
+int    normalkeyboard = 0;
+int    drawoverlay = 1;
+int    gesturedown = 0;
+int    in_impulse = 0;
+
+//Hacky way to show the 'jumping' overlay item
+int     jumping_counter = 0;
+#define JUMP_FRAME_COUNT 6
+
+int     fire_counter = 0;
+#define FIRE_FRAME_COUNT 1
+
+static SDL_Surface *buffer = NULL;
+static SDL_Surface *screen = NULL;
+
+static int joy_x, joy_y;
+
+// No support for option menus
+void (*vid_menudrawfn)(void) = NULL;
+void (*vid_menukeyfn)(int key) = NULL;
+
+// I don't have the header for this...
+SDL_Surface * IMG_Load( char * filename );
+
+static SDL_Surface * joy_img = NULL;
+static SDL_Surface * joy_press_img = NULL;
+static SDL_Surface * jump_img = NULL;
+static SDL_Surface * fire_img = NULL;
+
+static SDL_Rect old_rects[OVERLAY_ITEM_COUNT];
+
 
 #ifdef USE_OPENGL
 #include "glbuild.h"
@@ -75,7 +237,7 @@ static unsigned char keytranslation[SDLK_LAST] = {
 	12, 52, 53, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 39, 39, 51, 13, 52, 53, 3, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	26, 43, 27, 7, 12, 41, 30, 48, 46, 32, 18, 33, 34, 35, 23, 36, 0xd0/*37*/, 0xc8/*38*/, 0xcd/*50*/,
-	49, 24, 25, 16, 19, 31, 20, 22, 47, 0xcb/*17*/, 45, 21, 44, 0, 0, 0, 0, 211, 0, 0,
+	49, 24, 25, 1/*16*/, 19, 31, 20, 22, 47, 0xcb/*17*/, 45, 21, 44, 0, 0, 0, 0, 211, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -83,7 +245,7 @@ static unsigned char keytranslation[SDLK_LAST] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 82, 79, 80, 81, 75, 76, 77, 71, 72, 73, 83, 181, 55, 74, 78, 156, 0,
 	200, 208, 205, 203, 210, 199, 207, 201, 209, 59, 60, 61, 62, 63, 64, 65,
-	66, 67, 68, 87, 88, 0, 0, 0, 0, 0, 0, 69, 58, 70, 54, 42, 157, 29, 184, 56,
+	66, 67, 68, 87, 88, 0, 0, 0, 0, 0, 0, 69, 58, 70, 54, 42, 0x39/*157*/, 0x39/*29*/, 184, 56,
 	0, 0, 219, 220, 0, 0, 0, /*-2*/0, 84, 183, 221, 0, 0, 0
 };
 
@@ -182,6 +344,214 @@ void wm_setapptitle(char *name)
 #endif
 }
 
+
+static int translateKeyWebOS(int sym, int state) {
+	int modstate = SDL_GetModState();
+
+	//Weapon cycling!
+	if (state) {
+		if (sym == 27)
+		{
+			//gesture down
+			return sc_OpenBracket;
+		} else if (sym == 229) {
+			//gesture up
+			return sc_CloseBracket;
+		}
+	}
+
+	switch(sym)
+	{
+	   case SDLK_DELETE: sym = sc_Delete; break;
+	   case SDLK_BACKSPACE: sym = sc_BackSpace; break;
+	   case SDLK_F1: sym = sc_F1; break;
+	   case SDLK_F2: sym = sc_F2; break;
+	   case SDLK_F3: sym = sc_F3; break;
+	   case SDLK_F4: sym = sc_F4; break;
+	   case SDLK_F5: sym = sc_F5; break;
+	   case SDLK_F6: sym = sc_F6; break;
+	   case SDLK_F7: sym = sc_F7; break;
+	   case SDLK_F8: sym = sc_F8; break;
+	   case SDLK_F9: sym = sc_F9; break;
+	   case SDLK_F10: sym = sc_F10; break;
+	   case SDLK_F11: sym = sc_F11; break;
+	   case SDLK_F12: sym = sc_F12; break;
+	   case SDLK_BREAK:
+	   case SDLK_PAUSE: sym = sc_Pause; break;
+	   case SDLK_UP: sym = sc_UpArrow; break;
+	   case SDLK_DOWN: sym = sc_DownArrow; break;
+	   case SDLK_RIGHT: sym = sc_RightArrow; break;
+	   case SDLK_LEFT: sym = sc_LeftArrow; break;
+	   case SDLK_INSERT: sym = sc_Insert; break;
+	   case SDLK_HOME: sym = sc_Home; break;
+	   case SDLK_END: sym = sc_End; break;
+	   case SDLK_PAGEUP: sym = sc_PgUp; break;
+	   case SDLK_PAGEDOWN: sym = sc_PgDn; break;
+	   case SDLK_RSHIFT: sym = sc_RightShift; break;
+	   case SDLK_LSHIFT: sym = sc_LeftShift; break;
+	   case SDLK_RCTRL: sym = sc_RightControl; break;
+	   case SDLK_LCTRL: sym = sc_LeftControl; break;
+	   case SDLK_RALT: sym = sc_RightAlt; break;
+	   case SDLK_LALT: sym = sc_LeftAlt; break;
+	   case SDLK_KP0: 
+		   if(modstate & KMOD_NUM) sym = sc_Insert; 
+		   else sym = sc_0;
+		   break;
+	   case SDLK_KP1:
+		   if(modstate & KMOD_NUM) sym = sc_End;
+		   else sym = sc_1;
+		   break;
+	   case SDLK_KP2:
+		   if(modstate & KMOD_NUM) sym = sc_DownArrow;
+		   else sym = sc_2;
+		   break;
+	   case SDLK_KP3:
+		   if(modstate & KMOD_NUM) sym = sc_PgDn;
+		   else sym = sc_3;
+		   break;
+	   case SDLK_KP4:
+		   if(modstate & KMOD_NUM) sym = sc_LeftArrow;
+		   else sym = sc_4;
+		   break;
+	   case SDLK_KP5: sym = sc_5; break;
+	   case SDLK_KP6:
+		   if(modstate & KMOD_NUM) sym = sc_RightArrow;
+		   else sym = sc_6;
+		   break;
+	   case SDLK_KP7:
+		   if(modstate & KMOD_NUM) sym = sc_Home;
+		   else sym = sc_7;
+		   break;
+	   case SDLK_KP8:
+		   if(modstate & KMOD_NUM) sym = sc_UpArrow;
+		   else sym = sc_8;
+		   break;
+	   case SDLK_KP9:
+		   if(modstate & KMOD_NUM) sym = sc_PgUp;
+		   else sym = sc_9;
+		   break;
+	   case SDLK_KP_PERIOD:
+		   if(modstate & KMOD_NUM) sym = sc_Delete;
+		   else sym = sc_Period;
+		   break;
+	   case SDLK_KP_DIVIDE: sym = sc_Slash; break;
+	   case SDLK_KP_MULTIPLY: sym = SDLK_ASTERISK; break;
+	   case SDLK_KP_MINUS: sym = sc_Minus; break;
+	   case SDLK_KP_PLUS: sym = sc_Plus; break;
+	   case SDLK_KP_ENTER: sym = sc_Return; break;
+	   case SDLK_KP_EQUALS: sym = sc_Equals; break;
+	}
+	// If we're not directly handled and still above 255
+	// just force it to 0
+	if(sym > 255) sym = 0;
+
+	//XXX: This is a terrible hack
+	// because for some reason
+	// parsing configs doesn't work?
+
+	//sym+i is tilde
+	if ( sym == 37 ) sym = sc_Tilde;
+
+	if ( !normalkeyboard )
+	{
+		//these values are from keys.h
+		if ( sym == SDLK_j ) sym = sc_RightControl;//fire!
+		if ( sym == SDLK_b ) sym = sc_A;//jump!
+		//if ( sym == SDLK_j ) sym = K_UPARROW;//forward!
+		//if ( sym == SDLK_b ) sym = K_DOWNARROW;//back
+		if ( sym == SDLK_h ) sym = sc_U;//strafeleft
+		if ( sym == SDLK_n ) sym = sc_N;//straferight
+
+		//same, only sprint versions
+		/*
+		if ( sym == SDLK_i ) 
+		{
+			Key_Event( K_SHIFT, state );
+			Key_Event( K_UPARROW, state );
+			Key_Event( K_SHIFT, state );
+			sym = 0;
+		}
+		if ( sym == SDLK_u ) 
+		{
+			Key_Event( K_SHIFT, state );
+			Key_Event( 44, state );
+			Key_Event( K_SHIFT, state );
+			sym = 0;
+		}
+		if ( sym == SDLK_k ) 
+		{
+			Key_Event( K_SHIFT, state );
+			Key_Event( 46, state );
+			Key_Event( K_SHIFT, state );
+			sym = 0;
+		}
+		*/
+
+		//remap the numbers  to the weapons, so no orange needed
+		if ( sym == SDLK_e ) sym = sc_1;
+		if ( sym == SDLK_r ) sym = sc_2;
+		if ( sym == SDLK_t ) sym = sc_3;
+		if ( sym == SDLK_d ) sym = sc_4;
+		if ( sym == SDLK_f ) sym = sc_5;
+		if ( sym == SDLK_g ) sym = sc_6;
+		if ( sym == SDLK_x ) sym = sc_7;
+		if ( sym == SDLK_c ) sym = sc_8;
+		if ( sym == SDLK_v ) sym = sc_9;
+
+		//quick load/quick save
+		if ( sym == SDLK_QUOTE ) sym = sc_F9;//load
+		if ( sym == SDLK_UNDERSCORE ) sym = sc_F6;//save
+
+		//menu
+		if ( sym == SDLK_q ) sym = sc_Escape;
+
+		//arrow keys for menu nav
+		if ( sym == SDLK_w ) sym = sc_LeftArrow;
+		if ( sym == SDLK_s ) sym = sc_UpArrow;
+		if ( sym == SDLK_z ) sym = sc_RightArrow;
+		if ( sym == SDLK_y ) sym = sc_RightArrow; // for German keyboards
+		if ( sym == SDLK_a ) sym = sc_DownArrow;
+		if ( sym == SDLK_RETURN) sym = sc_Return;
+
+		if ( sym == SDLK_0 && state )
+		{
+			drawoverlay = !drawoverlay;
+			if ( drawoverlay )
+			{
+				initprintf( "Overlay enabled. Press orange+'@' (0) to toggle back.\n" );
+				OSD_Printf( "Overlay enabled. Press orange+'@' (0) to toggle back." );
+			}
+			else
+			{
+				initprintf( "Overlay disabled. Press orange+'@' (0) to toggle back.\n" );
+				OSD_Printf( "Overlay disabled. Press orange+'@' (0) to toggle back." );
+			}
+		}
+	}
+
+	//gesture button
+	if ( sym == 231 )
+	{
+		gesturedown = state;
+	}
+
+	if ( sym == SDLK_AT && state )
+	{
+		normalkeyboard = !normalkeyboard;
+		if ( normalkeyboard )
+		{
+			initprintf( "Normal keyboard enabled. Press '@' to toggle back.\n" );
+			OSD_Printf( "Normal keyboard enabled. Press '@' to toggle back." );
+		}
+		else
+		{
+			initprintf( "Action keyboard enabled. Press '@' to toggle back.\n" );
+			OSD_Printf( "Action keyboard enabled. Press '@' to toggle back." );
+		}
+	}
+	
+	return sym;
+}
 
 //
 //
@@ -1298,7 +1668,6 @@ static SDL_Surface * loadappicon(void)
 //
 // 
 
-
 //
 // handleevents() -- process the SDL message queue
 //   returns !0 if there was an important event worth checking (like quitting)
@@ -1307,6 +1676,7 @@ int handleevents(void)
 {
 	int code, rv=0, j;
 	SDL_Event ev;
+	static int bMouseDown = 0;
 
 #define SetKey(key,state) { \
 	keystatus[key] = state; \
@@ -1318,11 +1688,11 @@ int handleevents(void)
 }
 
 	while (SDL_PollEvent(&ev)) {
-
 		switch (ev.type) {
 			case SDL_KEYDOWN:
 			case SDL_KEYUP:
-				code = keytranslation[ev.key.keysym.sym];
+				code = translateKeyWebOS(ev.key.keysym.sym, ev.key.state);
+				//code = keytranslation[ev.key.keysym.sym];
 
 				if (ev.key.keysym.unicode != 0 && ev.key.type == SDL_KEYDOWN &&
 				    (ev.key.keysym.unicode & 0xff80) == 0 &&
@@ -1351,7 +1721,9 @@ int handleevents(void)
 			case SDL_ACTIVEEVENT:
 				if (ev.active.state & SDL_APPINPUTFOCUS) {
 					appactive = ev.active.gain;
-					if (mouseacquired) {
+					SetKey(sc_Pause, 1);
+					SetKey(sc_Pause, 0);
+					if (1/*mouseacquired*/) {
 						if (appactive) {
 							SDL_WM_GrabInput(SDL_GRAB_ON);
 							SDL_ShowCursor(SDL_DISABLE);
@@ -1364,50 +1736,115 @@ int handleevents(void)
 				}
 				break;
 
-			case SDL_MOUSEBUTTONDOWN:
-			case SDL_MOUSEBUTTONUP:
-				switch (ev.button.button) {
-					case SDL_BUTTON_LEFT: j = 0; break;
-					case SDL_BUTTON_RIGHT: j = 1; break;
-					case SDL_BUTTON_MIDDLE: j = 2; break;
-					default: j = -1; break;
-				}
-				if (j<0) break;
-				
-				if (ev.button.state == SDL_PRESSED)
-					mouseb |= (1<<j);
-				else
-					mouseb &= ~(1<<j);
+            case SDL_MOUSEBUTTONUP:
+                if ( ev.motion.y > VIDHEIGHT - JOY_SIZE &&
+                     ev.motion.x < JOY_SIZE )
+                {
+                    joy_x = joy_y = 0;
+                    mousedown = 0;
+                }
+                if ( ev.motion.x > VIDWIDTH - FIRE_SIZE &&
+                        ev.motion.y > VIDHEIGHT - FIRE_SIZE )
+                {
+                    //FIRE!
+                    SetKey( sc_RightControl, ev.button.state );
+                    autofire = ev.button.state;
+                    if ( autofire )
+                    {
+                        fire_counter = FIRE_FRAME_COUNT;
+                    }
+                    break;
+                }
+				break;
 
-				if (mousepresscallback)
-					mousepresscallback(j+1, ev.button.state == SDL_PRESSED);
-				break;
-				
-			case SDL_MOUSEMOTION:
-				if (appactive) {
-					mousex += ev.motion.xrel;
-					mousey += ev.motion.yrel;
-					KB_KeyDown[sc_LeftArrow] = 0;
-					KB_KeyDown[sc_RightArrow] = 0;
-					KB_KeyDown[sc_UpArrow] = 0;
-					KB_KeyDown[sc_DownArrow] = 0;
-					if ((ev.motion.x < 80) && (ev.motion.y > 160))
-					{
-						if ((ev.motion.x < 30) && (ev.motion.y > 180) && (ev.motion.y < 220))
-							KB_KeyDown[sc_LeftArrow] = 1;
-						if ((ev.motion.x > 50) && (ev.motion.y > 180) && (ev.motion.y < 220))
-							KB_KeyDown[sc_RightArrow] = 1;
-						if ((ev.motion.y < 210) && (ev.motion.x > 20) && (ev.motion.x < 60))
-							KB_KeyDown[sc_UpArrow] = 1;
-						if ((ev.motion.y > 190) && (ev.motion.x > 20) && (ev.motion.x < 60))
-							KB_KeyDown[sc_DownArrow] = 1;
+            case SDL_MOUSEBUTTONDOWN:
+
+				mousedown = 1;
+                
+                if ( ev.motion.x > VIDWIDTH - FIRE_SIZE &&
+                        ev.motion.y > VIDHEIGHT - FIRE_SIZE )
+                {
+                    //FIRE!
+                    SetKey( sc_RightControl, ev.button.state );
+                    autofire = ev.button.state;
+                    if ( autofire )
+                    {
+                        fire_counter = FIRE_FRAME_COUNT;
+                    }
+                    break;
+                }
+                break;
+            case SDL_MOUSEMOTION:
+                if ( mousedown && 
+                        ev.motion.y > VIDHEIGHT - JOY_SIZE &&
+                        ev.motion.x < JOY_SIZE )
+                {
+                    joy_x = ( ev.motion.x - JOY_X );
+                    if ( joy_x < JOY_DEAD && joy_x > -JOY_DEAD )
+                    {
+                        joy_x = 0;
+                    }
+                    else
+                    {
+                        if ( joy_x >= JOY_DEAD )
+                        {
+                            joy_x -= JOY_DEAD;
+                        }
+                        else
+                        {
+                            joy_x += JOY_DEAD;
+                        }
+                    }
+
+                    joy_y = ( ev.motion.y - JOY_Y );
+                    if ( joy_y < JOY_DEAD && joy_y > -JOY_DEAD )
+                    {
+                        joy_y = 0;
+                    }
+                    else
+                    {
+                        if ( joy_y >= JOY_DEAD )
+                        {
+                            joy_y -= JOY_DEAD;
+                        }
+                        else
+                        {
+                            joy_y += JOY_DEAD;
+                        }
+                    }
+
+					if (joynumaxes > 1) {
+						joyaxis[1] = joy_y * 600;//10000 / 32767;
+						joyaxis[0] = joy_x * 200;//10000 / 32767;
+					//initprintf( "joy_x_y: %d, %d\n", joy_x, joy_y );
+					//initprintf( "joyaxis: %d, %d\n", joyaxis[0], joyaxis[1] );
 					}
-				}
-				break;
+					break;
+                }
+
+                if ( !mousedown )
+                {
+                    joy_x = 0;
+                    joy_y = 0;
+                }
+
+                //jump: top
+                if ( ev.motion.y < JUMP_SIZE )
+                {
+                    //top-left corner, jump!
+                    jumping_counter = JUMP_FRAME_COUNT;
+                    SetKey( sc_A, 1 );
+                    SetKey( sc_A, 0 );
+					//initprintf( "jumping jack flash\n" );
+                    break;
+                }
+                break;
 
 			case SDL_JOYAXISMOTION:
-				if (appactive && ev.jaxis.axis < joynumaxes)
-					joyaxis[ ev.jaxis.axis ] = ev.jaxis.value * 10000 / 32767;
+				//if (appactive && ev.jaxis.axis < joynumaxes) {
+				//	joyaxis[ ev.jaxis.axis ] = ev.jaxis.value * 10000 / 32767;
+				//	//initprintf("joyaxis[0] %d joyaxis[1] %d\n", joyaxis[0], joyaxis[1]);
+				//}
 				break;
 
 			case SDL_JOYHATMOTION: {

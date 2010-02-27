@@ -100,10 +100,10 @@ char * gamefunctions[] =
 
 static char * keydefaults[] =
    {
-   "Move_Forward", "Up", "L",
-   "Move_Backward", "Down", "K",
-   "Turn_Left", "Left", "I",
-   "Turn_Right", "Right", "M",
+   "Move_Forward", "Up", "",
+   "Move_Backward", "Down", "",
+   "Turn_Left", "Left", "",
+   "Turn_Right", "Right", "",
    "Strafe", "LAlt", "RAlt",
    "Fire", "LCtrl", "RCtrl",
    "Open", "Space", "",
@@ -146,12 +146,12 @@ static char * keydefaults[] =
    "Show_Opponents_Weapon", "W", "",
    "Map_Follow_Mode", "F", "",
    "See_Coop_View", "K", "",
-   "Mouse_Aiming", "U", "",
+   "Mouse_Aiming", "", "",
    "Toggle_Crosshair", "I", "",
    "Steroids", "R", "",
    "Quick_Kick", "`", "",
-   "Next_Weapon", "'", "",
-   "Previous_Weapon", ";", "",
+   "Next_Weapon", "(", "",
+   "Previous_Weapon", ")", "",
    "Show_Console", "NumLck", ""
    };
 

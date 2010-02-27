@@ -750,7 +750,7 @@ void CONTROL_GetUserInput( UserInput *info )
 		info->dir = dir_West;
 	else if (KB_KeyDown[sc_kpad_6] || KB_KeyDown[sc_RightArrow] || KB_KeyDown[sc_M])
 		info->dir = dir_East;
-
+		
 	if (KB_KeyDown[BUTTON0_SCAN_1] || KB_KeyDown[BUTTON0_SCAN_2] || KB_KeyDown[BUTTON0_SCAN_3])
 		info->button0 = 1;
 	if (KB_KeyDown[BUTTON1_SCAN])

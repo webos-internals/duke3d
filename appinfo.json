@@ -7,7 +7,7 @@
        "vendor_email": "support@webos-internals.org",
        "vendor_url": "http://www.webos-internals.org/wiki/Application:Duke3D",
        "type": "game",
-       "main": "duke3d",
+       "main": "start",
        "icon": "icon.png",
        "removable": "true",
        "noWindow": true,

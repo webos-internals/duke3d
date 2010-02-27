@@ -219,7 +219,7 @@ void CONFIG_SetDefaults( void )
    myaimmode = ps[0].aim_mode = 0;
    MouseAiming = 0;
    AutoAim = 1;
-   ControllerType = 1;
+   ControllerType = 2;
    ud.mouseflip = 0;
    ud.runkey_mode = 0;
    ud.statusbarscale = 100;
@@ -229,7 +229,7 @@ void CONFIG_SetDefaults( void )
    ud.detail = 1;
    ud.lockout = 0;
    ud.pwlockout[0] = '\0';
-   ud.crosshair = 0;
+   ud.crosshair = 1;
    ud.m_marker = 1;
    ud.m_ffire = 1;
    ud.levelstats = 0;
@@ -257,6 +257,14 @@ void CONFIG_SetDefaults( void )
 
       KeyboardKeys[f][0] = k1;
       KeyboardKeys[f][1] = k2;
+   }
+
+   for (i=0; i<NUMGAMEFUNCTIONS; i++)
+   {
+      if (i == gamefunc_Show_Console)
+         OSD_CaptureKey(KeyboardKeys[i][0]);
+      else
+         CONTROL_MapKey( i, KeyboardKeys[i][0], KeyboardKeys[i][1] );
    }
 
    memset(MouseFunctions, -1, sizeof(MouseFunctions));
@@ -295,6 +303,13 @@ void CONFIG_SetDefaults( void )
 	JoystickDigitalFunctions[i][1] = CONFIG_FunctionNameToNum( joystickdigitaldefaults[i*2+1] );
 
 	JoystickAnalogueAxes[i] = CONFIG_AnalogNameToNum( joystickanalogdefaults[i] );
+   }
+   for (i=0;i<MAXJOYAXES;i++)
+   {
+     CONTROL_MapAnalogAxis(i, JoystickAnalogueAxes[i], controldevice_joystick);
+     CONTROL_MapDigitalAxis( i, JoystickDigitalFunctions[i][0], 0, controldevice_joystick );
+     CONTROL_MapDigitalAxis( i, JoystickDigitalFunctions[i][1], 1, controldevice_joystick );
+     CONTROL_SetAnalogAxisScale( i, JoystickAnalogueScale[i], controldevice_joystick );
    }
 }
 /*
@@ -540,7 +555,8 @@ void CONFIG_ReadSetup( void )
 	   scripthandle = SCRIPT_Load( setupfilename );
 
    if (scripthandle >= 0)
-      {
+   {
+	   initprintf("read setup from %s\n", setupfilename);
       for(dummy = 0;dummy < 10;dummy++)
          {
          commmacro[13] = dummy+'0';
