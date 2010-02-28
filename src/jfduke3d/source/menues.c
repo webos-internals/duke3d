@@ -718,8 +718,15 @@ int probe(int x,int y,int i,int n)
         CONTROL_GetInput( &minfo );
         mi += minfo.dz;
     }
-
     else minfo.dz = minfo.dyaw = 0;
+
+	if ( ControllerType == 2 && CONTROL_JoyPresent )
+    {
+        CONTROL_GetInput( &minfo );
+		if ((minfo.dz > 1000) || (minfo.dz < -1000))
+            mi += minfo.dz;
+    }
+
 
     if( x == (320>>1) )
         centre = 320>>2;
