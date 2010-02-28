@@ -25,8 +25,12 @@ build/%.built: build/.unpacked
 	( cd src/jfbuild ; ${SB2} make)
 	( cd src/jfduke3d ; ${SB2} make)
 	cp src/jfduke3d/duke3d .
-	mkdir src/binaries
-	cp src/jfduke3d/duke3d src/binaries
+	mkdir -p binaries
+	mkdir -p binaries/$*
+	mkdir -p control
+	touch control/postinst
+	touch control/prerm
+	cp src/jfduke3d/duke3d binaries/$*/
 	touch $@
 
 clobber::
