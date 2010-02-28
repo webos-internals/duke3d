@@ -1,12 +1,53 @@
 This is a WebOS port of JonoF's version of Duke Nukem 3D. You will find this version at 
 http://www.jonof.id.au/
 
-You need the following files in the same directory in which duke3d is:
+It's done by Henk "MetaView" Jonas. With help from rwhitby and the SDLQuake port.
+You find more in my blog at http://www.metaviewsoft.de/wordpress or follow me on twitter: @metaview
+
+You need the following files in the Duke3D directory on your internal drive:
 
 DEFS.CON
 DUKE3D.GRP
 GAME.CON
 USER.CON
+
+When you start Duke3D for the first time, it will create this directory for you.
+
+Controls:
+
+Move and Rotate:
+----------------
+
+W S Z(Y)
+  A
+or left screen area
+
+Fire:
+-----
+
+Return, J
+or right screen area
+
+Strafe left/right:
+------------------
+
+H, N
+
+Jump: B
+Open: Space
+Run: Shift
+Crouch: U
+Inventory: I
+MedKit: K
+TurnAround: BackSpace
+SendMessage: P
+Map: M
+Quick_Kick: L
+Next_Weapon: back gesture
+Previous_Weapon: forward gesture
+Show_Console: O
+Menu: Q
+Switch keyboard between action and normal mode: @
 
 
 Regards

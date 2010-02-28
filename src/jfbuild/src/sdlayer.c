@@ -393,6 +393,7 @@ static int translateKeyWebOS(int sym, int state) {
 	   case SDLK_LCTRL: sym = sc_LeftControl; break;
 	   case SDLK_RALT: sym = sc_RightAlt; break;
 	   case SDLK_LALT: sym = sc_LeftAlt; break;
+	   case SDLK_SPACE: sym = sc_Space; break;
 	   case SDLK_KP0: 
 		   if(modstate & KMOD_NUM) sym = sc_Insert; 
 		   else sym = sc_0;
@@ -455,12 +456,18 @@ static int translateKeyWebOS(int sym, int state) {
 	if ( !normalkeyboard )
 	{
 		//these values are from keys.h
-		if ( sym == SDLK_j ) sym = sc_RightControl;//fire!
-		if ( sym == SDLK_b ) sym = sc_A;//jump!
-		//if ( sym == SDLK_j ) sym = K_UPARROW;//forward!
-		//if ( sym == SDLK_b ) sym = K_DOWNARROW;//back
-		if ( sym == SDLK_h ) sym = sc_U;//strafeleft
+		if ( sym == SDLK_j ) sym = sc_J;//fire!
+		if ( sym == SDLK_b ) sym = sc_B;//jump!
+		if ( sym == SDLK_h ) sym = sc_H;//strafeleft
 		if ( sym == SDLK_n ) sym = sc_N;//straferight
+
+		if ( sym == SDLK_u ) sym = sc_U;
+		if ( sym == SDLK_i ) sym = sc_I;
+		if ( sym == SDLK_o ) sym = sc_O;
+		if ( sym == SDLK_p ) sym = sc_P;
+		if ( sym == SDLK_k ) sym = sc_K;
+		if ( sym == SDLK_l ) sym = sc_L;
+		if ( sym == SDLK_m ) sym = sc_M;
 
 		//same, only sprint versions
 		/*
@@ -1747,7 +1754,7 @@ int handleevents(void)
                         ev.motion.y > VIDHEIGHT - FIRE_SIZE )
                 {
                     //FIRE!
-                    SetKey( sc_RightControl, ev.button.state );
+                    SetKey( sc_Enter, ev.button.state );
                     autofire = ev.button.state;
                     if ( autofire )
                     {
@@ -1758,14 +1765,12 @@ int handleevents(void)
 				break;
 
             case SDL_MOUSEBUTTONDOWN:
-
 				mousedown = 1;
-                
                 if ( ev.motion.x > VIDWIDTH - FIRE_SIZE &&
                         ev.motion.y > VIDHEIGHT - FIRE_SIZE )
                 {
                     //FIRE!
-                    SetKey( sc_RightControl, ev.button.state );
+                    SetKey( sc_Enter, ev.button.state );
                     autofire = ev.button.state;
                     if ( autofire )
                     {

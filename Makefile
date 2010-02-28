@@ -5,7 +5,7 @@ VERSION = 1.0.0
 include ../../support/download.mk
 
 .PHONY: unpack
-unpack: build/.unpacked
+unpack: build
 
 build/.unpacked:
 	rm -rf build
@@ -31,7 +31,7 @@ build/%.built: build/.unpacked
 	touch control/postinst
 	touch control/prerm
 	cp src/jfduke3d/duke3d binaries/$*/
-	touch $@
+	#touch $@
 
 clobber::
 	rm -rf build
