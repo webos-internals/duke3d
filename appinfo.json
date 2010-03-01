@@ -11,6 +11,7 @@
        "icon": "icon.png",
        "removable": "true",
        "noWindow": true,
-       "noDeprecatedStyles": true
+       "noDeprecatedStyles": true,
+       "splashBackground":"duke3d_title.png",
 }
 
