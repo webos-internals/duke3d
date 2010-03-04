@@ -5,6 +5,7 @@ APPDIR=$(readlink -f $(dirname $0))
 mkdir -p /media/internal/Duke3D
 
 cp $APPDIR/bin/duke3d /media/internal/Duke3D/duke3d
+cp $APPDIR/README /media/internal/Duke3D/README.txt
 
 cd /media/internal/Duke3D/
 exec /media/internal/Duke3D/duke3d &
