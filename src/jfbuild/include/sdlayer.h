@@ -15,6 +15,8 @@ struct sdlappicon {
 	unsigned char *mask;
 };
 
+void sdl_print_error(char *t);
+
 #else
 #if (__build_interface_layer__ != SDL)
 #error "Already using the " __build_interface_layer__ ". Can't now use SDL."

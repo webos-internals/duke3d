@@ -2136,7 +2136,9 @@ void gameexit(char *t)
 //            if(*t == ' ' && *(t+1) == 0) *t = 0;
             //printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 		if (!(t[0] == ' ' && t[1] == 0)) {
-			wm_msgbox("Duke Nukem 3D", t);
+			initprintf(t);
+			
+			sdl_print_error(t);
 		}
     }
     
@@ -7506,6 +7508,8 @@ void Startup(void)
 	int i;
 
 	CONFIG_ReadSetup();
+	
+	// TODO: check here for GAME.CON
 
 	compilecons();	// JBF 20040116: Moved to below setup reading, because otherwise blown
 			// cons blow the configuration file.

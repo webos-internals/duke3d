@@ -134,12 +134,12 @@
 
 #define    VIDHEIGHT    240
 #define    VIDWIDTH     320
-#define    FIRE_SIZE    160
-#define    JUMP_SIZE    120
-#define    JOY_SIZE     160
-#define    JOY_DEAD     10
-#define    JOY_X        80
-#define    JOY_Y        (VIDHEIGHT - 80)
+#define    FIRE_SIZE    90
+#define    JUMP_SIZE    90
+#define    JOY_SIZE     90
+#define    JOY_DEAD     5
+#define    JOY_X        45
+#define    JOY_Y        (VIDHEIGHT - JOY_X)
 
 #define    JOY_IMAGE_FILENAME        "images/joystick.png"
 #define    JOY_PRESS_IMAGE_FILENAME  "images/joystick-press.png"
@@ -263,6 +263,8 @@ void close_startwin(void);
 void update_startwin(void);
 #endif
 
+extern int minitext(int x,int y,char *t,char p,short sb);
+
 int wm_msgbox(char *name, char *fmt, ...)
 {
 	char buf[1000];
@@ -288,6 +290,15 @@ int wm_msgbox(char *name, char *fmt, ...)
 #endif
 	{
 		puts(buf);
+/*
+		char *t = buf;
+		while (*t)
+		{
+			rotatesprite(10, 10, 65536L, 0, 0, 0, *t, 10+16, 0, 0, 10, 10);
+			t++;
+		}
+*/
+		//minitext(20, 180, buf, 0, 10+16+256);
 		getchar();
 	}
 	return 0;
@@ -348,20 +359,10 @@ void wm_setapptitle(char *name)
 static int translateKeyWebOS(int sym, int state) {
 	int modstate = SDL_GetModState();
 
-	//Weapon cycling!
-	if (state) {
-		if (sym == 27)
-		{
-			//gesture down
-			return sc_OpenBracket;
-		} else if (sym == 229) {
-			//gesture up
-			return sc_CloseBracket;
-		}
-	}
-
 	switch(sym)
 	{
+	   case SDLK_ESCAPE: sym = sc_OpenBracket; break;
+	   case SDLK_WORLD_71: sym = sc_CloseBracket; break;
 	   case SDLK_DELETE: sym = sc_Delete; break;
 	   case SDLK_BACKSPACE: sym = sc_BackSpace; break;
 	   case SDLK_F1: sym = sc_F1; break;
@@ -1684,6 +1685,11 @@ int handleevents(void)
 	int code, rv=0, j;
 	SDL_Event ev;
 	static int bMouseDown = 0;
+	static int jumpwhich = -1;
+	static int firewhich = -1;
+	static int controlwhich = -1;
+
+
 
 #define SetKey(key,state) { \
 	keystatus[key] = state; \
@@ -1744,106 +1750,71 @@ int handleevents(void)
 				break;
 
             case SDL_MOUSEBUTTONUP:
-                if ( ev.motion.y > VIDHEIGHT - JOY_SIZE &&
-                     ev.motion.x < JOY_SIZE )
-                {
-                    joy_x = joy_y = 0;
-                    mousedown = 0;
-                }
-                if ( ev.motion.x > VIDWIDTH - FIRE_SIZE &&
-                        ev.motion.y > VIDHEIGHT - FIRE_SIZE )
-                {
-                    //FIRE!
-                    SetKey( sc_Enter, ev.button.state );
-                    autofire = ev.button.state;
-                    if ( autofire )
-                    {
-                        fire_counter = FIRE_FRAME_COUNT;
-                    }
-                    break;
+				if (controlwhich == ev.button.which) {
+					mousedown = 0;
+					if (joynumaxes > 1) {
+						joyaxis[1] = 0;
+						joyaxis[0] = 0;
+					}
+					controlwhich = -1;
+				} else if (firewhich == ev.button.which) {
+                    // cease FIRE!
+                    SetKey( sc_Enter, 0 );
+					firewhich = -1;
+				} else if (jumpwhich == ev.button.which) {
+                    // stop jump!
+                    SetKey( sc_B, 0 );
+					jumpwhich = -1;
                 }
 				break;
 
             case SDL_MOUSEBUTTONDOWN:
-				mousedown = 1;
-                if ( ev.motion.x > VIDWIDTH - FIRE_SIZE &&
-                        ev.motion.y > VIDHEIGHT - FIRE_SIZE )
-                {
-                    //FIRE!
-                    SetKey( sc_Enter, ev.button.state );
-                    autofire = ev.button.state;
-                    if ( autofire )
-                    {
-                        fire_counter = FIRE_FRAME_COUNT;
-                    }
-                    break;
-                }
-                break;
-            case SDL_MOUSEMOTION:
-                if ( mousedown && 
-                        ev.motion.y > VIDHEIGHT - JOY_SIZE &&
-                        ev.motion.x < JOY_SIZE )
-                {
-                    joy_x = ( ev.motion.x - JOY_X );
-                    if ( joy_x < JOY_DEAD && joy_x > -JOY_DEAD )
-                    {
-                        joy_x = 0;
-                    }
-                    else
-                    {
-                        if ( joy_x >= JOY_DEAD )
-                        {
-                            joy_x -= JOY_DEAD;
-                        }
-                        else
-                        {
-                            joy_x += JOY_DEAD;
-                        }
-                    }
+				// track multitouch
+				if ((ev.button.y > (VIDHEIGHT - JOY_SIZE)) && (ev.button.x < JOY_SIZE)) {
+					mousedown = 1;
+					// remember which mouse device we need to track
+					controlwhich = ev.button.which;
+				} else  if ((ev.button.x > (VIDWIDTH - FIRE_SIZE)) && (ev.button.y > VIDHEIGHT - FIRE_SIZE)) {
+                    // FIRE!
+                    SetKey( sc_Enter, 1 );
+					// remember which device to track
+					firewhich = ev.button.which;
+				} else  if (ev.button.y < JUMP_SIZE) {
+                    // Jump!
+                    SetKey( sc_B, 1 );
+					// remember which device to track
+					jumpwhich = ev.button.which;
+				}
+				// fall through
 
-                    joy_y = ( ev.motion.y - JOY_Y );
-                    if ( joy_y < JOY_DEAD && joy_y > -JOY_DEAD )
-                    {
-                        joy_y = 0;
-                    }
-                    else
-                    {
-                        if ( joy_y >= JOY_DEAD )
-                        {
-                            joy_y -= JOY_DEAD;
-                        }
-                        else
-                        {
-                            joy_y += JOY_DEAD;
-                        }
-                    }
+			case SDL_MOUSEMOTION:
+				if (controlwhich == ev.button.which) {
+					if ((ev.motion.y > (VIDHEIGHT - JOY_SIZE)) && (ev.motion.x < JOY_SIZE)) {
+						long joy_x = ( ((long)ev.motion.x) - JOY_X );
+						if ( joy_x < JOY_DEAD && joy_x > -JOY_DEAD )
+							joy_x = 0;
+						else
+							if ( joy_x >= JOY_DEAD )
+								joy_x -= JOY_DEAD;
+							else
+								joy_x += JOY_DEAD;
 
-					if (joynumaxes > 1) {
-						joyaxis[1] = joy_y * 600;//10000 / 32767;
-						joyaxis[0] = joy_x * 200;//10000 / 32767;
-					//initprintf( "joy_x_y: %d, %d\n", joy_x, joy_y );
-					//initprintf( "joyaxis: %d, %d\n", joyaxis[0], joyaxis[1] );
+						long joy_y = ( ((long)ev.motion.y) - JOY_Y );
+						if ( joy_y < JOY_DEAD && joy_y > -JOY_DEAD )
+							joy_y = 0;
+						else
+							if ( joy_y >= JOY_DEAD )
+								joy_y -= JOY_DEAD;
+							else
+								joy_y += JOY_DEAD;
+
+						if (joynumaxes > 1) {
+							joyaxis[1] = joy_y * 2400;//10000 / 32767;
+							joyaxis[0] = joy_x * 1000;//10000 / 32767;
+						}
 					}
-					break;
                 }
-
-                if ( !mousedown )
-                {
-                    joy_x = 0;
-                    joy_y = 0;
-                }
-
-                //jump: top
-                if ( ev.motion.y < JUMP_SIZE )
-                {
-                    //top-left corner, jump!
-                    jumping_counter = JUMP_FRAME_COUNT;
-                    SetKey( sc_A, 1 );
-                    SetKey( sc_A, 0 );
-					//initprintf( "jumping jack flash\n" );
-                    break;
-                }
-                break;
+				break;
 
 			case SDL_JOYAXISMOTION:
 				//if (appactive && ev.jaxis.axis < joynumaxes) {
@@ -1908,3 +1879,52 @@ int handleevents(void)
 	return rv;
 }
 
+
+void sdl_print_error(char *t)
+{
+    // Initialize the SDL library with the Video subsystem
+    SDL_Init(SDL_INIT_VIDEO | SDL_INIT_NOPARACHUTE);
+
+    // Tell it to use OpenGL version 2.0
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
+
+    // Set the video mode to full screen with OpenGL-ES support
+    SDL_Surface *Surface = SDL_SetVideoMode(320, 480, 0, SDL_OPENGL);
+
+    // Event descriptor
+    SDL_Event Event;
+
+    do {
+        // Render our scene
+
+        // Make it visible on the screen
+        SDL_GL_SwapBuffers();
+
+        // Process the events
+        while (SDL_PollEvent(&Event)) {
+            switch (Event.type) {
+                // List of keys that have been pressed
+                case SDL_KEYDOWN:
+                    switch (Event.key.keysym.sym) {
+                        // Escape forces us to quit the app
+                        case SDLK_ESCAPE:
+                            Event.type = SDL_QUIT;
+                            break;
+
+                        default:
+                            break;
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+    } while (Event.type != SDL_QUIT);
+    // We exit anytime we get a request to quit the app
+
+    // Cleanup
+    SDL_Quit();
+
+}
