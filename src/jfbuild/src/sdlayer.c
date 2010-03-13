@@ -600,6 +600,13 @@ int main(int argc, char *argv[])
 	return r;
 }
 
+SDL_Surface * LoadImage( char * image )
+{
+	SDL_Surface * img = IMG_Load( image );
+	SDL_SetAlpha( img, SDL_SRCALPHA, OVERLAY_ALPHA );
+
+	return img;
+}
 
 //
 // initsystem() -- init SDL systems
@@ -667,6 +674,11 @@ int initsystem(void)
 	initprintf("  Accelerated colour fills?              %s\n", (vid->blit_fill)?"Yes":"No");
 	initprintf("  Total video memory:                    %dKB\n", vid->video_mem);
 #endif
+
+	//joy_img = LoadImage( JOY_IMAGE_FILENAME );
+    //joy_press_img = LoadImage( JOY_PRESS_IMAGE_FILENAME );
+	//jump_img = LoadImage( JUMP_IMAGE_FILENAME );
+	//fire_img = LoadImage( FIRE_IMAGE_FILENAME );
 
 	return 0;
 }
@@ -1882,16 +1894,28 @@ int handleevents(void)
 
 void sdl_print_error(char *t)
 {
-    // Initialize the SDL library with the Video subsystem
+	SDL_Rect rect;
+	SDL_Surface *img = LoadImage("images/error.png");
+
+	rect.x = 0;
+	rect.y = 0;
+	rect.w = 480;
+	rect.h = 320;
+
+	// Initialize the SDL library with the Video subsystem
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_NOPARACHUTE);
 
     // Tell it to use OpenGL version 2.0
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
 
     // Set the video mode to full screen with OpenGL-ES support
-    SDL_Surface *Surface = SDL_SetVideoMode(320, 480, 0, SDL_OPENGL);
+    SDL_Surface *screen = SDL_SetVideoMode(320, 480, 0, SDL_OPENGL);
 
-    // Event descriptor
+    // Clear the screen
+    glClear (GL_COLOR_BUFFER_BIT);
+	SDL_BlitSurface( img, NULL, screen, &rect );
+
+	// Event descriptor
     SDL_Event Event;
 
     do {
