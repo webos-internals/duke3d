@@ -141,6 +141,9 @@
 #define    JOY_X        45
 #define    JOY_Y        (VIDHEIGHT - JOY_X)
 
+// I don't have the header for this...
+SDL_Surface * IMG_Load( char * filename );
+
 #define    JOY_IMAGE_FILENAME        "images/joystick.png"
 #define    JOY_PRESS_IMAGE_FILENAME  "images/joystick-press.png"
 #define    JUMP_IMAGE_FILENAME       "images/jump.png"
@@ -602,10 +605,13 @@ int main(int argc, char *argv[])
 
 SDL_Surface * LoadImage( char * image )
 {
-	SDL_Surface * img = IMG_Load( image );
+	return NULL;
+	/*
+	SDL_Surface *img = IMG_Load( image );
 	SDL_SetAlpha( img, SDL_SRCALPHA, OVERLAY_ALPHA );
 
 	return img;
+	*/
 }
 
 //
@@ -1895,7 +1901,6 @@ int handleevents(void)
 void sdl_print_error(char *t)
 {
 	SDL_Rect rect;
-	SDL_Surface *img = LoadImage("images/error.png");
 
 	rect.x = 0;
 	rect.y = 0;
@@ -1909,46 +1914,49 @@ void sdl_print_error(char *t)
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
 
     // Set the video mode to full screen with OpenGL-ES support
-    SDL_Surface *screen = SDL_SetVideoMode(320, 480, 0, SDL_OPENGL);
+    SDL_Surface *surface = SDL_SetVideoMode(320, 480, 0, SDL_OPENGL);
+	if (surface)
+	{
+		SDL_Surface *img = LoadImage("images/error.png");
+		if (img)
+		{
+			SDL_BlitSurface( img, NULL, surface, &rect );
 
-    // Clear the screen
-    glClear (GL_COLOR_BUFFER_BIT);
-	SDL_BlitSurface( img, NULL, screen, &rect );
+			// Event descriptor
+			SDL_Event Event;
 
-	// Event descriptor
-    SDL_Event Event;
+			do {
+				// Render our scene
 
-    do {
-        // Render our scene
+				// Make it visible on the screen
+				SDL_GL_SwapBuffers();
 
-        // Make it visible on the screen
-        SDL_GL_SwapBuffers();
+				// Process the events
+				while (SDL_PollEvent(&Event)) {
+					switch (Event.type) {
+						// List of keys that have been pressed
+						case SDL_KEYDOWN:
+							switch (Event.key.keysym.sym) {
+								// Escape forces us to quit the app
+								case SDLK_ESCAPE:
+									Event.type = SDL_QUIT;
+									break;
 
-        // Process the events
-        while (SDL_PollEvent(&Event)) {
-            switch (Event.type) {
-                // List of keys that have been pressed
-                case SDL_KEYDOWN:
-                    switch (Event.key.keysym.sym) {
-                        // Escape forces us to quit the app
-                        case SDLK_ESCAPE:
-                            Event.type = SDL_QUIT;
-                            break;
+								default:
+									break;
+							}
+							break;
 
-                        default:
-                            break;
-                    }
-                    break;
+						default:
+							break;
+					}
+				}
 
-                default:
-                    break;
-            }
-        }
-
-    } while (Event.type != SDL_QUIT);
-    // We exit anytime we get a request to quit the app
+			} while (Event.type != SDL_QUIT);
+			// We exit anytime we get a request to quit the app
+		}
+	}
 
     // Cleanup
     SDL_Quit();
-
 }
