@@ -58,6 +58,7 @@ void uninitsystem(void);
 void initprintf(const char *, ...);
 void debugprintf(const char *,...);
 
+
 int handleevents(void);
 
 typedef void (*KeyPressCallback)(long,long);

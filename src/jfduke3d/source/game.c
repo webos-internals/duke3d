@@ -2137,6 +2137,7 @@ void gameexit(char *t)
             //printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 		if (!(t[0] == ' ' && t[1] == 0)) {
 			initprintf(t);
+			initprintf("\n");
 			
 			sdl_print_error(t);
 		}

@@ -62,6 +62,7 @@ endif
 
 ifeq ($(RENDERTYPE),SDL)
 	LIBS+= $(shell $(SDLCONFIG) --libs)
+	LIBS+=-lSDL_ttf
 
 	ifeq (1,$(WITHOUT_GTK))
 		HAVE_GTK2=0

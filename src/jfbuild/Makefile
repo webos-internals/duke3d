@@ -63,7 +63,7 @@ override CFLAGS+= -W -Wall -Wimplicit -Wno-char-subscripts -Wno-unused \
 	-funsigned-char -fno-strict-aliasing -DNO_GCC_BUILTINS \
 	-DKSFORBUILD -I$(INC:/=) #-I../jfaud/src
 CXXFLAGS=-fno-exceptions -fno-rtti
-LIBS=
+LIBS=-lpng12 -lz
 GAMELIBS=#-lfmod #../jfaud/libjfaud.a ../jfaud/mpadec/libmpadec/libmpadec.a -lwinmm
 ASFLAGS=-s #-g
 EXESUFFIX=

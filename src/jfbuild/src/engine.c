@@ -2098,9 +2098,9 @@ static void ceilspritehline(long x2, long y)
 {
 	long x1, v, bx, by;
 
-	//x = x1 + (x2-x1)t + (y1-y2)u  ³  x = 160v
-	//y = y1 + (y2-y1)t + (x2-x1)u  ³  y = (scrx-160)v
-	//z = z1 = z2                   ³  z = posz + (scry-horiz)v
+	//x = x1 + (x2-x1)t + (y1-y2)u  Â³  x = 160v
+	//y = y1 + (y2-y1)t + (x2-x1)u  Â³  y = (scrx-160)v
+	//z = z1 = z2                   Â³  z = posz + (scry-horiz)v
 
 	x1 = lastx[y]; if (x2 < x1) return;
 
@@ -5013,6 +5013,7 @@ static int loadtables(void)
 		} else {
 			engineerrstr = "Failed to load TABLES.DAT!";
 			initprintf("ERROR: %s\n", engineerrstr);
+			sdl_print_error(engineerrstr);
 			return 1;
 		}
 		tablesloaded = 1;

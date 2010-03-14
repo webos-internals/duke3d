@@ -15,6 +15,10 @@
 #include "build.h"
 #include "osd.h"
 
+#include <SDL_video.h>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
+
 // from keyboard.h from jfduke3d/jmact/
 #define KB_KeyDown keystatus
 #define  sc_None         0
@@ -141,13 +145,12 @@
 #define    JOY_X        45
 #define    JOY_Y        (VIDHEIGHT - JOY_X)
 
-// I don't have the header for this...
-SDL_Surface * IMG_Load( char * filename );
-
 #define    JOY_IMAGE_FILENAME        "images/joystick.png"
 #define    JOY_PRESS_IMAGE_FILENAME  "images/joystick-press.png"
 #define    JUMP_IMAGE_FILENAME       "images/jump.png"
 #define    FIRE_IMAGE_FILENAME       "images/fire.png"
+
+#define FONT "/usr/share/fonts/PreludeCondensed-Medium.ttf"
 
 #define    OVERLAY_ITEM_COUNT   4
 #define    OVERLAY_ALPHA       32
@@ -174,9 +177,6 @@ static int joy_x, joy_y;
 // No support for option menus
 void (*vid_menudrawfn)(void) = NULL;
 void (*vid_menukeyfn)(int key) = NULL;
-
-// I don't have the header for this...
-SDL_Surface * IMG_Load( char * filename );
 
 static SDL_Surface * joy_img = NULL;
 static SDL_Surface * joy_press_img = NULL;
@@ -606,12 +606,32 @@ int main(int argc, char *argv[])
 SDL_Surface * LoadImage( char * image )
 {
 	return NULL;
-	/*
+
 	SDL_Surface *img = IMG_Load( image );
 	SDL_SetAlpha( img, SDL_SRCALPHA, OVERLAY_ALPHA );
 
 	return img;
-	*/
+}
+
+void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination )
+{
+	//Holds offsets
+	SDL_Rect offset;
+	
+	//Source rect
+	SDL_Rect src;
+	
+	//Get offsets
+	offset.x = x;
+	offset.y = y;
+	
+	src.x = 0;
+	src.y = 0;
+	src.w = source->w;
+	src.h = source->h;
+	
+	//Blit
+	SDL_BlitSurface( source, &src, destination, &offset );
 }
 
 //
@@ -1910,16 +1930,17 @@ void sdl_print_error(char *t)
 	// Initialize the SDL library with the Video subsystem
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_NOPARACHUTE);
 
-    // Tell it to use OpenGL version 2.0
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
-
+initprintf("sdl\n");
     // Set the video mode to full screen with OpenGL-ES support
-    SDL_Surface *surface = SDL_SetVideoMode(320, 480, 0, SDL_OPENGL);
+    SDL_Surface *surface = SDL_SetVideoMode(480, 320, 8, SDL_FULLSCREEN | SDL_RESIZABLE);
 	if (surface)
 	{
+initprintf("surf\n");
+/*
 		SDL_Surface *img = LoadImage("images/error.png");
 		if (img)
 		{
+initprintf("blit");
 			SDL_BlitSurface( img, NULL, surface, &rect );
 
 			// Event descriptor
@@ -1954,6 +1975,65 @@ void sdl_print_error(char *t)
 
 			} while (Event.type != SDL_QUIT);
 			// We exit anytime we get a request to quit the app
+		}
+*/
+		if ( !TTF_Init() ) {
+			TTF_Font * font_normal = TTF_OpenFont( FONT, 18 );
+			if (font_normal) {
+initprintf("font\n");
+				//No game files found! Tell the user with a nice screen.
+				//(Note this is where first-time users most likely end up);
+				int top=0, bottom=319;
+				SDL_Color textColor = { 255, 255, 255 };
+				SDL_Color hiColor = { 255, 200, 200 };
+				SDL_Color linkColor = { 200, 200, 255 };
+				//XXX: This code has gone too far--really should make use of some engine or loop or something :(
+				SDL_Surface * nr0 = TTF_RenderText_Blended( font_normal, t, hiColor );
+				SDL_Surface * nr1 = TTF_RenderText_Blended( font_normal, "No game files found?", textColor );
+				SDL_Surface * nr2 = TTF_RenderText_Blended( font_normal, "Please check the ReadMe.txt", textColor );
+				SDL_Surface * nr3 = TTF_RenderText_Blended( font_normal, "in the Duke3D folder", textColor );
+				SDL_Surface * nr4 = TTF_RenderText_Blended( font_normal, "on your internal drive.", textColor );
+				SDL_Surface * nr5 = TTF_RenderText_Blended( font_normal, "Duke Nukem 3D ported by", linkColor );
+				SDL_Surface * nr6 = TTF_RenderText_Blended( font_normal, "MetaView", linkColor );
+				apply_surface( surface->w/2-nr0->w/2, (top + bottom)/2 - nr0->h - nr1->h - nr2->h - 55, nr0, surface );
+				apply_surface( surface->w/2-nr1->w/2, (top + bottom)/2 - nr1->h - nr2->h - 45, nr1, surface );
+				apply_surface( surface->w/2-nr2->w/2, (top + bottom)/2 - nr2->h - 35, nr2, surface );
+				apply_surface( surface->w/2-nr3->w/2, (top + bottom)/2 - 25, nr3, surface );
+				apply_surface( surface->w/2-nr4->w/2, (top + bottom)/2 + nr3->h + -15, nr4, surface );
+				apply_surface( surface->w/2-nr5->w/2, (top + bottom)/2 + nr3->h + nr4->h - 5, nr5, surface );
+				apply_surface( surface->w/2-nr6->w/2, (top + bottom)/2 + nr3->h + nr4->h + nr5->h + 5, nr6, surface );
+				SDL_UpdateRect( surface, 0, 0, 0, 0 );
+			}
+
+			// Event descriptor
+			SDL_Event Event;
+			
+			do {
+				while ( SDL_PollEvent( &Event ) ) {
+initprintf("Event.type: %d\n", Event.type);
+					switch (Event.type) {
+						case SDL_KEYDOWN:
+							switch (Event.key.keysym.sym) {
+								// Escape forces us to quit the app
+								case SDLK_ESCAPE:
+									Event.type = SDL_QUIT;
+									break;
+
+								default:
+									break;
+							}
+							break;
+
+						case SDL_MOUSEBUTTONDOWN:
+							Event.type = SDL_QUIT;
+							break;
+						
+						default:
+							break;
+					}
+				}
+				SDL_Delay( 20 );
+			} while (Event.type != SDL_QUIT);
 		}
 	}
 

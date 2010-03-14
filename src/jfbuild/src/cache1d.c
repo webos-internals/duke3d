@@ -234,7 +234,8 @@ static void reportandexit(char *errormessage)
 	Bprintf("Cachesize = %ld\n",cachesize);
 	Bprintf("Cacnum = %ld\n",cacnum);
 	Bprintf("Cache length sum = %ld\n",j);
-	initprintf("ERROR: %s\n",errormessage);
+	initprintf("ERROR: %s\n", errormessage);
+	sdl_print_error(errormessage);
 	exit(0);
 }
 
