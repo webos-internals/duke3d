@@ -4,6 +4,8 @@
 
 #include "fmod.h"
 #include "fmod_errors.h"
+#include "SDL_mixer.h"
+
 
 #ifndef F_CALLBACKAPI
 #define FMOD_PRE370
@@ -75,6 +77,26 @@ void initsb(char dadigistat, char damusistat, long dasamplerate, char danumspeak
 	musicstat = damusistat;
 	
 	printOSD("Initialising FMOD...\n");
+
+	/* We're going to be requesting certain things from our audio
+	   device, so we set them up beforehand */
+	int audio_rate = 22050;
+	Uint16 audio_format = AUDIO_S16; /* 16-bit stereo */
+	int audio_channels = 2;
+	int audio_buffers = 4096;
+
+	if (Mix_OpenAudio(audio_rate, audio_format, audio_channels, audio_buffers)) {
+		initprintf("Unable to open audio!\n");
+		return;
+	}
+
+	/* If we actually care about what we got, we can ask here.  In this
+	   program we don't, but I'm showing the function call here anyway
+	   in case we'd want to know later. */
+	Mix_QuerySpec(&audio_rate, &audio_format, &audio_channels);
+	
+	fmod_inited = 1;
+
 #if 0
 	printOSD("  Linked version: %.02f\n", FMOD_VERSION);
 	printOSD("  DLL version: %.02f\n", FSOUND_GetVersion());
@@ -122,10 +144,8 @@ void initsb(char dadigistat, char damusistat, long dasamplerate, char danumspeak
 
 void uninitsb(void)
 {
-	if (fmod_inited) {		
-#if 0
-		FSOUND_Close();
-#endif
+	if (fmod_inited) {
+		Mix_CloseAudio();
 		fmod_inited = 0;
 	}
 }
@@ -330,29 +350,24 @@ void loadwaves(void)
 
 
 #if 1
-static FSOUND_STREAM *musicstream = NULL;
+static Mix_Music *musicstream = NULL;
 static int musicplaying = 0;
 
 void loadsong(char *filename)
 {
 	if (!musicstat) return;
 	if (musicstream) return;
-#if 0
-#ifdef FMOD_PRE370
-	musicstream = FSOUND_Stream_OpenFile(filename, FSOUND_LOOP_NORMAL, 0);
-#else
-	musicstream = FSOUND_Stream_Open(filename, FSOUND_LOOP_NORMAL, 0, 0);
-#endif
-#endif
+	
+	musicstream = Mix_LoadMUS(filename);
 }
 
 void musicon(void)
 {
 	if (!musicstat) return;
 	if (!musicstream || musicplaying) return;
-#if 0
-	FSOUND_Stream_Play(FSOUND_FREE, musicstream);
-#endif
+
+	Mix_PlayMusic(musicstream, 0);
+
 	musicplaying = 1;
 }
 
@@ -360,9 +375,11 @@ void musicoff(void)
 {
 	if (!musicstat) return;
 	if (!musicstream || !musicplaying) return;
-#if 0
-	FSOUND_Stream_Stop(musicstream);
-#endif
+
+	Mix_HaltMusic();
+	Mix_FreeMusic(musicstream);
+	musicstream = 0;
+
 	musicplaying = 0;
 }
 #endif

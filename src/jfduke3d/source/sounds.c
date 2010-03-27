@@ -33,9 +33,10 @@ Modifications for JonoF's port by Jonathon Fowler (jonof@edgenetwk.com)
 #include "music.h"
 #include "duke3d.h"
 #include "util_lib.h"
+#include <SDL_mixer.h>
 
 
-#define LOUDESTVOLUME 150
+#define LOUDESTVOLUME 128
 
 long backflag,numenvsnds;
 
@@ -52,9 +53,12 @@ void SoundStartup( void )
    int32 status;
 
    // if they chose None lets return
-   if (FXDevice < 0) return;
+initprintf("FXDevice %d\n", FXDevice);
+	if (FXDevice < 0) return;
 
+initprintf("%d %d %d %d %d\n", FXDevice, NumVoices, NumChannels, NumBits, MixRate);
    status = FX_Init( FXDevice, NumVoices, NumChannels, NumBits, MixRate );
+initprintf("status %d\n", status);
    if ( status == FX_Ok ) {
       FX_SetVolume( FXVolume );
       if (ReverseStereo == 1) {
@@ -63,13 +67,13 @@ void SoundStartup( void )
    }
       
    if ( status != FX_Ok ) {
-      Error( "Sound startup error: %s", FX_ErrorString( FX_Error ));
+      initprintf( "Sound startup error: %s", FX_ErrorString( FX_Error ));
    }
 
    status = FX_SetCallBack( testcallback );
 
    if ( status != FX_Ok ) {
-      Error( "Sound startup error: %s", FX_ErrorString( FX_Error ));
+      initprintf( "Sound startup error: %s", FX_ErrorString( FX_Error ));
    }
 }
 
@@ -104,33 +108,36 @@ void SoundShutdown( void )
 */
 
 void MusicStartup( void )
-   {
-   int32 status;
+{
+	int32 status;
 
-   // if they chose None lets return
-   if (MusicDevice < 0)
-      return;
+	// if they chose None lets return
+	if (MusicDevice < 0)
+	{
+		initprintf("No MusicDevice.\n");
+		return;
+	}
 
-   status = MUSIC_Init( MusicDevice, 0 );
+	status = MUSIC_Init( MusicDevice, 0 );
 
-   if ( status == MUSIC_Ok )
-      {
-      MUSIC_SetVolume( MusicVolume );
-      }
-   else
-   {
-      initprintf("Couldn't find selected sound card, or, error w/ sound card itself.\n");
+	if ( status == MUSIC_Ok )
+	{
+		MUSIC_SetVolume( MusicVolume );
+	}
+	else
+	{
+		initprintf("Couldn't find selected sound card, or, error w/ sound card itself.\n");
 
-      SoundShutdown();
-      uninittimer();
-      uninitengine();
-      CONTROL_Shutdown();
-      CONFIG_WriteSetup();
-      KB_Shutdown();
-      uninitgroupfile();
-      //unlink("duke3d.tmp");
-      exit(-1);
-   }
+		SoundShutdown();
+		uninittimer();
+		uninitengine();
+		CONTROL_Shutdown();
+		CONFIG_WriteSetup();
+		KB_Shutdown();
+		uninitgroupfile();
+		//unlink("duke3d.tmp");
+		exit(-1);
+	}
 }
 
 /*
@@ -142,7 +149,7 @@ void MusicStartup( void )
 */
 
 void MusicShutdown( void )
-   {
+{
    int32 status;
 
    // if they chose None lets return
@@ -151,10 +158,10 @@ void MusicShutdown( void )
 
    status = MUSIC_Shutdown();
    if ( status != MUSIC_Ok )
-      {
+   {
       Error( MUSIC_ErrorString( MUSIC_ErrorCode ));
-      }
    }
+}
 
 void MusicUpdate(void)
 {
@@ -215,6 +222,7 @@ void playmusic(char *fn)
     if(MusicToggle == 0) return;
     if(MusicDevice < 0) return;
 
+initprintf("Load music %s\n", fn);
     fp = kopen4load(fn,0);
 
     if(fp == -1) return;
@@ -228,7 +236,17 @@ void playmusic(char *fn)
 
     kread( fp, MusicPtr, l);
     kclose( fp );
-    MUSIC_PlaySong( MusicPtr, MUSIC_LoopSong );
+
+	// MusicPtr is a data ptr
+	// save a temp copy
+	FILE *f = fopen("temp.mid", "w");
+	if (f)
+	{
+		fwrite(MusicPtr, l, 1, f);
+		fclose(f);
+	}
+
+	MUSIC_PlaySong( "temp.mid", MUSIC_LoopSong );
 }
 
 char loadsound(unsigned short num)
@@ -238,6 +256,7 @@ char loadsound(unsigned short num)
     if(num >= NUM_SOUNDS || SoundToggle == 0) return 0;
     if (FXDevice < 0) return 0;
 
+initprintf("Load sound %s\n", sounds[num]);
     fp = kopen4load(sounds[num],loadfromgrouponly);
     if(fp == -1)
     {
@@ -253,6 +272,7 @@ char loadsound(unsigned short num)
 
     allocache((long *)&Sound[num].ptr,l,(char *)&Sound[num].lock);
     kread( fp, Sound[num].ptr , l);
+	Sound[num].chunk = Mix_LoadWAV_RW(SDL_RWFromMem(Sound[num].ptr, l), 0);
     kclose( fp );
     return 1;
 }
@@ -377,18 +397,18 @@ int xyzsound(short num,short i,long x,long y,long z)
         start = *(unsigned short *)(Sound[num].ptr + 0x14);
 
         if(*Sound[num].ptr == 'C')
-            voice = FX_PlayLoopedVOC( Sound[num].ptr, start, start + soundsiz[num],
+            voice = FX_PlayLoopedVOC( Sound[num].chunk, start, start + soundsiz[num],
                     pitch,sndist>>6,sndist>>6,0,soundpr[num],num);
         else
-            voice = FX_PlayLoopedWAV( Sound[num].ptr, start, start + soundsiz[num],
+            voice = FX_PlayLoopedWAV( Sound[num].chunk, start, start + soundsiz[num],
                     pitch,sndist>>6,sndist>>6,0,soundpr[num],num);
     }
     else
     {
         if( *Sound[num].ptr == 'C')
-            voice = FX_PlayVOC3D( Sound[ num ].ptr,pitch,sndang>>6,sndist>>6, soundpr[num], num );
+            voice = FX_PlayVOC3D( Sound[ num ].chunk, pitch, sndang>>6, sndist>>6, soundpr[num], num );
         else
-	    voice = FX_PlayWAV3D( Sound[ num ].ptr,pitch,sndang>>6,sndist>>6, soundpr[num], num );
+	    voice = FX_PlayWAV3D( Sound[ num ].chunk, pitch, sndang>>6, sndist>>6, soundpr[num], num );
     }
 
     if ( voice > FX_Ok )
@@ -438,22 +458,22 @@ void sound(short num)
         if(*Sound[num].ptr == 'C')
         {
             start = (long)*(unsigned short *)(Sound[num].ptr + 0x14);
-            voice = FX_PlayLoopedVOC( Sound[num].ptr, start, start + soundsiz[num],
+            voice = FX_PlayLoopedVOC( Sound[num].chunk, start, start + soundsiz[num],
                     pitch,LOUDESTVOLUME,LOUDESTVOLUME,LOUDESTVOLUME,soundpr[num],num);
         }
         else
         {
             start = (long)*(unsigned short *)(Sound[num].ptr + 0x14);
-            voice = FX_PlayLoopedWAV( Sound[num].ptr, start, start + soundsiz[num],
+            voice = FX_PlayLoopedWAV( Sound[num].chunk, start, start + soundsiz[num],
                     pitch,LOUDESTVOLUME,LOUDESTVOLUME,LOUDESTVOLUME,soundpr[num],num);
         }
     }
     else
     {
         if(*Sound[num].ptr == 'C')
-            voice = FX_PlayVOC3D( Sound[ num ].ptr, pitch,0,255-LOUDESTVOLUME,soundpr[num], num );
+            voice = FX_PlayVOC3D( Sound[ num ].chunk, pitch,0,255-LOUDESTVOLUME,soundpr[num], num );
         else
-            voice = FX_PlayWAV3D( Sound[ num ].ptr, pitch,0,255-LOUDESTVOLUME,soundpr[num], num );
+            voice = FX_PlayWAV3D( Sound[ num ].chunk, pitch,0,255-LOUDESTVOLUME,soundpr[num], num );
     }
 
     if(voice > FX_Ok) return;
@@ -483,10 +503,12 @@ void stopenvsound(short num,short i)
     {
         k = Sound[num].num;
         for(j=0;j<k;j++)
+		{
            if(SoundOwner[num][j].i == i)
-        {
-            FX_StopSound(SoundOwner[num][j].voice);
-            break;
+           {
+              FX_StopSound(SoundOwner[num][j].voice);
+              break;
+		   }
         }
     }
 }

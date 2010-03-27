@@ -55,10 +55,14 @@ void Error(char *error, ...)
 	if (ShutDown) ShutDown();
 
 	if (error) {
+		initprintf("%s\n", error);
+		sdl_print_error(error);
+		/*
 		va_start(va, error);
 		vprintf(error, va);
 		va_end(va);
 		printf("\n\n");
+		*/
 	}
 
 	exit((error != NULL));

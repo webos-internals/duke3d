@@ -5,11 +5,18 @@ APPDIR=$(readlink -f $(dirname $0))
 mkdir -p /media/internal/Duke3D
 mkdir -p /media/internal/Duke3D/images
 
+mkdir -p /media/internal/Timidity
+
 cp $APPDIR/images/error.png /media/internal/Duke3D/images/error.png
+cp $APPDIR/images/fire.png /media/internal/Duke3D/images/fire.png
+cp $APPDIR/images/joystick-press.png /media/internal/Duke3D/images/joystick-press.png
+cp $APPDIR/images/joystick.png /media/internal/Duke3D/images/joystick.png
+cp $APPDIR/images/jump.png /media/internal/Duke3D/images/jump.png
 
 cp $APPDIR/bin/duke3d /media/internal/Duke3D/duke3d
 cp $APPDIR/README /media/internal/Duke3D/README.txt
 
+export TIMIDITY_CFG=/media/internal/Timidity/timidity.cfg
 cd /media/internal/Duke3D/
 exec /media/internal/Duke3D/duke3d &
 

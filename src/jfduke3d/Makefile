@@ -37,7 +37,7 @@ CFLAGS=$(debug)
 override CFLAGS+= -W -Wall -Wimplicit -Wno-char-subscripts -Wno-unused \
 	-funsigned-char -fno-strict-aliasing -DNO_GCC_BUILTINS -DNOCOPYPROTECT \
 	-I$(INC:/=) -I$(EINC:/=) -I$(SRC)jmact -I$(SRC)jaudiolib #-I../jfaud/inc
-LIBS=-lm -lpng12 -lz #../jfaud/jfaud.a # -L../jfaud -ljfaud
+LIBS=#-lm -lpng12 -lz #../jfaud/jfaud.a # -L../jfaud -ljfaud
 NASMFLAGS=-s #-g
 EXESUFFIX=
 

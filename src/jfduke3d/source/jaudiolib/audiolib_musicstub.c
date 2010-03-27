@@ -24,6 +24,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 //-------------------------------------------------------------------------
 
 #include "music.h"
+#include "duke3d.h"
+#include <SDL_mixer.h>
 
 
 #define TRUE  ( 1 == 1 )
@@ -31,6 +33,16 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 
 int MUSIC_ErrorCode = MUSIC_Ok;
+
+
+/* We're going to be requesting certain things from our audio
+   device, so we set them up beforehand */
+int audio_rate = 22050;
+Uint16 audio_format = AUDIO_S16; /* 16-bit stereo */
+int audio_channels = 2;
+int audio_buffers = 4096;
+
+Mix_Music *song_hdl = NULL;
 
 
 /*---------------------------------------------------------------------
@@ -103,20 +115,26 @@ char *MUSIC_ErrorString
    Selects which sound device to use.
 ---------------------------------------------------------------------*/
 
-int MUSIC_Init
-   (
-   int SoundCard,
-   int Address
-   )
+int MUSIC_Init(int SoundCard, int Address)
+{
+	int i;
+	int status;
 
-   {
-   int i;
-   int status;
+	initprintf("Try to open audio!\n");
+	if (Mix_OpenAudio(audio_rate, audio_format, audio_channels, audio_buffers)) {
+		initprintf("Unable to open audio!\n");
+		return MUSIC_Error;
+	}
 
-   status = MUSIC_Ok;
+	/* If we actually care about what we got, we can ask here.  In this
+	   program we don't, but I'm showing the function call here anyway
+	   in case we'd want to know later. */
+	Mix_QuerySpec(&audio_rate, &audio_format, &audio_channels);
 
-   return( status );
-   }
+	status = MUSIC_Ok;
+
+	return( status );
+}
 
 
 /*---------------------------------------------------------------------
@@ -125,19 +143,16 @@ int MUSIC_Init
    Terminates use of sound device.
 ---------------------------------------------------------------------*/
 
-int MUSIC_Shutdown
-   (
-   void
-   )
-
-   {
+int MUSIC_Shutdown(void)
+{
    int status;
 
    status = MUSIC_Ok;
 
+	Mix_CloseAudio();
 
    return( status );
-   }
+}
 
 
 /*---------------------------------------------------------------------
@@ -146,13 +161,9 @@ int MUSIC_Shutdown
    Sets the maximum MIDI channel that FM cards respond to.
 ---------------------------------------------------------------------*/
 
-void MUSIC_SetMaxFMMidiChannel
-   (
-   int channel
-   )
-
-   {
-   }
+void MUSIC_SetMaxFMMidiChannel(int channel)
+{
+}
 
 
 /*---------------------------------------------------------------------
@@ -161,13 +172,10 @@ void MUSIC_SetMaxFMMidiChannel
    Sets the volume of music playback.
 ---------------------------------------------------------------------*/
 
-void MUSIC_SetVolume
-   (
-   int volume
-   )
-
-   {
-   }
+void MUSIC_SetVolume(int volume)
+{
+	Mix_VolumeMusic(volume);
+}
 
 
 /*---------------------------------------------------------------------
@@ -176,14 +184,9 @@ void MUSIC_SetVolume
    Sets the volume of music playback on the specified MIDI channel.
 ---------------------------------------------------------------------*/
 
-void MUSIC_SetMidiChannelVolume
-   (
-   int channel,
-   int volume
-   )
-
-   {
-   }
+void MUSIC_SetMidiChannelVolume(int channel, int volume)
+{
+}
 
 
 /*---------------------------------------------------------------------
@@ -192,13 +195,9 @@ void MUSIC_SetMidiChannelVolume
    Sets the volume of music playback on all MIDI channels to full volume.
 ---------------------------------------------------------------------*/
 
-void MUSIC_ResetMidiChannelVolumes
-   (
-   void
-   )
-
-   {
-   }
+void MUSIC_ResetMidiChannelVolumes(void)
+{
+}
 
 
 /*---------------------------------------------------------------------
@@ -207,14 +206,10 @@ void MUSIC_ResetMidiChannelVolumes
    Returns the volume of music playback.
 ---------------------------------------------------------------------*/
 
-int MUSIC_GetVolume
-   (
-   void
-   )
-
-   {
-      return( 0 );
-   }
+int MUSIC_GetVolume(void)
+{
+	return( 0 );
+}
 
 
 /*---------------------------------------------------------------------
@@ -255,13 +250,10 @@ int MUSIC_SongPlaying
    Continues playback of a paused song.
 ---------------------------------------------------------------------*/
 
-void MUSIC_Continue
-   (
-   void
-   )
-
-   {
-   }
+void MUSIC_Continue(void)
+{
+	Mix_ResumeMusic();
+}
 
 
 /*---------------------------------------------------------------------
@@ -270,13 +262,10 @@ void MUSIC_Continue
    Pauses playback of a song.
 ---------------------------------------------------------------------*/
 
-void MUSIC_Pause
-   (
-   void
-   )
-
-   {
-   }
+void MUSIC_Pause(void)
+{
+	Mix_PauseMusic();
+}
 
 
 /*---------------------------------------------------------------------
@@ -285,14 +274,10 @@ void MUSIC_Pause
    Stops playback of current song.
 ---------------------------------------------------------------------*/
 
-int MUSIC_StopSong
-   (
-   void
-   )
-
-   {
-   return( MUSIC_Ok );
-   }
+int MUSIC_StopSong(void)
+{
+	return( MUSIC_Ok );
+}
 
 
 /*---------------------------------------------------------------------
@@ -301,15 +286,15 @@ int MUSIC_StopSong
    Begins playback of MIDI song.
 ---------------------------------------------------------------------*/
 
-int MUSIC_PlaySong
-   (
-   unsigned char *song,
-   int loopflag
-   )
-
-   {
-   return( MUSIC_Ok );
-   }
+int MUSIC_PlaySong(char *song, int loopflag)
+{
+	song_hdl = Mix_LoadMUS(song);
+	initprintf("play %s : %d!\n", song, song_hdl);
+	if (!song_hdl)
+		return MUSIC_Error;
+	Mix_PlayMusic(song_hdl, loopflag);
+	return( MUSIC_Ok );
+}
 
 
 /*---------------------------------------------------------------------
@@ -333,13 +318,10 @@ void MUSIC_SetContext
    Returns the current song context.
 ---------------------------------------------------------------------*/
 
-int MUSIC_GetContext
-   (
-   void
-   )
-
-   {
-   }
+int MUSIC_GetContext(void)
+{
+	return 0;
+}
 
 
 /*---------------------------------------------------------------------
@@ -495,13 +477,9 @@ void MUSIC_RerouteMidiChannel
    Halts playback of all sounds.
 ---------------------------------------------------------------------*/
 
-void MUSIC_RegisterTimbreBank
-   (
-   unsigned char *timbres
-   )
-
-   {
-   }
+void MUSIC_RegisterTimbreBank(unsigned char *timbres)
+{
+}
 
 
 void MUSIC_Update(void)

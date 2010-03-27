@@ -689,9 +689,9 @@ void getpackets(void)
                     break;
                 rtsptr = (char *)RTS_GetSound(packbuf[1]-1);
                 if (*rtsptr == 'C')
-                    FX_PlayVOC3D(rtsptr,0,0,0,255,-packbuf[1]);
+                    FX_PlayVOC(rtsptr, RTS_SoundLength(packbuf[1]-1));
                 else
-                    FX_PlayWAV3D(rtsptr,0,0,0,255,-packbuf[1]);
+                    FX_PlayWAV(rtsptr, RTS_SoundLength(packbuf[1]-1));
                 rtsplaying = 7;
                 break;
             case 8:
@@ -6564,8 +6564,8 @@ if (VOLUMEALL) {
             {
                 rtsptr = (char *)RTS_GetSound (i-1);
                 if(*rtsptr == 'C')
-                    FX_PlayVOC3D( rtsptr,0,0,0,255,-i);
-                else FX_PlayWAV3D( rtsptr,0,0,0,255,-i);
+                    FX_PlayVOC( rtsptr, RTS_SoundLength(i-1));
+                else FX_PlayWAV( rtsptr, RTS_SoundLength(i-1));
 
                 rtsplaying = 7;
 

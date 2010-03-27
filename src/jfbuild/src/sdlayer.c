@@ -145,10 +145,10 @@
 #define    JOY_X        45
 #define    JOY_Y        (VIDHEIGHT - JOY_X)
 
-#define    JOY_IMAGE_FILENAME        "images/joystick.png"
-#define    JOY_PRESS_IMAGE_FILENAME  "images/joystick-press.png"
-#define    JUMP_IMAGE_FILENAME       "images/jump.png"
-#define    FIRE_IMAGE_FILENAME       "images/fire.png"
+#define    JOY_IMAGE_FILENAME        "/media/internal/Duke3D/images/joystick.png"
+#define    JOY_PRESS_IMAGE_FILENAME  "/media/internal/Duke3D/images/joystick-press.png"
+#define    JUMP_IMAGE_FILENAME       "/media/internal/Duke3D/images/jump.png"
+#define    FIRE_IMAGE_FILENAME       "/media/internal/Duke3D/images/fire.png"
 
 #define FONT "/usr/share/fonts/PreludeCondensed-Medium.ttf"
 
@@ -605,10 +605,13 @@ int main(int argc, char *argv[])
 
 SDL_Surface * LoadImage( char * image )
 {
-	return NULL;
-
+initprintf("image %s\n", image);
 	SDL_Surface *img = IMG_Load( image );
-	SDL_SetAlpha( img, SDL_SRCALPHA, OVERLAY_ALPHA );
+initprintf("image %x\n", img);
+	if (img)
+		SDL_SetAlpha( img, SDL_SRCALPHA, OVERLAY_ALPHA );
+	else
+		initprintf("load %s failed: %s\n", image, IMG_GetError());
 
 	return img;
 }
@@ -651,9 +654,9 @@ int initsystem(void)
 		linked->major, linked->minor, linked->patch,
 		compiled.major, compiled.minor, compiled.patch);
 
-	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_AUDIO | SDL_INIT_NOPARACHUTE
 #ifdef NOSDLPARACHUTE
-			| SDL_INIT_NOPARACHUTE
+//			| SDL_INIT_NOPARACHUTE
 #endif
 		)) {
 		initprintf("Initialisation failed! (%s)\n", SDL_GetError());
@@ -664,7 +667,7 @@ int initsystem(void)
 
 	frameplace = 0;
 	lockcount = 0;
-
+	
 #ifdef USE_OPENGL
 	if (loadgldriver(getenv("BUILD_GLDRV"))) {
 		initprintf("Failed loading OpenGL driver. GL modes will be unavailable.\n");
@@ -701,10 +704,14 @@ int initsystem(void)
 	initprintf("  Total video memory:                    %dKB\n", vid->video_mem);
 #endif
 
-	//joy_img = LoadImage( JOY_IMAGE_FILENAME );
-    //joy_press_img = LoadImage( JOY_PRESS_IMAGE_FILENAME );
-	//jump_img = LoadImage( JUMP_IMAGE_FILENAME );
-	//fire_img = LoadImage( FIRE_IMAGE_FILENAME );
+	joy_img = LoadImage( JOY_IMAGE_FILENAME );
+initprintf("joy img %x\n", joy_img);
+    joy_press_img = LoadImage( JOY_PRESS_IMAGE_FILENAME );
+initprintf("joy_press_img %x\n", joy_press_img);
+	jump_img = LoadImage( JUMP_IMAGE_FILENAME );
+initprintf("jump_img %x\n", jump_img);
+	fire_img = LoadImage( FIRE_IMAGE_FILENAME );
+initprintf("fire_img %x\n", fire_img);
 
 	return 0;
 }
@@ -718,6 +725,15 @@ void uninitsystem(void)
 	uninitinput();
 	uninitmouse();
 	uninittimer();
+	
+	if (joy_img)
+		SDL_FreeSurface(joy_img);
+	if (joy_press_img)
+		SDL_FreeSurface(joy_press_img);
+	if (fire_img)
+		SDL_FreeSurface(fire_img);
+	if (jump_img)
+		SDL_FreeSurface(jump_img);
 
 	SDL_Quit();
 
@@ -1508,6 +1524,89 @@ void enddrawing(void)
 }
 
 
+void D_DrawUIOverlay()
+{
+    // Render the overlay!
+    // This is done in two stages:
+    // Calculate the rects where everything goes,
+    // and then the actual drawing
+    SDL_Rect rect[OVERLAY_ITEM_COUNT];
+    SDL_Rect emptyrect;
+    int i;
+    memset( rect, 0, sizeof( rect ) );
+
+
+    //always draw the joystick location indicator
+	if (joy_img) {
+		rect[0].x = JOY_X - joy_img->w/2;
+		rect[0].y = JOY_Y - joy_img->h/2;
+		rect[0].w = joy_img->w;
+		rect[0].h = joy_img->h;
+	}
+
+
+    //If user has moved the joystick...
+	if (joy_press_img) {
+		rect[1].x = JOY_X + joy_x - joy_press_img->w/2;
+		rect[1].y = JOY_Y + joy_y - joy_press_img->h/2;
+		rect[1].w = joy_press_img->w;
+		rect[1].h = joy_press_img->h;
+
+		//Adjust x/y so the full image is on the screen
+		int max_x = VIDWIDTH - joy_press_img->w -1;
+		int max_y = VIDHEIGHT - joy_press_img->h -1;
+
+		if ( rect[1].x > max_x )
+		{
+			rect[1].x = max_x;
+		}
+		if ( rect[1].y > max_y )
+		{
+			rect[1].y = max_y;
+		}
+	}
+
+
+    //Draw the jump button if the user hit it
+	if (jump_img) {
+		rect[2].x = VIDWIDTH/2 - jump_img->w/2;
+		rect[2].y = 10;
+		rect[2].w = jump_img->w;
+		rect[2].h = jump_img->h;
+	}
+
+    //Draw the fire button if the user is hitting it
+	if (fire_img) {
+		rect[3].x = VIDWIDTH - FIRE_SIZE/2 - fire_img->w/2;
+		rect[3].y = VIDHEIGHT - FIRE_SIZE/2 - fire_img->h/2;
+		rect[3].w = fire_img->w;
+		rect[3].h = fire_img->h;
+	}
+
+    //Now render the overlay
+    if ( !drawoverlay )
+    {
+        return;
+    }
+
+	if (joy_img)
+		SDL_BlitSurface( joy_img, NULL, sdl_surface, &rect[0] );
+
+	if (joy_press_img)
+		SDL_BlitSurface( joy_press_img, NULL, sdl_surface, &rect[1] );
+
+    if ( jumping_counter > 0 )
+    {
+        jumping_counter--;
+		if (jump_img)
+			SDL_BlitSurface( jump_img, NULL, sdl_surface, &rect[2] );
+    }
+
+	if (fire_img)
+		SDL_BlitSurface( fire_img, NULL, sdl_surface, &rect[3] );
+}
+
+
 //
 // showframe() -- update the display
 //
@@ -1560,6 +1659,8 @@ void showframe(int w)
 		printf("Frame still locked %ld times when showframe() called.\n", lockcount);
 		while (lockcount) enddrawing();
 	}
+	
+	D_DrawUIOverlay();
 
 	SDL_Flip(sdl_surface);
 }
@@ -1794,6 +1895,8 @@ int handleevents(void)
 						joyaxis[1] = 0;
 						joyaxis[0] = 0;
 					}
+					joy_x = 0;
+					joy_y = 0;
 					controlwhich = -1;
 				} else if (firewhich == ev.button.which) {
                     // cease FIRE!
@@ -1820,6 +1923,7 @@ int handleevents(void)
 				} else  if (ev.button.y < JUMP_SIZE) {
                     // Jump!
                     SetKey( sc_B, 1 );
+					jumping_counter = JUMP_FRAME_COUNT;
 					// remember which device to track
 					jumpwhich = ev.button.which;
 				}
@@ -1828,7 +1932,7 @@ int handleevents(void)
 			case SDL_MOUSEMOTION:
 				if (controlwhich == ev.button.which) {
 					if ((ev.motion.y > (VIDHEIGHT - JOY_SIZE)) && (ev.motion.x < JOY_SIZE)) {
-						long joy_x = ( ((long)ev.motion.x) - JOY_X );
+						joy_x = ( ((long)ev.motion.x) - JOY_X );
 						if ( joy_x < JOY_DEAD && joy_x > -JOY_DEAD )
 							joy_x = 0;
 						else
@@ -1837,7 +1941,7 @@ int handleevents(void)
 							else
 								joy_x += JOY_DEAD;
 
-						long joy_y = ( ((long)ev.motion.y) - JOY_Y );
+						joy_y = ( ((long)ev.motion.y) - JOY_Y );
 						if ( joy_y < JOY_DEAD && joy_y > -JOY_DEAD )
 							joy_y = 0;
 						else

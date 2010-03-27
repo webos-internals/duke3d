@@ -203,8 +203,8 @@ void CONFIG_SetDefaults( void )
    int32 i,f;
    byte k1,k2;
 
-   FXDevice = -1;
-   MusicDevice = -1;
+   FXDevice = 0;
+   MusicDevice = 0;
    NumVoices = 4;
    NumChannels = 2;
    NumBits = 8;

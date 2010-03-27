@@ -24,6 +24,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 //-------------------------------------------------------------------------
 
 #include "fx_man.h"
+#include "duke3d.h"
+#include <SDL_mixer.h>
 
 
 #define TRUE  ( 1 == 1 )
@@ -37,6 +39,8 @@ int FX_ErrorCode = FX_Ok;
 
 
 
+
+
 /*---------------------------------------------------------------------
    Function: FX_ErrorString
 
@@ -44,12 +48,8 @@ int FX_ErrorCode = FX_Ok;
    number.  A -1 returns a pointer the current error.
 ---------------------------------------------------------------------*/
 
-char *FX_ErrorString
-   (
-   int ErrorNumber
-   )
-
-   {
+char *FX_ErrorString(int ErrorNumber)
+{
    char *ErrorString;
 
    switch( ErrorNumber )
@@ -75,7 +75,7 @@ char *FX_ErrorString
       }
 
    return( ErrorString );
-   }
+}
 
 
 /*---------------------------------------------------------------------
@@ -84,18 +84,16 @@ char *FX_ErrorString
    Selects which sound device to use.
 ---------------------------------------------------------------------*/
 
-int FX_Init
-   (
-   int SoundCard,
-   int numvoices,
-   int numchannels,
-   int samplebits,
-   unsigned mixrate
-   )
-
-   {
-   return( FX_Ok );
-   }
+int FX_Init(int SoundCard, int numvoices, int numchannels, int samplebits, unsigned mixrate)
+{
+	initprintf("about to open audio!\n");
+	if (Mix_OpenAudio(22050/*mixrate*/, AUDIO_S16, numchannels, 1024)) {
+		initprintf("Unable to open audio!\n");
+		return FX_Error;
+	}
+	initprintf("success open audio!\n");
+	return( FX_Ok );
+}
 
 
 /*---------------------------------------------------------------------
@@ -104,14 +102,11 @@ int FX_Init
    Terminates use of sound device.
 ---------------------------------------------------------------------*/
 
-int FX_Shutdown
-   (
-   void
-   )
-
-   {
-   return( FX_Ok );
-   }
+int FX_Shutdown(void)
+{
+	Mix_CloseAudio();
+	return( FX_Ok );
+}
 
 
 /*---------------------------------------------------------------------
@@ -120,14 +115,10 @@ int FX_Shutdown
    Sets the function to call when a voice is done.
 ---------------------------------------------------------------------*/
 
-int FX_SetCallBack
-   (
-   void ( *function )( unsigned long )
-   )
-
-   {
-   return( FX_Ok );
-   }
+int FX_SetCallBack(void ( *function )( unsigned long ))
+{
+	return( FX_Ok );
+}
 
 
 /*---------------------------------------------------------------------
@@ -136,13 +127,10 @@ int FX_SetCallBack
    Sets the volume of the current sound device.
 ---------------------------------------------------------------------*/
 
-void FX_SetVolume
-   (
-   int volume
-   )
-
-   {
-   }
+void FX_SetVolume(int volume)
+{
+	Mix_Volume(-1, volume);
+}
 
 
 /*---------------------------------------------------------------------
@@ -151,13 +139,9 @@ void FX_SetVolume
    Set the orientation of the left and right channels.
 ---------------------------------------------------------------------*/
 
-void FX_SetReverseStereo
-   (
-   int setting
-   )
-
-   {
-   }
+void FX_SetReverseStereo(int setting)
+{
+}
 
 
 /*---------------------------------------------------------------------
@@ -166,14 +150,10 @@ void FX_SetReverseStereo
    Returns the orientation of the left and right channels.
 ---------------------------------------------------------------------*/
 
-int FX_GetReverseStereo
-   (
-   void
-   )
-
-   {
-   return 0;
-   }
+int FX_GetReverseStereo(void)
+{
+	return 0;
+}
 
 
 /*---------------------------------------------------------------------
@@ -182,13 +162,9 @@ int FX_GetReverseStereo
    Sets the reverb level.
 ---------------------------------------------------------------------*/
 
-void FX_SetReverb
-   (
-   int reverb
-   )
-
-   {
-   }
+void FX_SetReverb(int reverb)
+{
+}
 
 
 /*---------------------------------------------------------------------
@@ -197,13 +173,9 @@ void FX_SetReverb
    Sets the delay level of reverb to add to mix.
 ---------------------------------------------------------------------*/
 
-void FX_SetReverbDelay
-   (
-   int delay
-   )
-
-   {
-   }
+void FX_SetReverbDelay(int delay)
+{
+}
 
 
 /*---------------------------------------------------------------------
@@ -212,14 +184,10 @@ void FX_SetReverbDelay
    Checks if a voice can be play at the specified priority.
 ---------------------------------------------------------------------*/
 
-int FX_VoiceAvailable
-   (
-   int priority
-   )
-
-   {
-	   return 0;
-   }
+int FX_VoiceAvailable(int priority)
+{
+	return 1;
+}
 
 
 /*---------------------------------------------------------------------
@@ -228,22 +196,11 @@ int FX_VoiceAvailable
    Begin playback of sound data with the given volume and priority.
 ---------------------------------------------------------------------*/
 
-int FX_PlayLoopedVOC
-   (
-   char *ptr,
-   long loopstart,
-   long loopend,
-   int pitchoffset,
-   int vol,
-   int left,
-   int right,
-   int priority,
-   unsigned long callbackval
-   )
-
-   {
-   return( 0 );
-   }
+int FX_PlayLoopedVOC(void *ptr, long loopstart, long loopend, int pitchoffset, int vol, int left, int right, int priority, unsigned long callbackval)
+{
+	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
+	return( phaserChannel );
+}
 
 
 /*---------------------------------------------------------------------
@@ -252,22 +209,11 @@ int FX_PlayLoopedVOC
    Begin playback of sound data with the given volume and priority.
 ---------------------------------------------------------------------*/
 
-int FX_PlayLoopedWAV
-   (
-   char *ptr,
-   long loopstart,
-   long loopend,
-   int pitchoffset,
-   int vol,
-   int left,
-   int right,
-   int priority,
-   unsigned long callbackval
-   )
-
-   {
-   return( 0 );
-   }
+int FX_PlayLoopedWAV(void *ptr, long loopstart, long loopend, int pitchoffset, int vol, int left, int right, int priority, unsigned long callbackval )
+{
+	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
+	return( phaserChannel );
+}
 
 
 /*---------------------------------------------------------------------
@@ -277,19 +223,20 @@ int FX_PlayLoopedWAV
    from listener.
 ---------------------------------------------------------------------*/
 
-int FX_PlayVOC3D
-   (
-   char *ptr,
-   int pitchoffset,
-   int angle,
-   int distance,
-   int priority,
-   unsigned long callbackval
-   )
+int FX_PlayVOC3D(void *ptr, int pitchoffset, int angle, int distance, int priority, unsigned long callbackval)
+{
+	initprintf("FX_PlayVOC3D\n");
+	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
+	Mix_SetPosition(phaserChannel, angle, distance);
+	return( phaserChannel );
+}
 
-   {
-   return( 0 );
-   }
+int FX_PlayVOC(void *ptr, long size)
+{
+	initprintf("FX_PlayVOC\n");
+	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
+	return( phaserChannel );
+}
 
 
 /*---------------------------------------------------------------------
@@ -299,20 +246,18 @@ int FX_PlayVOC3D
    from listener.
 ---------------------------------------------------------------------*/
 
-int FX_PlayWAV3D
-   (
-   char *ptr,
-   int pitchoffset,
-   int angle,
-   int distance,
-   int priority,
-   unsigned long callbackval
-   )
+int FX_PlayWAV3D(void *ptr, int pitchoffset, int angle, int distance, int priority, unsigned long callbackval)
+{
+	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
+	Mix_SetPosition(phaserChannel, angle, distance);
+	return( phaserChannel );
+}
 
-   {
-   return( 0 );
-   }
-
+int FX_PlayWAV(void *ptr, long size)
+{
+	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
+	return( phaserChannel );
+}
 
 /*---------------------------------------------------------------------
    Function: FX_Pan3D
@@ -321,16 +266,10 @@ int FX_PlayWAV3D
    with the specified handle.
 ---------------------------------------------------------------------*/
 
-int FX_Pan3D
-   (
-   int handle,
-   int angle,
-   int distance
-   )
-
-   {
-   return( 0 );
-   }
+int FX_Pan3D(int handle, int angle, int distance)
+{
+	return( 0 );
+}
 
 
 /*---------------------------------------------------------------------
@@ -339,14 +278,11 @@ int FX_Pan3D
    Halts playback of a specific voice
 ---------------------------------------------------------------------*/
 
-int FX_StopSound
-   (
-   int handle
-   )
-
-   {
-   return( FX_Ok );
-   }
+int FX_StopSound(int handle)
+{
+	Mix_HaltChannel(handle);
+	return( FX_Ok );
+}
 
 
 /*---------------------------------------------------------------------
@@ -355,14 +291,13 @@ int FX_StopSound
    Halts playback of all sounds.
 ---------------------------------------------------------------------*/
 
-int FX_StopAllSounds
-   (
-   void
-   )
-
-   {
-   return( FX_Ok );
-   }
+int FX_StopAllSounds(void)
+{
+	Mix_HaltChannel(-1);
+	return( FX_Ok );
+}
 
 
-void AudioUpdate(void) { }
+void AudioUpdate(void)
+{
+}
