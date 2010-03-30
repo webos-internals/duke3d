@@ -2698,8 +2698,10 @@ if (PLUTOPAK) {
                     case 3: globalskillsound = JIBBED_ACTOR5;break;
                 }
 
+initprintf("110\n");
                 sound(globalskillsound);
 
+initprintf("yummi!\n");
                 ud.m_player_skill = x+1;
                 if(x == 3) ud.m_respawn_monsters = 1;
                 else ud.m_respawn_monsters = 0;
@@ -2719,7 +2721,9 @@ if (PLUTOPAK) {
                     nextpage();
                 }
 
+initprintf("newgame\n");
                 newgame(ud.m_volume_number,ud.m_level_number,ud.m_player_skill);
+initprintf("enterlevel\n");
                 if (enterlevel(MODE_GAME)) backtomenu();
             }
             else if(x == -1)

@@ -81,6 +81,8 @@ char firstdemofile[80] = { '\0' };
 static int netparamcount = 0;
 static char **netparam = NULL;
 
+extern int gblInGame;
+
 int usemodels;
 
 #if 0
@@ -7949,6 +7951,8 @@ if (VOLUMEONE) {
 
     MAIN_LOOP_RESTART:
 
+	gblInGame = 0;
+
     if(ud.warp_on == 0)
         Logo();
     else if(ud.warp_on == 1)
@@ -7972,6 +7976,8 @@ if (VOLUMEONE) {
 
     ud.warp_on = 0;
     KB_KeyDown[sc_Pause] = 0;	// JBF: I hate the pause key
+	
+	gblInGame = 1;
 
     while ( !(ps[myconnectindex].gm&MODE_END) ) //The whole loop!!!!!!!!!!!!!!!!!!
     {

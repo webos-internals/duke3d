@@ -61,7 +61,7 @@ typedef struct
 #define MUSIC_PlayOnce ( !MUSIC_LoopSong )
 
 char *MUSIC_ErrorString( int ErrorNumber );
-int   MUSIC_Init( int SoundCard, int Address );
+int   MUSIC_Init( int SoundCard, int numvoices, int numchannels, int samplebits, unsigned mixrate );
 int   MUSIC_Shutdown( void );
 void  MUSIC_SetVolume( int volume );
 void  MUSIC_SetMidiChannelVolume( int channel, int volume );

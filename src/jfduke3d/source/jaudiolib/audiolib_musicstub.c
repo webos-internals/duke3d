@@ -35,13 +35,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 int MUSIC_ErrorCode = MUSIC_Ok;
 
 
-/* We're going to be requesting certain things from our audio
-   device, so we set them up beforehand */
-int audio_rate = 22050;
-Uint16 audio_format = AUDIO_S16; /* 16-bit stereo */
-int audio_channels = 2;
-int audio_buffers = 4096;
-
 Mix_Music *song_hdl = NULL;
 
 
@@ -115,21 +108,18 @@ char *MUSIC_ErrorString
    Selects which sound device to use.
 ---------------------------------------------------------------------*/
 
-int MUSIC_Init(int SoundCard, int Address)
+int MUSIC_Init(int SoundCard, int numvoices, int numchannels, int samplebits, unsigned mixrate)
 {
 	int i;
 	int status;
 
 	initprintf("Try to open audio!\n");
-	if (Mix_OpenAudio(audio_rate, audio_format, audio_channels, audio_buffers)) {
+	if (Mix_OpenAudio(mixrate, MIX_DEFAULT_FORMAT, numchannels, 256)) {
 		initprintf("Unable to open audio!\n");
 		return MUSIC_Error;
 	}
-
-	/* If we actually care about what we got, we can ask here.  In this
-	   program we don't, but I'm showing the function call here anyway
-	   in case we'd want to know later. */
-	Mix_QuerySpec(&audio_rate, &audio_format, &audio_channels);
+	initprintf("success open audio!\n");
+	Mix_AllocateChannels(16);
 
 	status = MUSIC_Ok;
 
@@ -276,6 +266,7 @@ void MUSIC_Pause(void)
 
 int MUSIC_StopSong(void)
 {
+	Mix_HaltMusic();
 	return( MUSIC_Ok );
 }
 
@@ -288,6 +279,8 @@ int MUSIC_StopSong(void)
 
 int MUSIC_PlaySong(char *song, int loopflag)
 {
+	if (song_hdl)
+		Mix_FreeMusic(song_hdl);
 	song_hdl = Mix_LoadMUS(song);
 	initprintf("play %s : %d!\n", song, song_hdl);
 	if (!song_hdl)

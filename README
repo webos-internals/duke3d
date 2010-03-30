@@ -50,5 +50,14 @@ Menu: Q
 Switch keyboard between action and normal mode: @
 
 
+Music:
+------
+
+To get music work you will need an instrument set for the timidity midi player. You can found one here:
+http://www.metaviewsoft.de/eawpats12_full_palm.zip
+Unpack this file into the /Timidity folder on your internal drive. Duke3D will create this folder on
+first run.
+
+
 Regards
 Henk

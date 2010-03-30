@@ -87,11 +87,14 @@ char *FX_ErrorString(int ErrorNumber)
 int FX_Init(int SoundCard, int numvoices, int numchannels, int samplebits, unsigned mixrate)
 {
 	initprintf("about to open audio!\n");
-	if (Mix_OpenAudio(22050/*mixrate*/, AUDIO_S16, numchannels, 1024)) {
+
+	if (Mix_OpenAudio(mixrate, MIX_DEFAULT_FORMAT, numchannels, 256)) {
 		initprintf("Unable to open audio!\n");
 		return FX_Error;
 	}
 	initprintf("success open audio!\n");
+	Mix_AllocateChannels(16);
+
 	return( FX_Ok );
 }
 
@@ -117,6 +120,7 @@ int FX_Shutdown(void)
 
 int FX_SetCallBack(void ( *function )( unsigned long ))
 {
+	Mix_ChannelFinished(function);
 	return( FX_Ok );
 }
 
@@ -198,21 +202,9 @@ int FX_VoiceAvailable(int priority)
 
 int FX_PlayLoopedVOC(void *ptr, long loopstart, long loopend, int pitchoffset, int vol, int left, int right, int priority, unsigned long callbackval)
 {
-	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
-	return( phaserChannel );
-}
-
-
-/*---------------------------------------------------------------------
-   Function: FX_PlayWAV
-
-   Begin playback of sound data with the given volume and priority.
----------------------------------------------------------------------*/
-
-int FX_PlayLoopedWAV(void *ptr, long loopstart, long loopend, int pitchoffset, int vol, int left, int right, int priority, unsigned long callbackval )
-{
-	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
-	return( phaserChannel );
+	int phaserChannel = Mix_PlayChannel(-1, ptr, -1);
+	initprintf("FX_PlayLoopedVOC %d\n", phaserChannel+1);
+	return( phaserChannel+1 );
 }
 
 
@@ -225,17 +217,30 @@ int FX_PlayLoopedWAV(void *ptr, long loopstart, long loopend, int pitchoffset, i
 
 int FX_PlayVOC3D(void *ptr, int pitchoffset, int angle, int distance, int priority, unsigned long callbackval)
 {
-	initprintf("FX_PlayVOC3D\n");
 	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
+	initprintf("FX_PlayVOC3D %d 0x%x\n", phaserChannel+1, ptr);
 	Mix_SetPosition(phaserChannel, angle, distance);
-	return( phaserChannel );
+	return( phaserChannel+1 );
 }
 
 int FX_PlayVOC(void *ptr, long size)
 {
-	initprintf("FX_PlayVOC\n");
 	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
-	return( phaserChannel );
+	initprintf("FX_PlayVOC %d\n", phaserChannel+1);
+	return( phaserChannel+1 );
+}
+
+
+/*---------------------------------------------------------------------
+   Function: FX_PlayWAV
+
+   Begin playback of sound data with the given volume and priority.
+---------------------------------------------------------------------*/
+
+int FX_PlayLoopedWAV(void *ptr, long loopstart, long loopend, int pitchoffset, int vol, int left, int right, int priority, unsigned long callbackval )
+{
+	int phaserChannel = Mix_PlayChannel(-1, ptr, -1);
+	return( phaserChannel+1 );
 }
 
 
@@ -250,13 +255,13 @@ int FX_PlayWAV3D(void *ptr, int pitchoffset, int angle, int distance, int priori
 {
 	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
 	Mix_SetPosition(phaserChannel, angle, distance);
-	return( phaserChannel );
+	return( phaserChannel+1 );
 }
 
 int FX_PlayWAV(void *ptr, long size)
 {
 	int phaserChannel = Mix_PlayChannel(-1, ptr, 0);
-	return( phaserChannel );
+	return( phaserChannel+1 );
 }
 
 /*---------------------------------------------------------------------
@@ -268,6 +273,8 @@ int FX_PlayWAV(void *ptr, long size)
 
 int FX_Pan3D(int handle, int angle, int distance)
 {
+	initprintf("FX_Pan3D %d\n", handle-1);
+	Mix_SetPosition(handle-1, angle, distance);
 	return( 0 );
 }
 
@@ -280,7 +287,8 @@ int FX_Pan3D(int handle, int angle, int distance)
 
 int FX_StopSound(int handle)
 {
-	Mix_HaltChannel(handle);
+	initprintf("FX_StopSound %d\n", handle-1);
+	Mix_HaltChannel(handle-1);
 	return( FX_Ok );
 }
 
@@ -293,6 +301,7 @@ int FX_StopSound(int handle)
 
 int FX_StopAllSounds(void)
 {
+	initprintf("FX_StopAllSounds\n");
 	Mix_HaltChannel(-1);
 	return( FX_Ok );
 }

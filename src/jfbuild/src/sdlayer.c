@@ -161,6 +161,7 @@ int    normalkeyboard = 0;
 int    drawoverlay = 1;
 int    gesturedown = 0;
 int    in_impulse = 0;
+int    gblInGame = 0;
 
 //Hacky way to show the 'jumping' overlay item
 int     jumping_counter = 0;
@@ -1584,7 +1585,7 @@ void D_DrawUIOverlay()
 	}
 
     //Now render the overlay
-    if ( !drawoverlay )
+    if ( !drawoverlay || !gblInGame )
     {
         return;
     }
@@ -1951,8 +1952,10 @@ int handleevents(void)
 								joy_y += JOY_DEAD;
 
 						if (joynumaxes > 1) {
-							joyaxis[1] = joy_y * 2400;//10000 / 32767;
-							joyaxis[0] = joy_x * 1000;//10000 / 32767;
+							joyaxis[1] = joy_y * joy_y * 128;//10000 / 32767;
+							joyaxis[0] = joy_x * joy_x * 64;//10000 / 32767;
+							if (joy_y < 0) joyaxis[1] *= -1;
+							if (joy_x < 0) joyaxis[0] *= -1;
 						}
 					}
                 }

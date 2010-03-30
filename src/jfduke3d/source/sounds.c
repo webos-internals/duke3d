@@ -56,6 +56,9 @@ void SoundStartup( void )
 initprintf("FXDevice %d\n", FXDevice);
 	if (FXDevice < 0) return;
 
+	memset(Sound, 0, sizeof(Sound));
+	memset(SoundOwner, 0, sizeof(SoundOwner));
+
 initprintf("%d %d %d %d %d\n", FXDevice, NumVoices, NumChannels, NumBits, MixRate);
    status = FX_Init( FXDevice, NumVoices, NumChannels, NumBits, MixRate );
 initprintf("status %d\n", status);
@@ -118,7 +121,9 @@ void MusicStartup( void )
 		return;
 	}
 
-	status = MUSIC_Init( MusicDevice, 0 );
+initprintf("%d %d %d %d %d\n", MusicDevice, NumVoices, NumChannels, NumBits, MixRate);
+	status = MUSIC_Init( MusicDevice, NumVoices, NumChannels, NumBits, MixRate );
+initprintf("status %d\n", status);
 
 	if ( status == MUSIC_Ok )
 	{
@@ -274,6 +279,7 @@ initprintf("Load sound %s\n", sounds[num]);
     kread( fp, Sound[num].ptr , l);
 	Sound[num].chunk = Mix_LoadWAV_RW(SDL_RWFromMem(Sound[num].ptr, l), 0);
     kclose( fp );
+initprintf("Load sound %d 0x%x 0x%x\n", num, Sound[num].chunk, Sound[num].ptr);
     return 1;
 }
 
@@ -285,6 +291,7 @@ int xyzsound(short num,short i,long x,long y,long z)
 
 //    if(num != 358) return 0;
 
+	initprintf("xyzsound %d\n", num);
     if( num >= NUM_SOUNDS ||
         FXDevice < 0 ||
         ( (soundm[num]&8) && ud.lockout ) ||
@@ -417,7 +424,10 @@ int xyzsound(short num,short i,long x,long y,long z)
         SoundOwner[num][Sound[num].num].voice = voice;
         Sound[num].num++;
     }
-    else Sound[num].lock--;
+    else
+	{
+		Sound[num].lock--;
+	}
     return (voice);
 }
 
@@ -427,6 +437,7 @@ void sound(short num)
     int voice;
     long start;
 
+	initprintf("sound %d\n", num);
     if (FXDevice < 0) return;
     if(SoundToggle==0) return;
     if(VoiceToggle==0 && (soundm[num]&4) ) return;
@@ -476,12 +487,26 @@ void sound(short num)
             voice = FX_PlayWAV3D( Sound[ num ].chunk, pitch,0,255-LOUDESTVOLUME,soundpr[num], num );
     }
 
-    if(voice > FX_Ok) return;
-    Sound[num].lock--;
+    if ( voice > FX_Ok )
+    {
+        SoundOwner[num][Sound[num].num].i = 0;
+        SoundOwner[num][Sound[num].num].voice = voice;
+        Sound[num].num++;
+    }
+    else
+	{
+		Sound[num].lock--;
+	}
+/*
+	Sound[num].lock--;
+    if ( voice > FX_Ok )
+		return;
+*/
 }
 
 int spritesound(unsigned short num, short i)
 {
+	initprintf("spritesound\n");
     if(num >= NUM_SOUNDS) return -1;
     return xyzsound(num,i,SX,SY,SZ);
 }
@@ -490,8 +515,9 @@ void stopsound(short num)
 {
     if(Sound[num].num > 0)
     {
+		initprintf("stopsound\n");
         FX_StopSound(SoundOwner[num][Sound[num].num-1].voice);
-        testcallback(num);
+		testcallback(SoundOwner[num][Sound[num].num-1].voice);
     }
 }
 
@@ -501,6 +527,7 @@ void stopenvsound(short num,short i)
 
     if(Sound[num].num > 0)
     {
+		initprintf("stopenvsound\n");
         k = Sound[num].num;
         for(j=0;j<k;j++)
 		{
@@ -520,6 +547,7 @@ void pan3dsound(void)
 
     numenvsnds = 0;
 
+	initprintf("pan3dsound\n");
     if(ud.camerasprite == -1)
     {
         cx = ps[screenpeek].oposx;
@@ -593,42 +621,68 @@ void pan3dsound(void)
     }
 }
 
-void testcallback(unsigned long num)
+void testcallback(int voice)
 {
     short tempi,tempj,tempk;
+	int num;
 
-        if((long)num < 0)
-        {
-            if(lumplockbyte[-num] >= 200)
-                lumplockbyte[-num]--;
-            return;
-        }
+	// SDL is 0..., but we use 1...
+	voice++;
+initprintf("voice: %d\n", voice);
+    for (num=0; num<NUM_SOUNDS; num++) {
+		if (Sound[num].num > 0) {
+			int j;
+			int k = Sound[num].num;
+			int found = 0;
 
-        tempk = Sound[num].num;
+			for (j=0; j<k; j++) {
+initprintf("voice: %d %d %d\n", num, j, SoundOwner[num][j].voice);
+				if (SoundOwner[num][j].voice == voice) {
+					found = 1;
+					break;
+				}
+			}
+			if (found)
+				break;
+		}
+	}
+	
+	if (num == NUM_SOUNDS)
+		return;
 
-        if(tempk > 0)
-        {
-            if( (soundm[num]&16) == 0)
-                for(tempj=0;tempj<tempk;tempj++)
-            {
-                tempi = SoundOwner[num][tempj].i;
-                if(sprite[tempi].picnum == MUSICANDSFX && sector[sprite[tempi].sectnum].lotag < 3 && sprite[tempi].lotag < 999)
-                {
-                    hittype[tempi].temp_data[0] = 0;
-                    if( (tempj + 1) < tempk )
-                    {
-                        SoundOwner[num][tempj].voice = SoundOwner[num][tempk-1].voice;
-                        SoundOwner[num][tempj].i     = SoundOwner[num][tempk-1].i;
-                    }
-                    break;
-                }
-            }
+	if ((long)num < 0)
+	{
+		if(lumplockbyte[-num] >= 200)
+			lumplockbyte[-num]--;
+		return;
+	}
 
-            Sound[num].num--;
-            SoundOwner[num][tempk-1].i = -1;
-        }
+	tempk = Sound[num].num;
 
-        Sound[num].lock--;
+	if(tempk > 0)
+	{
+		if( (soundm[num]&16) == 0)
+			for(tempj=0;tempj<tempk;tempj++)
+		{
+			tempi = SoundOwner[num][tempj].i;
+			if(sprite[tempi].picnum == MUSICANDSFX && sector[sprite[tempi].sectnum].lotag < 3 && sprite[tempi].lotag < 999)
+			{
+				hittype[tempi].temp_data[0] = 0;
+				if( (tempj + 1) < tempk )
+				{
+					SoundOwner[num][tempj].voice = SoundOwner[num][tempk-1].voice;
+					SoundOwner[num][tempj].i     = SoundOwner[num][tempk-1].i;
+				}
+				break;
+			}
+		}
+
+		Sound[num].num--;
+		SoundOwner[num][tempk-1].i = -1;
+	}
+
+	Sound[num].lock--;
+initprintf("num: %d lock: %d\n", num, Sound[num].lock);
 }
 
 void clearsoundlocks(void)
